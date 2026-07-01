@@ -7,12 +7,6 @@
   <meta name="description" content="KINGLIS investigates organisations as interconnected systems. Understanding before transformation." />
   <link rel="icon" href="assets/kinglis_logo.png" />
   <link rel="stylesheet" href="assets/css/style.css" />
-<div class="cursor" id="cursor"><div class="cursor-dot"></div><div class="cursor-ring"></div></div>
-<script>
-const c=document.getElementById('cursor');let mx=0,my=0,px=0,py=0;
-addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
-function loop(){px+=(mx-px)*0.15;py+=(my-py)*0.15;c.style.transform=`translate3d(${px}px,${py}px,0)`;requestAnimationFrame(loop)}loop();
-</script>
 </head>
 <body>
   <header>
