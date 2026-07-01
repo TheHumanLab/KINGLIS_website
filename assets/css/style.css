@@ -20,7 +20,7 @@ nav ul a{color:var(--muted);font-size:14px;letter-spacing:.01em}
 nav ul a:hover{color:var(--fg);border-bottom:none}
 
 .hero{padding:140px 0 80px;text-align:left;border-bottom:1px solid var(--line)}
-.hero img{width:110px;margin-bottom:32px;opacity:.9}
+.hero img{width:150px;margin-bottom:32px;opacity:.9}
 .kicker{text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:var(--muted);margin-bottom:16px;border-top:1px solid var(--line);padding-top:16px;display:inline-block}
 h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(36px,5vw,52px);letter-spacing:.02em;color:var(--fg);margin:0 0 16px;line-height:1.1}
 .subtitle{color:var(--muted);font-size:clamp(17px,2vw,20px);margin:0 0 32px;max-width:640px}
