@@ -39,3 +39,28 @@ section h2{font-family:Georgia,serif;font-weight:400;color:var(--fg);letter-spac
 blockquote{border-left:1px solid var(--accent);padding-left:20px;color:var(--muted);margin:32px 0;font-style:italic}
 footer{padding:56px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 .small{font-size:12px;color:var(--muted)}
+.founder-section {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-top: 24px;
+}
+.founder-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px; /* matches your 6px corners everywhere */
+  filter: grayscale(10%); /* keeps it slightly desaturated to match your site */
+  border: 1px solid #1f1f1f;
+}
+@media (max-width: 800px) {
+  .founder-section {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .founder-photo img {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
