@@ -109,10 +109,60 @@ Previous transformation efforts haven't solved the problem.</p>
         <div class="kicker">Start a Conversation</div>
         <h2>Perhaps the problem isn't the problem...</h2>
         <p>The architecture producing it may be.</p>
-        <p><a class="cta" href="mailto:kaylee@thisiskinglis.com">Book an Organisational Intelligence Conversation</a></p>
-        <p class="small">Or email hello@thisiskinglis.com</p>
-      </div>
-    </section>
+       <section id="request">
+  <div class="container">
+    <h2>Request an Organisational Intelligence Conversation</h2>
+    <p class="muted" style="max-width:640px">30 minutes. No pitch. We explore your organisational architecture question before any engagement.</p>
+
+    <form action="https://formspree.io/f/meebrwjw" method="POST" class="oi-form">
+      <label>Name
+        <input type="text" name="name" required>
+      </label>
+
+      <label>Organisation
+        <input type="text" name="organisation" required>
+      </label>
+
+      <label>Work Email
+        <input type="email" name="email" required>
+      </label>
+
+      <label>What prompted you to reach out?
+        <textarea name="challenge" rows="4" required placeholder="Briefly describe the organisational challenge, outcome or question you'd like to discuss."></textarea>
+      </label>
+
+      <label>Organisation size
+        <select name="size" required>
+          <option value="" disabled selected>Select size</option>
+          <option>1–10</option>
+          <option>11–50</option>
+          <option>51–250</option>
+          <option>251–1000</option>
+          <option>1000+</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend>Preferred meeting format</legend>
+        <label class="choice"><input type="radio" name="format" value="Microsoft Teams" required> Microsoft Teams</label>
+        <label class="choice"><input type="radio" name="format" value="Zoom"> Zoom</label>
+        <label class="choice"><input type="radio" name="format" value="WhatsApp"> WhatsApp</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferred day</legend>
+        <label class="choice"><input type="checkbox" name="day" value="Monday"> Monday</label>
+        <label class="choice"><input type="checkbox" name="day" value="Tuesday"> Tuesday</label>
+        <label class="choice"><input type="checkbox" name="day" value="Wednesday"> Wednesday</label>
+        <label class="choice"><input type="checkbox" name="day" value="Thursday"> Thursday</label>
+      </fieldset>
+
+      <button type="submit" class="cta">Request conversation</button>
+      <input type="hidden" name="_subject" value="New Organisational Intelligence Request — KINGLIS">
+      <p class="form-note">You'll receive a confirmation within 24 hours.</p>
+    </form>
+  </div>
+</section>
   </main>
 
   <footer>
