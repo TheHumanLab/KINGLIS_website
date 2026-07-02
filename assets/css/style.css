@@ -65,16 +65,27 @@ footer{padding:56px 0;border-top:1px solid var(--line);color:var(--muted);font-s
   }
 }
 /* --- Organisational Intelligence form --- */
-.oi-form{max-width:640px;display:grid;gap:18px;margin-top:28px}
-.oi-form label{font-size:14px;color:#b9b2a6;display:grid;gap:6px}
+.oi-form{max-width:640px;display:grid;gap:18px;margin-top:28px;text-align:left}
+.oi-form label{font-size:14px;color:#b9b2a6;display:grid;gap:6px;text-align:left}
 .oi-form input,.oi-form select,.oi-form textarea{
   width:100%;padding:12px 14px;background:#0f0f0f;border:1px solid #2a2a2a;
-  color:#e8e0d0;border-radius:6px;font-family:Inter,system-ui,sans-serif;font-size:15px
+  color:#e8e0d0;border-radius:6px;font-family:Inter,system-ui,sans-serif;font-size:15px;
+  box-sizing:border-box
 }
 .oi-form input:focus,.oi-form select:focus,.oi-form textarea:focus{outline:none;border-color:#c9a86b}
-.oi-form fieldset{border:1px solid #2a2a2a;border-radius:6px;padding:14px 16px;margin:0}
-.oi-form legend{padding:0 6px;font-size:13px;color:#9a9386}
-.oi-form .choice{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:14px;color:#e8e0d0;cursor:pointer}
+
+.oi-form fieldset{
+  border:1px solid #2a2a2a;border-radius:6px;padding:14px 16px;margin:0;
+  display:grid;gap:10px;text-align:left
+}
+.oi-form legend{padding:0 6px;font-size:13px;color:#9a9386;text-align:left}
+
+.oi-form .choice{
+  display:grid;grid-template-columns:18px 1fr;align-items:center;gap:10px;
+  margin:0;font-size:14px;color:#e8e0d0;cursor:pointer;text-align:left
+}
+.oi-form .choice input{width:auto;margin:0;justify-self:start}
 .oi-form input[type="radio"],.oi-form input[type="checkbox"]{accent-color:#c9a86b}
+
 .oi-form button{justify-self:start;margin-top:8px}
-.form-note{font-size:12px;color:#9a9386;margin-top:4px}
+.form-note{font-size:12px;color:#9a9386;margin-top:4px;text-align:left}
