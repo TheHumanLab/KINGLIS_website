@@ -89,3 +89,15 @@ footer{padding:56px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 
 .oi-form button{justify-self:start;margin-top:8px}
 .form-note{font-size:12px;color:#9a9386;margin-top:4px;text-align:left}
+/* --- Methodology steps --- */
+.method-steps{max-width:640px;margin:32px 0;display:grid;gap:12px}
+.method-steps .step{padding:16px 0;border-left:2px solid #2a2a2a;padding-left:18px}
+.method-steps .step h3{
+  margin:0 0 4px;font-family:"Fraunces",serif;font-size:22px;
+  color:#e8e0d0;font-weight:500;letter-spacing:.2px
+}
+.method-steps .step p{margin:0;color:#b9b2a6;font-size:15px}
+.method-steps .arrow{
+  color:#c9a86b;font-size:18px;line-height:1;
+  padding-left:18px;margin:-4px 0
+}
