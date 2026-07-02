@@ -65,7 +65,7 @@ footer{padding:56px 0;border-top:1px solid var(--line);color:var(--muted);font-s
   }
 }
 /* --- Organisational Intelligence form --- */
-.oi-form{max-width:640px;display:grid;gap:18px;margin-top:28px;text-align:left}
+.oi-form{max-width:700px;display:grid;gap:18px;margin-top:28px;text-align:left}
 .oi-form label{font-size:14px;color:#b9b2a6;display:grid;gap:6px;text-align:left}
 .oi-form input,.oi-form select,.oi-form textarea{
   width:100%;padding:12px 14px;background:#0f0f0f;border:1px solid #2a2a2a;
