@@ -55,10 +55,11 @@ footer{padding:56px 0;border-top:1px solid var(--line);color:var(--muted);font-s
   border: 1px solid #1f1f1f;
 }
 @media (max-width: 800px) {
-  .founder-section {
-    grid-template-columns: 1fr;
-    gap: 24px;
+  .founder-photo img {
+    max-width: 320px;
+    height: 420px;
   }
+}
   .founder-photo img {
     max-width: 320px;
     margin: 0 auto;
