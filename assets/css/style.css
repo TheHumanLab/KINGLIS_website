@@ -5,6 +5,7 @@
   --muted:#9e978b;
   --line:#262626;
   --card:#161616;
+html { font-size: 112.5%; } /* 16px → 18px base, everything scales */
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
