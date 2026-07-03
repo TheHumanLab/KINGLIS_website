@@ -48,7 +48,7 @@ footer{padding:56px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 }
 .founder-photo img {
   width: 100%;
-  height: auto;
+  height: 400px;
   display: block;
   border-radius: 6px; /* matches your 6px corners everywhere */
   filter: grayscale(10%); /* keeps it slightly desaturated to match your site */
