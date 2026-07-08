@@ -1,9 +1,9 @@
 :root{
-  --bg:#101010;
-  --fg:#d7d3c7;
-  --accent:#8b8375;
-  --muted:#9e978b;
-  --line:#262626;
+  --bg:#F9F8F7;
+  --fg:#1E1D1E;
+  --accent:#948A7F;
+  --muted:#5C5A57;
+  --line:#DEDCDB;
   --card:#161616;
 html { font-size: 112.5%; } /* 16px → 18px base, everything scales */
 }
