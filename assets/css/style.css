@@ -126,8 +126,7 @@ footer{padding:56px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     }
 }
 
-@media (max-width:768px){
+@media (max-width:650px){
     .ecosystem-image{
         margin-top:40px;
-    }
 }
