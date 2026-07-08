@@ -127,9 +127,7 @@ nav .brand img {
   max-width: none;
   opacity: .92;
 }
-
 nav .brand .small {
-
   font-size: 10.5px;
   letter-spacing: 0.02em;
   color: var(--muted);
@@ -144,18 +142,6 @@ nav ul {
   padding: 0;
   flex-wrap: wrap;
 }
-
-nav ul a {
-  color: var(--muted);
-  font-size: 14px;
-  letter-spacing: 0.01em;
-  border-bottom: 1px solid transparent;
-}
-nav ul a:hover {
-  color: var(--fg);
-  border-bottom-color: var(--accent);
-}
-
 /* Hero */
 .hero {
   padding: 128px 0 96px;
