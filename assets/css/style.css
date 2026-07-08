@@ -579,7 +579,7 @@ a, button, select, .cta, .problem-list li {
   cursor: var(--cursor-target);
 }
 /* Target only on diagrams + CTAs — my recommendation */
-.diagram-section, .ecosystem-figure, .evidence-figure, .evidnce-figure, .cta:hover {
+.diagram-section, .ecosystem-figure, .evidence-figure, .evidence-figure, .cta:hover {
   cursor: var(--cursor-target);
 }
 /* --- Restrained hover — diagrams + cards --- */
@@ -587,7 +587,7 @@ a, button, select, .cta, .problem-list li {
 /* Diagrams — precision lift, not zoom */
 .ecosystem-figure,
 .evidence-figure,
-.evidnce-figure {
+.evidence-figure {
   overflow: hidden;
   border-radius: var(--radius);
   border: 1px solid transparent;
@@ -596,13 +596,13 @@ a, button, select, .cta, .problem-list li {
 
 .ecosystem-figure:hover,
 .evidence-figure:hover,
-.evidnce-figure:hover {
+.evidence-figure:hover {
   border-color: var(--line);
 }
 
 .ecosystem-image,
 .evidence-figure img,
-.evidnce-figure img {
+.evidence-figure img {
   transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), 
               filter 0.5s ease;
   will-change: transform;
@@ -610,7 +610,7 @@ a, button, select, .cta, .problem-list li {
 
 .ecosystem-figure:hover .ecosystem-image,
 .evidence-figure:hover img,
-.evidnce-figure:hover img {
+.evidence-figure:hover img {
   transform: scale(1.015);
   filter: grayscale(0%);
 }
