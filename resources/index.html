@@ -3,52 +3,70 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
   <title>Resources — KINGLIS</title>
   <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 <body>
-  <header><div class="container"><nav><div class="brand"><img src="../assets/kinglis_logo.png" alt="KINGLIS"/><span class="small">Resources</span></div><ul><li><a href="../">Home</a></li></ul></nav></div></header>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary">
+        <div class="brand">
+          <img src="/assets/kinglis_logo.png" alt="KINGLIS" width="112" height="28" decoding="async" />
+          <span class="small">Resources</span>
+        </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <main>
     <section>
       <div class="container">
-        <div class="kicker">Resources</div>
+        <p class="kicker">Resources</p>
         <h2>Executive papers, frameworks and organizational intelligence.</h2>
-        <p class="small">The KINGLIS Resources Library contains selected papers, frameworks, guides and reference material exploring organizational intelligence, governance, operating models and organizational architecture.
-
-These publications are designed for founders, boards and executive teams seeking deeper understanding of how organizations operate and how better decisions emerge from better organizational insight.</p>
+        <p class="lead" style="max-width:640px; color:var(--muted);">The KINGLIS Resources Library contains selected papers, frameworks, guides and reference material exploring organizational intelligence, governance, operating models and organizational architecture.</p>
+        <p class="muted" style="max-width:640px;">These publications are designed for founders, boards and executive teams seeking deeper understanding of how organizations operate and how better decisions emerge from better organizational insight.</p>
         
         <div class="resources-list">
-          <!-- EDIT BELOW: Duplicate a resource-item block for each file -->
-          <div class="resource-item">
-            <div>
-              <a href="example-portfolio.pdf">Featured Publications</a>
-              <a href="example-portfolio.pdf">Organizational Intelligence</a>
-              <a href="example-portfolio.pdf">Foundational papers introducing the principles behind organizational intelligence and evidence-led executive decision support.</a>
+          <article class="resource-item">
+            <div class="resource-main">
+              <h3><a href="example-portfolio.pdf">Featured Publications</a></h3>
+              <p class="resource-subtitle">Organizational Intelligence</p>
+              <p>Foundational papers introducing the principles behind organizational intelligence and evidence-led executive decision support.</p>
               <div class="tag">PDF · Add your real file to /resources/</div>
             </div>
             <span class="badge">New</span>
-          </div>
-           <div class="resource-item">
-            <div>
-              <a href="example-portfolio.pdf">Example Portfolio — Organisational Diagnostic</a>
-              <div class="tag">PDF · Add your real file to /resources/</div>
-            </div>
-            <span class="badge">New</span>
-          </div>
+          </article>
 
-          <div class="resource-item">
-            <div>
-              <a href="research-paper.pdf">Research Paper — Architecture Determines Behaviour</a>
+          <article class="resource-item">
+            <div class="resource-main">
+              <h3><a href="example-portfolio.pdf">Example Portfolio — Organisational Diagnostic</a></h3>
+              <div class="tag">PDF · Add your real file to /resources/</div>
+            </div>
+            <span class="badge">New</span>
+          </article>
+
+          <article class="resource-item">
+            <div class="resource-main">
+              <h3><a href="research-paper.pdf">Research Paper — Architecture Determines Behaviour</a></h3>
               <div class="tag">PDF · Replace with your paper</div>
             </div>
             <span class="badge">Draft</span>
-          </div>
-          <!-- END EDIT -->
+          </article>
         </div>
 
-        <p style="margin-top:24px"><a href="../">← Back to home</a></p>
+        <p style="margin-top:48px"><a href="/" class="cta">← Back to home</a></p>
       </div>
     </section>
   </main>
+
+  <footer>
+    <div class="container">
+      <div>© KINGLIS — Organizational Intelligence.</div>
+    </div>
+  </footer>
 </body>
 </html>
