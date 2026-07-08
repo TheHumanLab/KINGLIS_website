@@ -550,3 +550,7 @@ footer .container {
     animation: none !important;
   }
 }
+/* Target only on diagrams + CTAs — my recommendation */
+.diagram-section, .ecosystem-figure, .evidence-figure, .evidnce-figure, .cta:hover {
+  cursor: var(--cursor-target);
+}
