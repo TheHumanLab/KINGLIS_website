@@ -67,3 +67,32 @@ nav .brand img { width:auto; height:26px; max-width:none; display:block; opacity
   .resource-item { padding-left:16px; padding-right:16px; margin-left:-16px; margin-right:-16px; }
   .resource-item:hover { padding-left:20px; }
 }
+/* Resources — titles dark & bold */
+.resources-list .resource-item h3 {
+  color: #1E1D1E; /* dark */
+  font-weight: 700; /* bold */
+  font-family: Inter, system-ui, sans-serif; /* executive, not serif */
+  font-size: 17px;
+  letter-spacing: 0.01em;
+  margin: 0 0 6px;
+}
+
+.resources-list .resource-item p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 14px;
+}
+
+.resource-link {
+  display: inline-block;
+  font-size: 13.5px;
+  color: var(--fg);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+
+.resource-link:hover {
+  border-bottom-color: var(--fg);
+}
