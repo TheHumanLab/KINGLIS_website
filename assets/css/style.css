@@ -103,3 +103,7 @@ footer{padding:56px 0;border-top:1px solid var(--line);color:var(--muted);font-s
   color:#c9a86b;font-size:18px;line-height:1;
   padding-left:18px;margin:-4px 0
 }
+.method-content{
+    max-width:900px;
+    margin:0 auto;
+}
