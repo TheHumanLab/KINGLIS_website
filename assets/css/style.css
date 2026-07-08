@@ -1,469 +1,229 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Atelier — Systems designed to endure</title>
-<meta name="description" content="Atelier is a private platform for founders and institutions building long-term value.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>KINGLIS — Organizational Intelligence</title>
 <style>
-/* ===================================================================
-   01. VARIABLES
-   =================================================================== */
+/* KINGLIS FINAL - EDITORIAL SYSTEM */
 :root{
-  --bg: #fafaf8;
-  --bg-2: #f5f3ef;
-  --text: #121212;
-  --text-soft: #2a2a2a;
-  --muted: rgba(18,18,18,0.45);
-  --muted-2: rgba(18,18,18,0.28);
-  --line: rgba(18,18,18,0.08);
-  --line-strong: rgba(18,18,18,0.14);
-  --scrolled-bg: rgba(12,12,14,0.92);
-  --section-padding: clamp(88px, 10vw, 144px);
-  --content-width: 760px;
-  --wide-width: 1280px;
-  --gutter: clamp(20px, 4vw, 48px);
-  --serif: "Instrument Serif", "Times New Roman", Georgia, serif;
-  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --bg:#fafaf8;
+  --text:#121212;
+  --muted:#9a9a96;
+  --muted-2:#6e6e6a;
+  --line:#e8e6e1;
+  --line-strong:#d8d5cf;
+  --content-width:760px;
+  --wide-width:1180px;
+  --section-pad:clamp(88px,10vw,144px);
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  --serif:Georgia,"Times New Roman",Times,serif;
 }
-
-/* ===================================================================
-   02. RESET / BASE
-   =================================================================== */
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
-body{
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--sans);
-  font-weight:300;
-  line-height:1.6;
-  overflow-x:hidden;
-}
-a{color:inherit;text-decoration:none}
-button{border:0;background:none;font:inherit;color:inherit;cursor:pointer}
-img,svg{display:block;max-width:100%}
-::selection{background: var(--text); color: var(--bg)}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 
-/* ===================================================================
-   03. TYPOGRAPHY & HEADING STANDARDIZATION
-   - Kicker: uppercase, 11px, 0.18em, 24px bottom
-   - H2: 24px top
-   - Divider: 40px line, 1px height, 32px below
-   =================================================================== */
-.kicker{
-  font-family: var(--sans);
-  font-size: 11px;
-  font-weight:500;
-  line-height:1;
-  letter-spacing:0.18em;
-  text-transform:uppercase;
-  color: var(--muted);
-  margin-bottom:24px;
-}
-.section-head h2,
-.content-head h2{
-  font-family: var(--serif);
-  font-weight:400;
-  font-size: clamp(36px, 4.6vw, 56px);
-  line-height:0.95;
-  letter-spacing:-0.03em;
-  color: var(--text);
-  margin-top:24px;
-  margin-bottom:24px;
-}
-.divider{
-  width:40px;
-  height:1px;
-  background: var(--text);
-  opacity:0.18;
-  margin-bottom:32px;
-}
-.body-text{
-  font-size: clamp(17px, 1.2vw, 19px);
-  line-height:1.78;
-  letter-spacing:-0.01em;
-  color: var(--text-soft);
-  max-width: var(--content-width);
-}
-.body-text + .body-text{margin-top:24px}
+/* 9 / 9 FIXES IN ORDER */
+/* 1. No tiny logo in hero - enforced by omitting img.k-hero mark */
+.hero-no-logo{content:""}
 
-/* ===================================================================
-   04. LAYOUT
-   =================================================================== */
-.container-wide{
-  max-width: var(--wide-width);
-  margin-inline:auto;
-  padding-inline: var(--gutter);
-  width:100%;
-}
-.content-wrap{
-  max-width: var(--content-width);
-  margin-inline:auto;
-  padding-inline: var(--gutter);
-  width:100%;
-}
-.section{
-  padding-block: var(--section-padding);
-  position:relative;
-}
-
-/* ===================================================================
-   05. NAVIGATION
-   - Transparent initially, -> rgba(12,12,14,0.92) + blur on .scrolled
-   =================================================================== */
-#site-nav{
-  position:fixed;
-  inset:0 0 auto 0;
-  z-index:50;
-  height:72px;
-  display:flex;
-  align-items:center;
-  background: transparent;
-  color: var(--text);
-  transition: background 0.36s var(--ease), color 0.36s var(--ease), border-color 0.36s var(--ease), backdrop-filter 0.36s var(--ease);
-  border-bottom:1px solid transparent;
-}
-#site-nav.scrolled{
-  background: var(--scrolled-bg);
-  color: #fafaf8;
-  border-bottom-color: rgba(250,250,248,0.08);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-}
-.nav-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  width:100%;
-  max-width: var(--wide-width);
-  margin-inline:auto;
-  padding-inline: var(--gutter);
-}
-.nav-logo{
-  font-family: var(--serif);
-  font-size:22px;
-  letter-spacing: -0.02em;
-  line-height:1;
-}
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap: clamp(20px, 3vw, 40px);
-}
-.nav-links a{
-  font-size:11px;
-  font-weight:500;
-  letter-spacing:0.16em;
-  text-transform:uppercase;
-  opacity:0.7;
-  transition: opacity 0.24s var(--ease);
-}
-.nav-links a:hover{opacity:1}
-#site-nav.scrolled .nav-links a{opacity:0.66}
-#site-nav.scrolled .nav-links a:hover{opacity:1}
-
-/* ===================================================================
-   06. HERO
-   =================================================================== */
-.hero{
-  padding-block: var(--section-padding);
-  padding-top: calc(var(--section-padding) + 32px);
-  min-height: 92vh;
-  display:flex;
-  align-items:flex-end;
-  background: var(--bg);
-  border-bottom:1px solid var(--line);
-}
-.hero-inner{
-  max-width: var(--content-width);
-  margin-inline:auto;
-  padding-inline: var(--gutter);
-  width:100%;
-}
-.hero h1{
-  font-family: var(--serif);
-  font-weight:400;
-  font-size: clamp(48px, 8.2vw, 96px);
-  line-height:0.9;
-  letter-spacing:-0.04em;
-  color: var(--text);
-  max-width: 9.2em;
-}
-.hero h1 em{
-  font-style:italic;
-  font-weight:400;
-  letter-spacing:-0.03em;
-}
-.hero-sub{
-  margin-top:32px;
-  font-size: clamp(16px, 1.25vw, 18px);
-  line-height:1.7;
-  color: var(--muted);
-  max-width: 32em;
-  font-weight:400;
-}
-.btn-primary{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  margin-top:40px;
-  height:48px;
-  padding:0 28px;
+/* 2. Primary CTA pill dark uppercase 13px */
+.cta-pill{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:#121212;color:#fafaf8;
   border-radius:999px;
-  background: var(--text);
-  color: var(--bg);
-  font-family: var(--sans);
+  padding:17px 36px;
+  font-family:var(--sans);
   font-size:13px;
-  font-weight:500;
-  letter-spacing:0.06em;
-  text-transform:uppercase;
-  transition: transform 0.24s var(--ease), background 0.24s var(--ease), box-shadow 0.24s var(--ease);
-}
-.btn-primary:hover{
-  transform: translateY(-1px);
-  background:#000;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-}
-.btn-primary:active{transform: translateY(0)}
-.btn-primary .arrow{transition: transform 0.24s var(--ease)}
-.btn-primary:hover .arrow{transform: translateX(3px)}
-
-/* ===================================================================
-   07. CARDS - REPLACES TEXT LINKS
-   Minimal luxury cards with hover
-   =================================================================== */
-.cards-section{
-  padding-block: var(--section-padding);
-  background: var(--bg);
-  border-bottom:1px solid var(--line);
-}
-.cards-grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:1px;
-  background: var(--line);
-  border:1px solid var(--line);
-}
-.card{
-  position:relative;
-  display:flex;
-  flex-direction:column;
-  background:#fff;
-  padding: clamp(28px, 3vw, 44px);
-  min-height: 360px;
-  transition: background 0.36s var(--ease), transform 0.36s var(--ease);
-  overflow:hidden;
-}
-.card:hover{
-  background:#fcfbf9;
-}
-.card-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  margin-bottom:64px;
-}
-.card-num{
-  font-family: var(--serif);
-  font-size:14px;
-  font-style:italic;
-  color:var(--muted-2);
-  line-height:1;
-}
-.card-arrow{
-  width:28px;
-  height:28px;
-  border-radius:999px;
-  border:1px solid var(--line-strong);
-  display:grid;
-  place-items:center;
-  font-size:12px;
-  transition: transform 0.36s var(--ease), border-color 0.36s var(--ease), background 0.36s var(--ease);
-}
-.card:hover .card-arrow{
-  transform: translateX(4px);
-  border-color: var(--text);
-  background: var(--text);
-  color: var(--bg);
-}
-.card-title{
-  font-family: var(--sans);
-  font-size:11px;
-  font-weight:500;
-  letter-spacing:0.18em;
-  text-transform:uppercase;
-  margin-bottom:16px;
-  color: var(--text);
-}
-.card-desc{
-  font-family: var(--serif);
-  font-size: clamp(20px, 1.8vw, 24px);
-  line-height:1.2;
-  letter-spacing:-0.02em;
-  color: var(--text-soft);
-  max-width: 14em;
-  margin-top:auto;
-}
-.card-cta{
-  margin-top:24px;
-  font-size:11px;
   letter-spacing:0.14em;
   text-transform:uppercase;
-  font-weight:500;
-  color: var(--muted);
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
+  text-decoration:none;
+  line-height:1;
+  border:1px solid #121212;
+  transition:transform .25s ease,background .25s ease,color .25s ease,box-shadow .25s ease,opacity .2s;
+  will-change:transform;
 }
-.card:hover .card-cta{color: var(--text)}
+.cta-pill:hover{background:#000;transform:translateY(-1px);box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.cta-pill:active{transform:translateY(0)}
 
-/* ===================================================================
-   08. CONTENT SECTIONS (3x) - SHOWCASE HEADING STANDARDIZATION
-   =================================================================== */
-.content-section{
-  padding-block: var(--section-padding);
-  border-bottom:1px solid var(--line);
-  background: var(--bg);
-}
-.content-section.alt{
-  background: var(--bg-2);
-}
+/* 3. Fixed section spacing */
+.section{padding:var(--section-pad) 0;position:relative}
+.section + .section{border-top:1px solid var(--line)}
 
-/* ===================================================================
-   09. ECOSYSTEM DIAGRAM - FULL BLEED CRISP SVG 100vw
-   =================================================================== */
-.ecosystem-section{
-  padding-block: var(--section-padding);
-  background: var(--bg);
-  overflow:clip;
-  border-bottom:1px solid var(--line);
-}
-.ecosystem-bleed{
+/* 4. Ecosystem diagram full width crisp */
+.ecosystem-diagram{
   width:100vw;
   margin-left:50%;
-  transform: translateX(-50%);
-  margin-top: clamp(40px, 6vw, 88px);
+  transform:translateX(-50%);
+  background:#ffffff;
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
-  background: #fff;
-  position:relative;
-}
-.ecosystem-bleed::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-image: radial-gradient(rgba(18,18,18,0.06) 1px, transparent 1px);
-  background-size:32px 32px;
-  opacity:0.22;
-  pointer-events:none;
-}
-.ecosystem-svg{
-  width:100vw;
-  height:auto;
-  display:block;
-  position:relative;
-  z-index:1;
-}
-.node-label{
-  font-family: var(--sans);
-  font-size:10.5px;
-  font-weight:500;
-  letter-spacing:0.16em;
-  text-transform:uppercase;
-  fill: var(--text);
-}
-.node-sub{
-  font-family: var(--serif);
-  font-size:13px;
-  font-style:italic;
-  fill: var(--muted);
-}
-.line-hair{
-  stroke: var(--text);
-  stroke-opacity:0.10;
-  stroke-width:1;
-  fill:none;
-  vector-effect: non-scaling-stroke;
-}
-.line-strong-hair{
-  stroke: var(--text);
-  stroke-opacity:0.18;
-  stroke-width:1;
-  fill:none;
-  stroke-dasharray: 4 8;
+  padding:clamp(32px,6vw,84px) 0;
+  display:flex;justify-content:center;align-items:center;
+  margin-top:48px;
+  overflow:hidden;
 }
 
-/* ===================================================================
-   10. FOOTER
-   =================================================================== */
-.footer{
-  padding-block: 64px;
-  background: #0c0c0e;
-  color: rgba(250,250,248,0.72);
+/* 5. Increase text width to 760px */
+.content{
+  max-width:var(--content-width);
+  margin:0 auto;
+  padding:0 24px;
+  width:100%;
 }
-.footer-inner{
-  max-width: var(--wide-width);
-  margin-inline:auto;
-  padding-inline: var(--gutter);
-  display:flex;
-  justify-content:space-between;
-  gap:40px;
-  flex-wrap:wrap;
+.content-wide{
+  max-width:var(--wide-width);
+  margin:0 auto;
+  padding:0 24px;
+  width:100%;
 }
-.footer-logo{
-  font-family: var(--serif);
-  font-size:20px;
-  color:#fafaf8;
-  letter-spacing:-0.02em;
+
+/* 6. Cards replacing text links - minimal luxury, hover lift */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+  margin-top:clamp(64px,8vw,112px);
 }
-.footer-meta{
+.card{
+  background:#fff;
+  padding:40px 32px 36px;
+  display:flex;flex-direction:column;
+  transition:transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s ease,background .3s;
+  position:relative;
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(0,0,0,.08);z-index:2}
+.card-index{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;display:block}
+.card-title{font-family:var(--serif);font-size:22px;line-height:1.18;letter-spacing:-0.02em;margin-bottom:14px;font-weight:400}
+.card-body{font-size:14.5px;line-height:1.65;color:#56554f;margin-top:auto}
+
+/* 7. Subtle fade-in .reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;will-change:opacity,transform}
+.reveal.visible{opacity:1;transform:none}
+
+/* 8. Nav darker on scroll */
+#site-header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:22px 0;
+  transition:background .4s ease,backdrop-filter .4s ease,border-color .4s ease,padding .3s ease;
+  border-bottom:1px solid transparent;
+}
+#site-header.scrolled{
+  background:rgba(12,12,14,0.92);
+  backdrop-filter:blur(18px) saturate(180%);
+  -webkit-backdrop-filter:blur(18px) saturate(180%);
+  border-bottom-color:rgba(255,255,255,0.08);
+  padding:18px 0;
+}
+#site-header.scrolled .brand,#site-header.scrolled .nav-link,#site-header.scrolled .nav-toggle{color:#fafaf8}
+#site-header.scrolled .nav-toggle span{background:#fafaf8}
+
+/* 9. Standardize headings */
+.kicker{
+  font-family:var(--sans);
   font-size:11px;
-  letter-spacing:0.14em;
+  letter-spacing:0.18em;
   text-transform:uppercase;
-  line-height:1.8;
+  color:var(--muted);
+  margin-bottom:24px;
+  display:block;
+  line-height:1;
 }
-.footer-meta a{color: rgba(250,250,248,0.92)}
-.footer-meta a:hover{color:#fff; text-decoration:underline; text-underline-offset:4px}
-.footer-copy{
-  font-family: var(--serif);
-  font-style:italic;
-  font-size:14px;
-  color: rgba(250,250,248,0.38);
-  margin-top:24px;
+.h2{
+  font-family:var(--serif);
+  font-size:clamp(34px,4.6vw,56px);
+  line-height:0.98;
+  letter-spacing:-0.03em;
+  font-weight:400;
+  color:var(--text);
+  margin-bottom:28px;
 }
+.divider{width:40px;height:1px;background:var(--text);display:block;margin:0 0 36px}
+.divider.muted{background:var(--line-strong)}
 
-/* ===================================================================
-   11. REVEAL ANIMATIONS - 0.6s ease, 16px translateY
-   =================================================================== */
-.reveal{
-  opacity:0;
-  transform: translateY(16px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  will-change: opacity, transform;
-}
-.reveal.is-visible{
-  opacity:1;
-  transform: translateY(0);
-}
+/* BASE TYPOGRAPHY */
+.body-text{font-size:18px;line-height:1.7;color:#33332f;max-width:var(--content-width)}
+.body-text + .body-text{margin-top:20px}
+.body-text.small{font-size:16.5px;color:#555450}
+.lead-quote{font-family:var(--serif);font-size:clamp(22px,2.6vw,28px);line-height:1.35;letter-spacing:-0.015em;color:#1a1a18;margin:24px 0 0}
 
-/* ===================================================================
-   12. RESPONSIVE
-   =================================================================== */
-@media (max-width: 900px){
-  .cards-grid{grid-template-columns:1fr}
-  .card{min-height: 280px}
-  .card-top{margin-bottom:36px}
+/* HEADER INNER */
+.header-inner{max-width:var(--wide-width);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.brand{
+  font-family:var(--sans);
+  font-size:11px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--text);
+  text-decoration:none;
+  white-space:pre;
+  line-height:1;
 }
-@media (max-width: 560px){
-  #site-nav{height:64px}
-  .nav-links{gap:16px}
-  .nav-links a{font-size:10px; letter-spacing:0.14em}
-  .hero{min-height: 78vh}
-  .footer-inner{flex-direction:column}
+.nav-desktop{display:flex;gap:32px;align-items:center}
+.nav-link{font-family:var(--sans);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text);text-decoration:none;opacity:.86;transition:opacity .2s}
+.nav-link:hover{opacity:1}
+.nav-toggle{display:none;width:28px;height:18px;position:relative;background:none;border:none;cursor:pointer}
+.nav-toggle span{position:absolute;left:0;right:0;height:1px;background:var(--text);transition:.3s}
+.nav-toggle span:nth-child(1){top:0}
+.nav-toggle span:nth-child(2){top:8px}
+.nav-toggle span:nth-child(3){top:16px}
+.nav-mobile{
+  position:fixed;inset:0;z-index:999;
+  background:#fafaf8;display:flex;flex-direction:column;
+  padding:96px 24px 40px;
+  transform:translateY(-100%);transition:transform .5s cubic-bezier(.16,1,.3,1);
+}
+.nav-mobile.open{transform:none}
+.nav-mobile a{font-family:var(--serif);font-size:42px;line-height:1.1;letter-spacing:-0.02em;text-decoration:none;color:var(--text);padding:12px 0;border-bottom:1px solid var(--line)}
+.nav-mobile-meta{margin-top:auto;display:flex;justify-content:space-between;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted)}
+
+/* HERO */
+.hero{padding-top:calc(var(--section-pad) + 48px);padding-bottom:var(--section-pad)}
+.hero-h1{font-family:var(--serif);font-size:clamp(46px,7.2vw,92px);line-height:0.92;letter-spacing:-0.04em;font-weight:400;max-width:720px;margin-bottom:32px}
+.hero-lead{font-size:clamp(16.5px,1.55vw,19px);line-height:1.65;color:#3d3d39;max-width:640px;margin-bottom:44px}
+
+/* PROBLEM LIST */
+.problem-list{list-style:none;margin-top:8px;border-top:1px solid var(--text)}
+.problem-list li{padding:20px 0;border-bottom:1px solid var(--line);font-size:18px;line-height:1.5;display:flex;gap:16px}
+.problem-list li span.num{font-family:var(--sans);font-size:11px;letter-spacing:0.12em;color:var(--muted);margin-top:6px;flex-shrink:0}
+.problem-list li em{font-style:normal;color:var(--text)}
+
+/* INLINE SVG DIAGRAM */
+.eco-svg{width:min(960px,92vw);height:auto;display:block}
+.eco-node{fill:#fff;stroke:#121212;stroke-width:1.1}
+.eco-core{fill:#121212;stroke:#121212}
+.eco-line{stroke:#121212;stroke-width:1;stroke-opacity:.18}
+.eco-label{font-family:var(--sans);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;fill:#121212;text-anchor:middle;dominant-baseline:middle}
+.eco-label-core{fill:#fafaf8;font-size:11px;letter-spacing:0.18em}
+
+/* PRINCIPLES GRID */
+.principles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px}
+.principle{background:#fff;padding:32px 28px}
+.principle-title{font-family:var(--serif);font-size:18px;margin-bottom:10px;letter-spacing:-0.01em}
+.principle-text{font-size:14.5px;line-height:1.65;color:#57564f}
+
+/* CONTACT */
+.contact-box{border:1px solid var(--text);padding:48px 40px;display:flex;flex-direction:column;gap:28px;background:#fff;margin-top:24px}
+.contact-meta{display:flex;flex-wrap:wrap;gap:32px;font-size:13px;letter-spacing:0.04em;color:#6a6a66}
+.contact-meta strong{color:var(--text);font-weight:500;letter-spacing:0.06em;text-transform:uppercase;font-size:11px;display:block;margin-bottom:6px}
+
+/* FOOTER */
+footer{padding:40px 24px;border-top:1px solid var(--line);text-align:center}
+.footer-text{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+
+/* RESPONSIVE */
+@media(max-width:980px){
+  .cards{grid-template-columns:1fr}
+  .principles-grid{grid-template-columns:1fr}
+  .nav-desktop{display:none}
+  .nav-toggle{display:block}
+  .contact-box{padding:32px 24px}
+  .brand{font-size:10px;overflow:hidden;text-overflow:clip}
+}
+@media(max-width:520px){
+  .brand{letter-spacing:0.12em;white-space:normal;line-height:1.3;max-width:180px}
+  .hero-h1{font-size:44px;line-height:.95}
+  .problem-list li{font-size:16px}
 }
