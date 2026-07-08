@@ -568,3 +568,78 @@ a, button, select, .cta, .problem-list li {
 .diagram-section, .ecosystem-figure, .evidence-figure, .evidnce-figure, .cta:hover {
   cursor: var(--cursor-target);
 }
+/* --- Restrained hover — diagrams + cards --- */
+
+/* Diagrams — precision lift, not zoom */
+.ecosystem-figure,
+.evidence-figure,
+.evidnce-figure {
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  transition: border-color 0.4s ease;
+}
+
+.ecosystem-figure:hover,
+.evidence-figure:hover,
+.evidnce-figure:hover {
+  border-color: var(--line);
+}
+
+.ecosystem-image,
+.evidence-figure img,
+.evidnce-figure img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), 
+              filter 0.5s ease;
+  will-change: transform;
+}
+
+.ecosystem-figure:hover .ecosystem-image,
+.evidence-figure:hover img,
+.evidnce-figure:hover img {
+  transform: scale(1.015);
+  filter: grayscale(0%);
+}
+
+/* Cards — if you use .card anywhere */
+.card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease,
+              box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 32px rgba(30, 29, 30, 0.06);
+}
+
+/* Method steps — engineered indicator */
+.method-steps .step {
+  transition: border-color 0.35s ease;
+}
+
+.method-steps .step:hover {
+  border-left-color: var(--accent);
+}
+
+/* Founder photo — same system */
+.founder-photo img {
+  transition: filter 0.5s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.founder-photo:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.008);
+}
+
+/* Reduced motion — respect */
+@media (prefers-reduced-motion: reduce) {
+  .ecosystem-image,
+  .card,
+  .method-steps .step,
+  .founder-photo img {
+    transition: none;
+    transform: none !important;
+  }
+}
