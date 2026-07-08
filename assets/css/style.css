@@ -112,15 +112,7 @@ nav {
   padding: 18px 0;
   gap: 24px;
 }
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 0;
-  gap: 24px;
-}
 
-/* Logo — +15% */
 nav .brand {
   display: flex;
   align-items: center;
@@ -136,7 +128,6 @@ nav .brand img {
 
 nav .brand .small {
 
-nav .brand .small {
   font-size: 10.5px;
   letter-spacing: 0.02em;
   color: var(--muted);
@@ -171,7 +162,7 @@ nav ul a:hover {
 }
 
 .hero img {
-  width: 168px;
+  width: 193px;
   height: auto;
   margin-bottom: 40px;
   opacity: 0.92;
