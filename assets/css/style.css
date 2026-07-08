@@ -10,9 +10,11 @@
   --line: #DEDCDB;
   --accent: #948A7F;
   --accent-strong: #7A7066;
-
   --container: 1100px;
   --content: 680px;
+  /* ... plus */
+  --cursor-target: url("data:image/svg+xml,...") 12 12, crosshair;
+}
 
   --space-xs: 8px;
   --space-sm: 16px;
