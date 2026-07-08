@@ -118,33 +118,6 @@ footer{padding:56px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     height:auto;
     margin:80px auto 0;
 }
-
-@media (max-width:1024px){
-    .ecosystem-image{
-        max-width:100%;
-        margin-top:60px;
-    }
-}
-
-/* ==========================================
-   KINGLIS ECOSYSTEM DIAGRAM
-========================================== */
-
-.ecosystem-image{
-    display:block;
-    width:100%;
-    max-width:1400px;
-    height:auto;
-    margin:80px auto 0;
-}
-
-@media (max-width:1024px){
-    .ecosystem-image{
-        max-width:100%;
-        margin-top:60px;
-    }
-}
-
 @media (max-width:768px){
     .ecosystem-image{
         margin-top:40px;
