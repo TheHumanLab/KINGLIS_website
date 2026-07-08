@@ -1,114 +1,469 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atelier — Systems designed to endure</title>
+<meta name="description" content="Atelier is a private platform for founders and institutions building long-term value.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ===================================================================
+   01. VARIABLES
+   =================================================================== */
 :root{
-  --bg:#F9F8F7;
-  --fg:#1E1D1E;
-  --accent:#948A7F;
-  --muted:#5C5A57;
-  --line:#DEDCDB;
-  --card:#161616;
-html { font-size: 112.5%; } /* 16px → 18px base, everything scales */
+  --bg: #fafaf8;
+  --bg-2: #f5f3ef;
+  --text: #121212;
+  --text-soft: #2a2a2a;
+  --muted: rgba(18,18,18,0.45);
+  --muted-2: rgba(18,18,18,0.28);
+  --line: rgba(18,18,18,0.08);
+  --line-strong: rgba(18,18,18,0.14);
+  --scrolled-bg: rgba(12,12,14,0.92);
+  --section-padding: clamp(88px, 10vw, 144px);
+  --content-width: 760px;
+  --wide-width: 1280px;
+  --gutter: clamp(20px, 4vw, 48px);
+  --serif: "Instrument Serif", "Times New Roman", Georgia, serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
-a{color:var(--fg);text-decoration:none;border-bottom:1px solid transparent;transition:border .2s}
-a:hover{border-bottom:1px solid var(--accent)}
-.container{max-width:1100px;margin:0 auto;padding:0 32px}
-header{position:sticky;top:0;background:rgba(16,16,16,.85);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-nav .brand{display:flex;align-items:center;gap:12px}
-nav .brand img{height:32px;width:auto;opacity:.9}
-nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
-nav ul a{color:var(--muted);font-size:14px;letter-spacing:.01em}
-nav ul a:hover{color:var(--fg);border-bottom:none}
 
-.hero{padding:110px 0 80px;text-align:left;border-bottom:1px solid var(--line)}
-.hero img{width:150px;margin-bottom:32px;opacity:.9}
-.kicker{text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:var(--muted);margin-bottom:16px;border-top:1px solid var(--line);padding-top:16px;display:inline-block}
-h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(36px,5vw,52px);letter-spacing:.02em;color:var(--fg);margin:0 0 16px;line-height:1.1}
-.subtitle{color:var(--muted);font-size:clamp(17px,2vw,20px);margin:0 0 32px;max-width:640px}
-.lead{font-size:19px;color:var(--fg);max-width:680px;margin-top:24px}
-.cta{display:inline-block;margin-top:32px;color:var(--accent);font-size:15px;letter-spacing:.02em;padding:0;border:none;background:none}
-.cta::after{content:" →";transition:transform .2s;display:inline-block}
-.cta:hover{color:var(--fg)}
-.cta:hover::after{transform:translateX(3px)}
+/* ===================================================================
+   02. RESET / BASE
+   =================================================================== */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight:300;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button{border:0;background:none;font:inherit;color:inherit;cursor:pointer}
+img,svg{display:block;max-width:100%}
+::selection{background: var(--text); color: var(--bg)}
 
-section{padding:80px 0;border-top:1px solid var(--line)}
-section h2{font-family:Georgia,serif;font-weight:400;color:var(--fg);letter-spacing:.01em;font-size:clamp(24px,3vw,32px);margin:0 0 20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin-top:32px}
-.card{background:var(--card);border:1px solid var(--line);padding:24px;border-radius:6px}
-.card h3{margin:0 0 8px;color:var(--fg);font-weight:500;font-size:17px;letter-spacing:.01em}
-.card p{color:var(--muted);margin:0;font-size:15px}
-blockquote{border-left:1px solid var(--accent);padding-left:20px;color:var(--muted);margin:32px 0;font-style:italic}
-footer{padding:56px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
-.small{font-size:12px;color:var(--muted)}
-.founder-section {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 48px;
-  align-items: start;
-  margin-top: 24px;
+/* ===================================================================
+   03. TYPOGRAPHY & HEADING STANDARDIZATION
+   - Kicker: uppercase, 11px, 0.18em, 24px bottom
+   - H2: 24px top
+   - Divider: 40px line, 1px height, 32px below
+   =================================================================== */
+.kicker{
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight:500;
+  line-height:1;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color: var(--muted);
+  margin-bottom:24px;
 }
-.founder-photo img {
-  width: 100%;
-  height: 400px;
-  display: block;
-  border-radius: 6px; /* matches your 6px corners everywhere */
-  filter: grayscale(10%); /* keeps it slightly desaturated to match your site */
-  border: 1px solid #1f1f1f;
+.section-head h2,
+.content-head h2{
+  font-family: var(--serif);
+  font-weight:400;
+  font-size: clamp(36px, 4.6vw, 56px);
+  line-height:0.95;
+  letter-spacing:-0.03em;
+  color: var(--text);
+  margin-top:24px;
+  margin-bottom:24px;
 }
-@media (max-width: 800px) {
-  .founder-photo img {
-    max-width: 320px;
-    height: 420px;
-  }
+.divider{
+  width:40px;
+  height:1px;
+  background: var(--text);
+  opacity:0.18;
+  margin-bottom:32px;
 }
-  .founder-photo img {
-    max-width: 320px;
-    margin: 0 auto;
-  }
+.body-text{
+  font-size: clamp(17px, 1.2vw, 19px);
+  line-height:1.78;
+  letter-spacing:-0.01em;
+  color: var(--text-soft);
+  max-width: var(--content-width);
 }
-/* --- Organisational Intelligence form --- */
-.oi-form{max-width:700px;display:grid;gap:18px;margin-top:28px;text-align:left}
-.oi-form label{font-size:14px;color:#b9b2a6;display:grid;gap:6px;text-align:left}
-.oi-form input,.oi-form select,.oi-form textarea{
-  width:100%;padding:12px 14px;background:#0f0f0f;border:1px solid #2a2a2a;
-  color:#e8e0d0;border-radius:6px;font-family:Inter,system-ui,sans-serif;font-size:15px;
-  box-sizing:border-box
-}
-.oi-form input:focus,.oi-form select:focus,.oi-form textarea:focus{outline:none;border-color:#c9a86b}
+.body-text + .body-text{margin-top:24px}
 
-.oi-form fieldset{
-  border:1px solid #2a2a2a;border-radius:6px;padding:14px 16px;margin:0;
-  display:grid;gap:10px;text-align:left
+/* ===================================================================
+   04. LAYOUT
+   =================================================================== */
+.container-wide{
+  max-width: var(--wide-width);
+  margin-inline:auto;
+  padding-inline: var(--gutter);
+  width:100%;
 }
-.oi-form legend{padding:0 6px;font-size:13px;color:#9a9386;text-align:left}
+.content-wrap{
+  max-width: var(--content-width);
+  margin-inline:auto;
+  padding-inline: var(--gutter);
+  width:100%;
+}
+.section{
+  padding-block: var(--section-padding);
+  position:relative;
+}
 
-.oi-form .choice{
-  display:grid;grid-template-columns:18px 1fr;align-items:center;gap:10px;
-  margin:0;font-size:14px;color:#e8e0d0;cursor:pointer;text-align:left
+/* ===================================================================
+   05. NAVIGATION
+   - Transparent initially, -> rgba(12,12,14,0.92) + blur on .scrolled
+   =================================================================== */
+#site-nav{
+  position:fixed;
+  inset:0 0 auto 0;
+  z-index:50;
+  height:72px;
+  display:flex;
+  align-items:center;
+  background: transparent;
+  color: var(--text);
+  transition: background 0.36s var(--ease), color 0.36s var(--ease), border-color 0.36s var(--ease), backdrop-filter 0.36s var(--ease);
+  border-bottom:1px solid transparent;
 }
-.oi-form .choice input{width:auto;margin:0;justify-self:start}
-.oi-form input[type="radio"],.oi-form input[type="checkbox"]{accent-color:#c9a86b}
+#site-nav.scrolled{
+  background: var(--scrolled-bg);
+  color: #fafaf8;
+  border-bottom-color: rgba(250,250,248,0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+  max-width: var(--wide-width);
+  margin-inline:auto;
+  padding-inline: var(--gutter);
+}
+.nav-logo{
+  font-family: var(--serif);
+  font-size:22px;
+  letter-spacing: -0.02em;
+  line-height:1;
+}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap: clamp(20px, 3vw, 40px);
+}
+.nav-links a{
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  opacity:0.7;
+  transition: opacity 0.24s var(--ease);
+}
+.nav-links a:hover{opacity:1}
+#site-nav.scrolled .nav-links a{opacity:0.66}
+#site-nav.scrolled .nav-links a:hover{opacity:1}
 
-.oi-form button{justify-self:start;margin-top:8px}
-.form-note{font-size:12px;color:#9a9386;margin-top:4px;text-align:left}
-/* --- Methodology steps --- */
-.method-steps{max-width:640px;margin:32px 0;display:grid;gap:12px}
-.method-steps .step{padding:16px 0;border-left:2px solid #2a2a2a;padding-left:18px}
-.method-steps .step h3{
-  margin:0 0 4px;font-family:"Fraunces",serif;font-size:22px;
-  color:#e8e0d0;font-weight:500;letter-spacing:.2px
+/* ===================================================================
+   06. HERO
+   =================================================================== */
+.hero{
+  padding-block: var(--section-padding);
+  padding-top: calc(var(--section-padding) + 32px);
+  min-height: 92vh;
+  display:flex;
+  align-items:flex-end;
+  background: var(--bg);
+  border-bottom:1px solid var(--line);
 }
-.method-steps .step p{margin:0;color:#b9b2a6;font-size:15px}
-.method-steps .arrow{
-  color:#c9a86b;font-size:18px;line-height:1;
-  padding-left:18px;margin:-4px 0
+.hero-inner{
+  max-width: var(--content-width);
+  margin-inline:auto;
+  padding-inline: var(--gutter);
+  width:100%;
 }
-.method-content{
-    max-width:900px;
-    margin:0 auto;
+.hero h1{
+  font-family: var(--serif);
+  font-weight:400;
+  font-size: clamp(48px, 8.2vw, 96px);
+  line-height:0.9;
+  letter-spacing:-0.04em;
+  color: var(--text);
+  max-width: 9.2em;
 }
-@media (max-width:768px){
-    .ecosystem-image{
-        margin-top:40px;
-    }
+.hero h1 em{
+  font-style:italic;
+  font-weight:400;
+  letter-spacing:-0.03em;
+}
+.hero-sub{
+  margin-top:32px;
+  font-size: clamp(16px, 1.25vw, 18px);
+  line-height:1.7;
+  color: var(--muted);
+  max-width: 32em;
+  font-weight:400;
+}
+.btn-primary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin-top:40px;
+  height:48px;
+  padding:0 28px;
+  border-radius:999px;
+  background: var(--text);
+  color: var(--bg);
+  font-family: var(--sans);
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  transition: transform 0.24s var(--ease), background 0.24s var(--ease), box-shadow 0.24s var(--ease);
+}
+.btn-primary:hover{
+  transform: translateY(-1px);
+  background:#000;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.btn-primary:active{transform: translateY(0)}
+.btn-primary .arrow{transition: transform 0.24s var(--ease)}
+.btn-primary:hover .arrow{transform: translateX(3px)}
+
+/* ===================================================================
+   07. CARDS - REPLACES TEXT LINKS
+   Minimal luxury cards with hover
+   =================================================================== */
+.cards-section{
+  padding-block: var(--section-padding);
+  background: var(--bg);
+  border-bottom:1px solid var(--line);
+}
+.cards-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:1px;
+  background: var(--line);
+  border:1px solid var(--line);
+}
+.card{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  background:#fff;
+  padding: clamp(28px, 3vw, 44px);
+  min-height: 360px;
+  transition: background 0.36s var(--ease), transform 0.36s var(--ease);
+  overflow:hidden;
+}
+.card:hover{
+  background:#fcfbf9;
+}
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:64px;
+}
+.card-num{
+  font-family: var(--serif);
+  font-size:14px;
+  font-style:italic;
+  color:var(--muted-2);
+  line-height:1;
+}
+.card-arrow{
+  width:28px;
+  height:28px;
+  border-radius:999px;
+  border:1px solid var(--line-strong);
+  display:grid;
+  place-items:center;
+  font-size:12px;
+  transition: transform 0.36s var(--ease), border-color 0.36s var(--ease), background 0.36s var(--ease);
+}
+.card:hover .card-arrow{
+  transform: translateX(4px);
+  border-color: var(--text);
+  background: var(--text);
+  color: var(--bg);
+}
+.card-title{
+  font-family: var(--sans);
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  margin-bottom:16px;
+  color: var(--text);
+}
+.card-desc{
+  font-family: var(--serif);
+  font-size: clamp(20px, 1.8vw, 24px);
+  line-height:1.2;
+  letter-spacing:-0.02em;
+  color: var(--text-soft);
+  max-width: 14em;
+  margin-top:auto;
+}
+.card-cta{
+  margin-top:24px;
+  font-size:11px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  font-weight:500;
+  color: var(--muted);
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.card:hover .card-cta{color: var(--text)}
+
+/* ===================================================================
+   08. CONTENT SECTIONS (3x) - SHOWCASE HEADING STANDARDIZATION
+   =================================================================== */
+.content-section{
+  padding-block: var(--section-padding);
+  border-bottom:1px solid var(--line);
+  background: var(--bg);
+}
+.content-section.alt{
+  background: var(--bg-2);
+}
+
+/* ===================================================================
+   09. ECOSYSTEM DIAGRAM - FULL BLEED CRISP SVG 100vw
+   =================================================================== */
+.ecosystem-section{
+  padding-block: var(--section-padding);
+  background: var(--bg);
+  overflow:clip;
+  border-bottom:1px solid var(--line);
+}
+.ecosystem-bleed{
+  width:100vw;
+  margin-left:50%;
+  transform: translateX(-50%);
+  margin-top: clamp(40px, 6vw, 88px);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background: #fff;
+  position:relative;
+}
+.ecosystem-bleed::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image: radial-gradient(rgba(18,18,18,0.06) 1px, transparent 1px);
+  background-size:32px 32px;
+  opacity:0.22;
+  pointer-events:none;
+}
+.ecosystem-svg{
+  width:100vw;
+  height:auto;
+  display:block;
+  position:relative;
+  z-index:1;
+}
+.node-label{
+  font-family: var(--sans);
+  font-size:10.5px;
+  font-weight:500;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  fill: var(--text);
+}
+.node-sub{
+  font-family: var(--serif);
+  font-size:13px;
+  font-style:italic;
+  fill: var(--muted);
+}
+.line-hair{
+  stroke: var(--text);
+  stroke-opacity:0.10;
+  stroke-width:1;
+  fill:none;
+  vector-effect: non-scaling-stroke;
+}
+.line-strong-hair{
+  stroke: var(--text);
+  stroke-opacity:0.18;
+  stroke-width:1;
+  fill:none;
+  stroke-dasharray: 4 8;
+}
+
+/* ===================================================================
+   10. FOOTER
+   =================================================================== */
+.footer{
+  padding-block: 64px;
+  background: #0c0c0e;
+  color: rgba(250,250,248,0.72);
+}
+.footer-inner{
+  max-width: var(--wide-width);
+  margin-inline:auto;
+  padding-inline: var(--gutter);
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  flex-wrap:wrap;
+}
+.footer-logo{
+  font-family: var(--serif);
+  font-size:20px;
+  color:#fafaf8;
+  letter-spacing:-0.02em;
+}
+.footer-meta{
+  font-size:11px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  line-height:1.8;
+}
+.footer-meta a{color: rgba(250,250,248,0.92)}
+.footer-meta a:hover{color:#fff; text-decoration:underline; text-underline-offset:4px}
+.footer-copy{
+  font-family: var(--serif);
+  font-style:italic;
+  font-size:14px;
+  color: rgba(250,250,248,0.38);
+  margin-top:24px;
+}
+
+/* ===================================================================
+   11. REVEAL ANIMATIONS - 0.6s ease, 16px translateY
+   =================================================================== */
+.reveal{
+  opacity:0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible{
+  opacity:1;
+  transform: translateY(0);
+}
+
+/* ===================================================================
+   12. RESPONSIVE
+   =================================================================== */
+@media (max-width: 900px){
+  .cards-grid{grid-template-columns:1fr}
+  .card{min-height: 280px}
+  .card-top{margin-bottom:36px}
+}
+@media (max-width: 560px){
+  #site-nav{height:64px}
+  .nav-links{gap:16px}
+  .nav-links a{font-size:10px; letter-spacing:0.14em}
+  .hero{min-height: 78vh}
+  .footer-inner{flex-direction:column}
 }
