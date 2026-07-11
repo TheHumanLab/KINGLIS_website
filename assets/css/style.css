@@ -281,3 +281,33 @@ a, button, select, .cta, .problem-list li { cursor: var(--cursor-target); }
 @media (prefers-reduced-motion: reduce) {
   .ecosystem-image, .card, .method-steps .step, .founder-photo img { transition: none; transform: none !important; }
 }
+.founder-offer {
+  margin: 36px auto 0;
+  padding: 28px 32px;
+  max-width: 520px;
+  text-align: center;
+  border-top: 1px solid rgba(138, 115, 92, 0.45);
+  border-bottom: 1px solid rgba(138, 115, 92, 0.45);
+}
+
+.founder-offer-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.founder-offer-price {
+  display: block;
+  margin: 12px 0 8px;
+  font-family: Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+.founder-offer-note {
+  display: block;
+  font-size: 0.82rem;
+  opacity: 0.7;
+}
