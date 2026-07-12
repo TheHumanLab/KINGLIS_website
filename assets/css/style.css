@@ -311,7 +311,6 @@ a, button, select, .cta, .problem-list li { cursor: var(--cursor-target); }
   font-size: 0.82rem;
   opacity: 0.7;
 }
-/* Founder Intelligence — Sample Proof */
 
 .founder-sample {
   max-width: 680px;
