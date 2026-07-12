@@ -146,6 +146,19 @@ footer .small a:hover{border-bottom-color:var(--accent)}
   #kinglis-model-charcoal .km-card{grid-column:span 12}
   .oi-form .form-top{grid-template-columns:1fr}
 }
+
+/* === TWEAKS - line between difference and founder + matching headings === */
+#founder{border-top:1px solid var(--line)}
+#this-is h2,#who h2,#believe h2{
+  font-family:Georgia,serif;
+  font-weight:400;
+  font-size:clamp(26px,3vw,36px);
+  line-height:1.15;
+  letter-spacing:.01em;
+  color:#1E1D1E;
+  max-width:800px;
+  margin:0 0 20px;
+}
 @media(max-width:720px){
   section{padding:72px 0}
   .hero{padding:88px 0 64px}
