@@ -334,7 +334,7 @@ a, button, select, .cta, .problem-list li { cursor: var(--cursor-target); }
 
     <!-- Box 2 -->
     <div style="background:#fff; border:1px solid #e8e1d6; border-radius:16px; padding:36px 28px; text-align:center;">
-      <p style="font-size:14px; font-weight:700; margin:0 0 12px; color:#111;">
+      <p style="font-size:14px; font-weight:700; margin:0 0 10px; color:#111;">
         Want to see the evidence behind the findings?
       </p>
       <p style="font-size:15px; line-height:1.6; margin:0 0 20px; color:#2a2a2a;">
@@ -386,3 +386,51 @@ a, button, select, .cta, .problem-list li { cursor: var(--cursor-target); }
 */
   </style>
 </section>
+:root{
+  --bg:#0a0a0a;
+  --fg:#e8e0d0;
+  --card:#172424; /* deep teal tinted black from #2F4D4F */
+  --line:#2a3636;
+  --muted:#8A7A5A; /* your brown olive for secondary text */
+  --accent:#A9442A; /* terracotta for one sharp moment */
+}
+
+.model h2,
+.model h2 em{color:var(--fg)}
+
+.model-lead,
+.desc{color:var(--muted)}
+
+.model-rule{background:var(--line)}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:10px;
+}
+
+.purpose-label{color:var(--muted)}
+.purpose-text{color:var(--fg)}
+
+.arrow{
+  border-color:var(--line);
+  color:var(--muted);
+}
+.card:hover .arrow{
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+.purpose-label::before{
+  content:"";
+  display:inline-block;
+  width:6px;
+  height:6px;
+  background:var(--accent);
+  border-radius:999px;
+  margin-right:8px;
+  vertical-align:middle;
+}
+
+.cta{border-color:var(--line);color:var(--fg)}
+.cta:hover{border-color:var(--accent);color:var(--accent)}
