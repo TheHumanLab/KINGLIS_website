@@ -311,5 +311,48 @@ a, button, select, .cta, .problem-list li { cursor: var(--cursor-target); }
   font-size: 0.82rem;
   opacity: 0.7;
 }
-  }
-}
+<section style="background:#fbf8f3; padding:64px 24px; font-family: Inter, system-ui, sans-serif; color:#111;">
+  <h2 style="text-align:center; font-size:13px; letter-spacing:0.14em; font-weight:600; margin:0 0 32px;">
+    SEE WHAT FOUNDER INTELLIGENCE EXAMINES.
+  </h2>
+
+  <div style="max-width:980px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+    
+    <!-- Box 1 -->
+    <div style="background:#fff; border:1px solid #e8e1d6; border-radius:16px; padding:36px 28px; text-align:center;">
+      <p style="font-size:15px; line-height:1.6; margin:0 0 20px; color:#2a2a2a;">
+        View an illustrative Private Intelligence Dossier built from<br>
+        a controlled evidence demonstration.
+      </p>
+      <a href="/sample-dossier" style="display:inline-block; font-size:13px; font-weight:600; letter-spacing:0.08em; text-decoration:none; color:#111; border-bottom:1px solid #111; padding-bottom:2px; margin-bottom:14px;">
+        VIEW SAMPLE DOSSIER →
+      </a>
+      <p style="font-size:12px; line-height:1.5; color:#8a857e; margin:0;">
+        Organization details replaced. Illustrative evidence<br>demonstration.
+      </p>
+    </div>
+
+    <!-- Box 2 -->
+    <div style="background:#fff; border:1px solid #e8e1d6; border-radius:16px; padding:36px 28px; text-align:center;">
+      <p style="font-size:14px; font-weight:700; margin:0 0 12px; color:#111;">
+        Want to see the evidence behind the findings?
+      </p>
+      <p style="font-size:15px; line-height:1.6; margin:0 0 20px; color:#2a2a2a;">
+        View the 62 item Evidence Index used to support the<br>
+        sample analysis.
+      </p>
+      <a href="/evidence-index" style="display:inline-block; font-size:13px; font-weight:600; letter-spacing:0.08em; text-decoration:none; color:#111; border-bottom:1px solid #111; padding-bottom:2px;">
+        VIEW EVIDENCE INDEX →
+      </a>
+    </div>
+
+  </div>
+
+  <style>
+    @media (max-width: 720px) {
+      div[style*="grid-template-columns:1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+</section>
