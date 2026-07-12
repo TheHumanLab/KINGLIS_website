@@ -354,5 +354,35 @@ a, button, select, .cta, .problem-list li { cursor: var(--cursor-target); }
         grid-template-columns: 1fr !important;
       }
     }
+.model h2,
+.model h2 em{
+  color:var(--fg) !important;
+  color:#e8e0d0 !important;
+  opacity:1 !important;
+}
+
+.model{
+  margin-bottom:0 !important;
+  padding-bottom:88px !important;
+  border-bottom:none !important;
+}
+
+/* kill the stray white gap */
+.model + *,
+.model + section,
+.model + div{
+  margin-top:0 !important;
+  border-top:none !important;
+  background:transparent !important;
+}
+
+/* if you left an empty container after the cards delete it in HTML */
+/* look for this pattern and delete the middle line
+  </div> <!-- end model grid -->
+</div>
+</section>
+<div class="container"></div>  <-- delete this empty line
+<section class="problem">
+*/
   </style>
 </section>
