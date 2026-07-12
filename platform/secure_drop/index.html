@@ -6,21 +6,154 @@
 <title>Secure Drop | KINGLIS</title>
 <link rel="stylesheet" href="../../assets/style.css">
 <style>
-:root{--bg:#0d0d0d;--card:#151515;--line:#242424;--ink:#f5f1e9;--muted:#9a948b}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.top{display:flex;justify-content:space-between;align-items:center;padding:28px 0;border-bottom:1px solid var(--line)}
-.logo{letter-spacing:.14em;font-weight:700;font-family:Georgia,serif;color:var(--ink);text-decoration:none}
-.nav a{color:var(--muted);text-decoration:none;margin-left:24px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-.breadcrumb{color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin:24px 0}
-.breadcrumb a{color:var(--muted);text-decoration:none}
-.hero{padding:56px 0 28px} .kicker{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
-.hero h1{font-family:Georgia,serif;font-size:44px;line-height:1.05;margin:0 0 14px} .hero p{max-width:680px;color:var(--muted);font-size:16px}
-.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:32px}
-.card{grid-column:span 6;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;text-decoration:none;color:inherit;display:block}
-.card.full{grid-column:span 12} .card h3{margin:0 0 8px;font-family:Georgia,serif;font-size:19px} .card p{margin:0;color:var(--muted);font-size:13.5px}
-.footer{border-top:1px solid var(--line);margin-top:64px;padding:28px 0;color:var(--muted);font-size:11px}
-@media(max-width:860px){.card{grid-column:span 12}.hero h1{font-size:34px}}
+:root{
+  --bg:#0d0d0d;
+  --card:#151515;
+  --line:#242424;
+  --ink:#f5f1e9;
+  --muted:#9a948b;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Inter,system-ui,sans-serif;
+  line-height:1.6;
+}
+
+.wrap{
+  max-width:1120px;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:28px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.logo{
+  letter-spacing:.14em;
+  font-weight:700;
+  font-family:Georgia,serif;
+  color:var(--ink);
+  text-decoration:none;
+}
+
+.nav a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:24px;
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.breadcrumb{
+  color:var(--muted);
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin:24px 0;
+}
+
+.breadcrumb a{
+  color:var(--muted);
+  text-decoration:none;
+}
+
+.hero{
+  padding:56px 0 28px;
+}
+
+.kicker{
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:14px;
+}
+
+.hero h1{
+  font-family:Georgia,serif;
+  font-size:44px;
+  line-height:1.05;
+  margin:0 0 14px;
+  color:var(--ink) !important;
+}
+
+.hero p{
+  max-width:680px;
+  color:var(--muted);
+  font-size:16px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:18px;
+  margin-top:32px;
+}
+
+.card{
+  grid-column:span 6;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:26px;
+  text-decoration:none;
+  color:inherit;
+  display:block;
+}
+
+.card.full{
+  grid-column:span 12;
+}
+
+.card h3{
+  margin:0 0 8px;
+  font-family:Georgia,serif;
+  font-size:19px;
+  color:var(--ink) !important;
+}
+
+.card p{
+  margin:0;
+  color:var(--muted);
+  font-size:13.5px;
+}
+
+.footer{
+  border-top:1px solid var(--line);
+  margin-top:64px;
+  padding:28px 0;
+  color:var(--muted);
+  font-size:11px;
+}
+
+/* REMOVE ALL LEGACY GOLD ACCENTS */
+.hero h1,
+.card h1,
+.card h2,
+.card h3,
+.card strong,
+.card b{
+  color:var(--ink) !important;
+}
+
+@media(max-width:860px){
+  .card{
+    grid-column:span 12;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+}
 </style>
 </head>
 <body>
