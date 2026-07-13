@@ -589,6 +589,19 @@ header{
 @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))){
   header{ background: #F8F7F5; }
 }
+    .video-wrap{
+  width:100%; /* was collapsing */
+  border:1px solid rgba(26,24,22,0.14);
+  background:#EDE7DF;
+  line-height:0;
+}
+.video-wrap video{
+  width:100%;
+  height:auto;
+  aspect-ratio:16/9; /* on the video itself, not the wrapper */
+  background:#EDE7DF;
+  object-fit:cover;
+}
 
   </style>
 </head>
