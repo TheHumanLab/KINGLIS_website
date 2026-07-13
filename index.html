@@ -25,6 +25,25 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="KINGLIS | Organizational Intelligence">
   <link rel="stylesheet" href="/assets/css/style.css" />
+  <style>
+    .hero-model{margin:1.75rem 0 2.25rem;font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;line-height:1.6;color:#2F4D4F}
+    .cta-group{display:flex;flex-wrap:wrap;gap:1rem 1.75rem;align-items:center;margin-top:1.25rem}
+    .cta-secondary{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+    .model-sequence{display:grid;gap:2.25rem;margin-top:2.5rem}
+    .model-stage{border-top:1px solid rgba(17,17,17,.12);padding-top:1.6rem}
+    .section-dark .model-stage{border-top-color:rgba(251,246,240,.14)}
+    .model-label{display:block;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:#8A7A5A;margin-bottom:.7rem}
+    .model-arrow{font-size:1.1rem;line-height:1;opacity:.32;margin:.2rem 0}
+    .close-statement{margin-top:2.75rem;padding-top:1.6rem;border-top:1px solid rgba(17,17,17,.12)}
+    .section-dark .close-statement{border-top-color:rgba(251,246,240,.14)}
+    .close-statement p{margin:0;line-height:1.6}
+    .close-statement p+p{margin-top:.4rem}
+    .product-intro{max-width:48rem;margin:0 0 2rem}
+    @media(min-width:900px){
+      .model-sequence.three-col{grid-template-columns:1fr 1fr 1fr;align-items:start}
+      .model-sequence.three-col .model-arrow{display:none}
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#top">Skip to content</a>
@@ -32,13 +51,14 @@
     <div class="container">
       <nav aria-label="Primary">
         <div class="brand">
-          <span class="small">O R G A N I Z A T I O N A L   I N T E L L I G E N C E</span>
+          <span class="small">O R G A N I Z A T I O N A L&nbsp;&nbsp;I N T E L L I G E N C E</span>
         </div>
         <ul>
-          <li><a href="#believe">About</a></li>
-          <li><a href="#kinglis-model-charcoal">Ecosystem</a></li>
-          <li><a href="#this-is">Services</a></li>
-          <li><a href="#who">Approach</a></li>
+          <li><a href="#model">About</a></li>
+          <li><a href="#model-intelligence">Intelligence</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#model-advisory">Advisory</a></li>
+          <li><a href="#method">Method</a></li>
           <li><a href="#founder">Founder</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -47,106 +67,58 @@
   </header>
 
   <main>
-    <!-- HERO -->
     <section class="hero section-light" id="top">
       <div class="container">
         <img src="assets/kinglis_logo.png" alt="KINGLIS" width="168" height="48" decoding="async" />
         <h1>Every organizational outcome has a cause.</h1>
-        <p class="lead">KINGLIS is an Organizational Intelligence company that transforms organizational evidence into executive intelligence through technology, evidence-led diagnostics, strategic advisory and intellectual property—revealing the conditions that shape how organizations operate.</p>
-        <a class="cta" href="#contact">Explore Our Practices</a>
-      </div>
-    </section>
-
-    <!-- FOUR PRACTICES - DARK -->
-    <section id="kinglis-model-charcoal" class="section-dark">
-      <div class="km-wrap container">
-        <div class="kicker">The Kinglis Model</div>
-        <h2>Organizational Intelligence,<br><em>structured into four integrated practices.</em></h2>
-        <p class="model-lead">KINGLIS combines technology, evidence led diagnostics, strategic advisory and intellectual property into a single organizational intelligence practice. Together, these capabilities help leaders understand organizations before changing them.</p>
-
-        <div class="model-rule"></div>
-        <div class="model-meta">Four integrated practices. One organizational intelligence system.</div>
-
-        <div class="km-grid">
-          <!-- Platform -->
-          <div class="km-card" role="button" tabindex="0" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-            <span class="km-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 6.5L8 10.5L12 6.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <h3>Platform<sup>™</sup></h3>
-            <div class="km-tag">Technology enabled organizational intelligence.</div>
-            <div class="km-purpose"><b>Purpose</b><span>Transform organizational evidence into structured intelligence.</span></div>
-            <div class="km-expand"><div class="km-expand-inner">
-              <p class="km-desc">Receive, organize and process organizational evidence through KINGLIS technology, combining structured evidence processing with expert analysis to produce executive intelligence.</p>
-              <div class="km-links">
-                <a href="./platform/secure_drop/">Secure Drop <span>→</span></a>
-                <a href="./platform/evidence_workspace/">Evidence Workspace <span>→</span></a>
-                <a href="./platform/vault/">Vault <span>→</span></a>
-                <a href="./platform/evidence_processing/">Evidence Processing <span>→</span></a>
-              </div>
-              <div class="km-foot">Practice → Product → Deliverable · Technology</div>
-            </div></div>
-          </div>
-
-          <!-- Diagnostics -->
-          <div class="km-card" role="button" tabindex="0" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-            <span class="km-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 6.5L8 10.5L12 6.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <h3>Diagnostics<sup>™</sup></h3>
-            <div class="km-tag">Evidence led organizational investigations.</div>
-            <div class="km-purpose"><b>Purpose</b><span>Discover what is happening, why it is happening and where leadership should focus.</span></div>
-            <div class="km-expand"><div class="km-expand-inner">
-              <p class="km-desc">Investigate visible organizational outcomes through existing evidence, expert review and defined diagnostic engagements to establish the conditions producing them.</p>
-              <div class="km-links">
-                <a href="./diagnostics/founder_intelligence/">Founder Intelligence <span>→</span></a>
-                <a href="./diagnostics/leadership_diagnostic/">Leadership Diagnostic <span>→</span></a>
-                <a href="./diagnostics/organizational_assessment/">Organizational Assessment <span>→</span></a>
-                <a href="./diagnostics/business_xray/">Business X Ray <span>→</span></a>
-              </div>
-              <div class="km-foot">Practice → Product → Deliverable · Investigation</div>
-            </div></div>
-          </div>
-
-          <!-- Advisory -->
-          <div class="km-card" role="button" tabindex="0" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-            <span class="km-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 6.5L8 10.5L12 6.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <h3>Advisory<sup>™</sup></h3>
-            <div class="km-tag">Executive intelligence in action.</div>
-            <div class="km-purpose"><b>Purpose</b><span>Transform intelligence into organisational action.</span></div>
-            <div class="km-expand"><div class="km-expand-inner">
-              <p class="km-desc">Translate Organizational Intelligence into decisions, organizational design and action through executive advisory, strategic partnerships, governance architecture and operating model design.</p>
-              <div class="km-links">
-                <a href="./advisory/founder_advisory/">Founder Advisory <span>→</span></a>
-                <a href="./advisory/executive_advisory/">Executive Advisory <span>→</span></a>
-                <a href="./advisory/governance_architecture/">Governance Architecture <span>→</span></a>
-                <a href="./advisory/operating_model_architecture/">Operating Model <span>→</span></a>
-              </div>
-              <div class="km-foot">Practice → Product → Deliverable · Judgement</div>
-            </div></div>
-          </div>
-
-          <!-- Knowledge -->
-          <div class="km-card" role="button" tabindex="0" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-            <span class="km-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 6.5L8 10.5L12 6.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <h3>Knowledge<sup>™</sup></h3>
-            <div class="km-tag">Intelligence that scales beyond the engagement.</div>
-            <div class="km-purpose"><b>Purpose</b><span>Capture, standardise and scale organisational intelligence.</span></div>
-            <div class="km-expand"><div class="km-expand-inner">
-              <p class="km-desc">Structure organizational knowledge and intellectual property into practical resources, methodologies, assessments, publications and learning products that can be used, transferred and scaled.</p>
-              <div class="km-links">
-                <a href="./knowledge/expertise_monetization/">Expertise Monetization <span>→</span></a>
-                <a href="./knowledge/governance_packs/">Governance Packs <span>→</span></a>
-                <a href="./knowledge/playbooks/">Playbooks <span>→</span></a>
-                <a href="./knowledge/assessments/">Assessments <span>→</span></a>
-              </div>
-              <div class="km-foot">Practice → Product → Deliverable · Intellectual Property</div>
-            </div></div>
-          </div>
+        <p class="lead">KINGLIS transforms organizational evidence into executive intelligence—helping leaders understand the conditions shaping how their organization operates before deciding what to change.</p>
+        <div class="hero-model">EVIDENCE → INTELLIGENCE → ADVISORY</div>
+        <div class="cta-group">
+          <a class="cta" href="#model">EXPLORE ORGANIZATIONAL INTELLIGENCE →</a>
+          <a class="cta-secondary" href="/sample-dossier">VIEW A SAMPLE DOSSIER →</a>
         </div>
       </div>
     </section>
 
-    <!-- PROBLEM - LIGHT -->
-    <section id="who" class="section-light problem-section">
+    <section id="model" class="section-light">
       <div class="container">
-        <p class="kicker">The Problem</p>
+        <p class="kicker">THE KINGLIS MODEL</p>
+        <h2>Evidence. Intelligence. Advisory.</h2>
+        <div class="product-intro">
+          <p>Organizations already produce evidence of how work moves, decisions travel, responsibility is held and outcomes are produced.</p>
+          <p>KINGLIS examines that evidence to establish what the available organizational record supports, identify structurally significant conditions and give leadership a clearer basis for decision.</p>
+        </div>
+        <div class="model-sequence three-col">
+          <div class="model-stage" id="model-evidence">
+            <span class="model-label">EVIDENCE</span>
+            <h3>We begin with the organizational record.</h3>
+            <p>Reports. Communications. Meeting records. Process documents. Decision records. Operational material.</p>
+            <p>Where required, KINGLIS diagnostic instruments generate additional structured evidence from leadership, workforce or defined organizational groups.</p>
+          </div>
+          <div class="model-arrow" aria-hidden="true">↓</div>
+          <div class="model-stage" id="model-intelligence">
+            <span class="model-label">INTELLIGENCE</span>
+            <h3>We structure, compare and interpret the evidence.</h3>
+            <p>KINGLIS examines chronology, routes, differing accounts, divergence, dependencies, handoffs and potential constraints.</p>
+            <p>Findings remain source-grounded and bounded by the available evidence.</p>
+          </div>
+          <div class="model-arrow" aria-hidden="true">↓</div>
+          <div class="model-stage" id="model-advisory">
+            <span class="model-label">ADVISORY</span>
+            <h3>Where change is required, intelligence informs the intervention.</h3>
+            <p>KINGLIS validates structural hypotheses, designs organizational architecture and supports implementation and review.</p>
+          </div>
+        </div>
+        <div class="close-statement">
+          <p>We do not begin with a preferred solution.</p>
+          <p>We begin with what the available evidence supports.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="section-light problem-section">
+      <div class="container">
+        <p class="kicker">THE PROBLEM</p>
         <h2>Organizations engage KINGLIS when...</h2>
         <ul class="problem-list">
           <li>Growth is becoming harder to sustain</li>
@@ -160,83 +132,93 @@
         </ul>
         <p>These are rarely isolated problems. They are organizational outcomes.</p>
         <p>The question is what is producing them.</p>
-        <p><em>KINGLIS is not for organizations seeking quick fixes, culture workshops, or implementation support without diagnosis.</em></p>
+        <p><em>KINGLIS does not begin with a preferred intervention. We first establish what the available evidence supports and which organizational conditions require executive attention.</em></p>
       </div>
     </section>
 
-     <!-- DUAL OFFERS - FOUNDING + BUSINESS XRAY SIDE BY SIDE - SAME LAYOUT -->
-    <section id="founding-offers" class="founding-offer section-light dual-offers">
+    <section id="products" class="section-light">
       <div class="container">
-        <div class="dual-grid">
-          <!-- LEFT: Founding Private Review -->
-          <div class="offer-column">
-            <div class="founding-header">
-              <div class="kicker">Founding Private Review</div>
-              <div class="founding-price">$750</div>
-              <div class="muted">Limited founding engagement</div>
-            </div>
-            <div class="offer-grid">
-              <div class="offer-card">
-                <p>View an illustrative Private Intelligence Dossier built from a controlled evidence demonstration.</p>
-                <a href="/sample-dossier" class="offer-link">VIEW SAMPLE DOSSIER →</a>
-                <span class="offer-note">Organization details replaced. Illustrative evidence demonstration.</span>
-              </div>
-              <div class="offer-card">
-                <p><strong>Want to see the evidence behind the findings?</strong><br>View the 62 item Evidence Index used to support the sample analysis.</p>
-                <a href="/evidence-index" class="offer-link">VIEW EVIDENCE INDEX →</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- RIGHT: Business X-Ray -->
-          <div class="offer-column">
-            <div class="founding-header">
-              <div class="kicker">Business X Ray Private Diagnostic</div>
+        <p class="kicker">INTELLIGENCE PRODUCTS</p>
+        <h2>Defined questions. Evidence-led investigation. Executive intelligence.</h2>
+        <div class="product-intro">
+          <p>KINGLIS Intelligence Products investigate defined organizational or professional questions using existing records, purpose-built diagnostic evidence, or both.</p>
+          <p>Each product applies KINGLIS evidence processing and intelligence methods to a specific decision problem.</p>
+        </div>
+        <div class="offer-grid">
+          <div class="offer-card">
+            <div class="founding-header" style="margin-bottom:1rem;">
+              <div class="kicker" style="margin:0 0 .35rem;">BUSINESS X-RAY™</div>
               <div class="founding-price">From $1,900</div>
-              <div class="muted">Founding private engagement</div>
             </div>
-            <div class="offer-grid">
-              <div class="offer-card">
-                <p>Something is happening in the business. The usual explanation no longer fully accounts for it.</p>
-                <p>Examine one defined business outcome through the working evidence your organization already generates.</p>
-                <a href="/business-xray" class="offer-link">EXPLORE BUSINESS X RAY →</a>
-                <span class="offer-note">Private evidence led organizational diagnostic.</span>
-              </div>
-              <div class="offer-card">
-                <p><strong>Not sure whether the visible problem is the actual problem?</strong></p>
-                <p>Business X Ray traces how work, decisions, ownership, information and dependencies interacted around the outcome.</p>
-                <a href="#contact" class="offer-link">DISCUSS THE OUTCOME →</a>
-              </div>
+            <p><strong>Examine one defined organizational outcome through the evidence your organization already generates.</strong></p>
+            <p>Something is happening in the business. The usual explanation no longer fully accounts for it.</p>
+            <p>Business X-Ray™ traces the work, decisions, information, ownership and dependencies evidenced around one defined outcome.</p>
+            <a href="/business-xray" class="offer-link">EXPLORE BUSINESS X-RAY™ →</a>
+            <span class="offer-note">Private evidence-led organizational diagnostic.</span>
+          </div>
+          <div class="offer-card">
+            <div class="founding-header" style="margin-bottom:1rem;">
+              <div class="kicker" style="margin:0 0 .35rem;">EVIDENCE CHRONOLOGY™</div>
+              <div class="muted">Evidence structuring for new matters</div>
             </div>
+            <p><strong>Initial chronology and evidence summary for new client matters.</strong></p>
+            <p>Client evidence arrives fragmented. Evidence Chronology™ structures the submitted material into a source-grounded evidence index, people and parties record, chronology, material events, differing accounts and evidence questions.</p>
+            <p><em>We build the chronology. You apply the law.</em></p>
+            <span class="offer-note">Illustrative method component. Displayed without CTA to avoid broken route.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- DIFFERENCE - LIGHT -->
-    <section id="this-is" class="section-light">
+    <section id="method" class="section-light">
       <div class="container">
-        <p class="kicker">The Difference</p>
-        <h2>We don't begin with recommendations. We begin with understanding.</h2>
+        <p class="kicker">THE METHOD</p>
+        <h2>Intelligence before intervention.</h2>
+        <div class="product-intro">
+          <p>Organizations are often redesigned from reported problems, assumed causes or preferred solutions.</p>
+          <p>KINGLIS begins earlier.</p>
+          <p>We examine the available organizational evidence, establish what it supports and identify the conditions requiring executive attention.</p>
+        </div>
         <div class="method-steps">
           <div class="step">
-            <h3>Understandning Precedes Change</h3>
-            <p>Many organizations attempt to solve problems before understanding the organizational architecture producing them.</p>
+            <h3>EVIDENCE BEFORE ASSUMPTION</h3>
+            <p>What does the available organizational record support?</p>
           </div>
           <div class="arrow" aria-hidden="true">↓</div>
           <div class="step">
-            <h3>We Take a Different Approach</h3>
-            <p>Before redesigning governance, restructuring teams, implementing technology or introducing change, we first establish a disciplined understanding of how the organization actually operates.</p>
+            <h3>INTELLIGENCE BEFORE INTERVENTION</h3>
+            <p>What conditions, relationships, routes or patterns are structurally significant?</p>
           </div>
           <div class="arrow" aria-hidden="true">↓</div>
           <div class="step">
-            <h3>Because better decisions begin with better understanding.</h3>
+            <h3>ADVISORY WHERE REQUIRED</h3>
+            <p>What should leadership validate, redesign or change?</p>
+          </div>
+        </div>
+        <p style="margin-top:2rem;"><em>Better organizational decisions require a defensible understanding of the conditions producing the outcome.</em></p>
+      </div>
+    </section>
+
+    <section id="dossier" class="section-light">
+      <div class="container">
+        <p class="kicker">SEE THE METHOD APPLIED</p>
+        <h2>Illustrative Executive Dossier</h2>
+        <p>Explore a controlled evidence demonstration showing how KINGLIS moves from organizational evidence to executive intelligence.</p>
+        <div class="offer-grid" style="margin-top:1.75rem;">
+          <div class="offer-card">
+            <p>View an illustrative Executive Dossier built from a controlled evidence demonstration.</p>
+            <a href="/sample-dossier" class="offer-link">VIEW SAMPLE DOSSIER →</a>
+            <span class="offer-note">Organization details replaced. Illustrative evidence demonstration.</span>
+          </div>
+          <div class="offer-card">
+            <p><strong>Want to see the evidence behind the findings?</strong><br>View the 62-item Evidence Index used to support the sample analysis.</p>
+            <a href="/evidence-index" class="offer-link">VIEW EVIDENCE INDEX →</a>
+            <span class="offer-note">Source-grounded index. Evidence-led demonstration.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FOUNDER - LIGHT -->
     <section id="founder" class="section-light">
       <div class="container">
         <div class="founder-section">
@@ -246,25 +228,23 @@
           <div class="founder-text">
             <p class="kicker">Founder</p>
             <h2>Kaylee-Jane</h2>
-            <p>Kaylee-Jane founded KINGLIS to establish organizational intelligence as a practical discipline for executive decision-making.</p>
-            <p>Her work combines organizational architecture, governance, operating models, systems inquiry and evidence-led analysis to help organizations understand the conditions shaping performance.</p>
-            <p>Rather than beginning with assumptions or recommendations, she begins with evidence—revealing the structures, relationships and behaviours that drive organizational outcomes before designing meaningful change.</p>
+            <p>Kaylee-Jane founded KINGLIS to establish Organizational Intelligence as a practical discipline for executive decision-making.</p>
+            <p>Her work sits across organizational architecture, governance, operating models and evidence-led systems inquiry—examining how organizational conditions shape outcomes.</p>
+            <p>Rather than beginning with assumptions or recommendations, she begins with evidence—examining the structures, relationships and patterns associated with organizational outcomes before determining what requires further investigation or change.</p>
             <p><a href="https://www.linkedin.com/kaylee-jane/" target="_blank" rel="noopener">LinkedIn →</a></p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT - DARK -->
     <section id="contact" class="section-dark contact-section">
       <div class="container">
         <p class="kicker">Start a Conversation</p>
         <h2>Perhaps the problem isn't the problem.</h2>
-        <p class="muted">The architecture producing it may be..</p>
+        <p class="muted">The architecture producing it may be.</p>
         <p class="muted">Tell us what you're seeing.</p>
         <p class="muted">A recurring decision. Work that keeps returning. A process that doesn't hold. An outcome nobody can quite explain.</p>
         <p class="muted">You don't need to diagnose the problem before you contact KINGLIS. Start with what keeps happening.</p>
-
         <form action="https://formspree.io/f/meebrwjw" method="POST" class="oi-form">
           <div class="form-top">
             <label>Name
@@ -287,11 +267,11 @@
       </div>
     </section>
 
-    <!-- FIRST PRINCIPLES - LIGHT -->
-    <section id="believe" class="section-light">
+    <section id="first-principles" class="section-light">
       <div class="container">
-        <p class="kicker">First Principles</p>
-        <h2>Organizational architecture is the system of relationships through which information flows, decisions are made, accountability is held and work gets done.</h2>
+        <p class="kicker">FIRST PRINCIPLES</p>
+        <h2>Organizations leave evidence of how work moves, decisions travel, responsibility is held and outcomes emerge.</h2>
+        <p>KINGLIS examines that evidence to support better organizational decisions.</p>
       </div>
     </section>
   </main>
@@ -302,7 +282,7 @@
       <div class="small">Organizational Intelligence</div>
       <div class="small">Founded by Kaylee-Jane Inglis</div>
       <div class="small">www.thisiskinglis.com · <a href="resources/">Research Library</a></div>
-      <p class="small"><em>KINGLIS Platform™, Diagnostics™, Advisory™, Knowledge™ and associated products, methodologies and frameworks are proprietary to KINGLIS. Evidence submitted through KINGLIS technology remains client property.</em></p>
+      <p class="small"><em>KINGLIS™, Organizational Intelligence methods, diagnostic instruments, evidence classifications, analytical frameworks and associated product methodologies are proprietary to KINGLIS. Evidence submitted through KINGLIS technology remains client property.</em></p>
     </div>
   </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
