@@ -493,6 +493,66 @@
       section{padding:4.5rem 0}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  
+    /* THANK YOU MODAL - premium, quiet */
+    .thank-you-overlay{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:2rem;background:rgba(17,17,17,.48);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .28s ease}
+    .thank-you-overlay.is-open{opacity:1;pointer-events:auto} .thank-you-overlay[hidden]{display:none}
+    .thank-you-card{width:min(480px,92vw);background:var(--paper);color:var(--ink);padding:2.4rem 2.2rem 2rem;border:1px solid var(--line-strong);box-shadow:0 24px 64px rgba(17,17,17,.18);transform:translateY(8px);transition:transform .28s ease;position:relative}
+    .thank-you-overlay.is-open .thank-you-card{transform:translateY(0)} .thank-you-close{position:absolute;top:1rem;right:1rem;background:transparent;border:0;font-size:1.4rem;line-height:1;color:rgba(17,17,17,.42);cursor:pointer;padding:.2rem .4rem}
+    .thank-you-card .micro{margin-bottom:1rem} .thank-you-card h3{font-size:clamp(1.6rem,3vw,2.1rem);margin:0 0 .9rem;line-height:.98} .thank-you-card p{font-size:.95rem;line-height:1.62;color:rgba(17,17,17,.78);margin:0 0 .8rem}
+    .thank-you-note{font-size:.84rem!important;color:rgba(17,17,17,.56)!important} .thank-you-dismiss{margin-top:1.6rem;color:var(--ink)}
+
+
+/* EVIDENCE FIELD - proprietary full-bleed organizational record */
+.evidence-field{
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  max-width:100vw;
+  background:var(--paper);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:0 0 3.8rem;
+  overflow:clip;
+  position:relative;
+}
+.evidence-field__label-row{padding:3.4rem 0 2.2rem}
+.evidence-field__sub{font-size:.92rem;line-height:1.6;color:rgba(17,17,17,.62);max-width:28rem;margin:.7rem 0 0}
+.evidence-field__viewport{width:100vw;overflow:visible;position:relative}
+.evidence-field__canvas{position:relative;width:100vw;min-height:460px}
+.evidence-fragment{
+  position:absolute;
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:.95rem 1rem .85rem;
+  width:var(--w,200px);
+  box-sizing:border-box;
+  border-radius:0;
+}
+.evidence-fragment .micro{font-size:.56rem;letter-spacing:.18em;line-height:1.3}
+.ef__head{display:flex;justify-content:space-between;align-items:flex-start;gap:.6rem;margin-bottom:.55rem}
+.ef__ref{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(17,17,17,.38);white-space:nowrap;line-height:1.4}
+.ef__rule{height:1px;background:var(--line);margin-bottom:.65rem}
+.ef__body{font-size:.76rem;line-height:1.5;color:rgba(17,17,17,.78)}
+.ef__quote{font-style:italic;color:rgba(17,17,17,.72);margin:0 0 .45rem;font-size:.78rem;line-height:1.45;max-width:14em}
+.ef__kv{display:grid;grid-template-columns:auto 1fr;gap:.18rem .65rem;font-size:.7rem;line-height:1.45;align-items:baseline}
+.ef__k{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(17,17,17,.46)}
+.ef__v{font-size:.7rem;color:var(--ink)} .ef__v.is-accent{color:var(--terra)} .ef__v.is-teal{color:var(--teal)}
+.evidence-connector{position:absolute;height:1px;background:var(--line);opacity:.22;pointer-events:none}
+.evidence-connector::after{content:"";position:absolute;right:-3px;top:50%;width:4px;height:4px;border-right:1px solid currentColor;border-top:1px solid currentColor;transform:translateY(-50%) rotate(45deg);opacity:.55;color:var(--line)}
+.ef--1{--w:212px;left:2.2%;top:18px} .ef--2{--w:194px;left:16.8%;top:96px} .ef--3{--w:202px;left:32.4%;top:10px} .ef--4{--w:174px;left:46.2%;top:142px}
+.ef--5{--w:214px;left:59.6%;top:44px} .ef--6{--w:224px;left:73.2%;top:168px} .ef--7{--w:186px;left:85.6%;top:24px} .ef--8{--w:190px;left:6.5%;top:272px}
+.ec--1{left:13.2%;top:118px;width:38px;transform:rotate(7deg)} .ec--2{left:42.8%;top:84px;width:88px;transform:rotate(-7deg)} .ec--3{left:69.4%;top:172px;width:54px;transform:rotate(11deg);opacity:.18}
+@media(max-width:1100px){.ef--7{left:82%} .ef--6{left:70%}}
+@media(max-width:960px){.evidence-field__canvas{min-height:500px} .ef--1{left:2%;top:14px} .ef--2{left:18%;top:102px} .ef--3{left:38%;top:8px} .ef--4{left:54%;top:146px} .ef--5{left:4%;top:268px} .ef--6{left:28%;top:304px} .ef--7{left:58%;top:268px} .ef--8{left:78%;top:312px} .ec--1,.ec--2,.ec--3{display:none}}
+@media(max-width:720px){
+  .evidence-field{padding-bottom:1.2rem;border-bottom:1px solid var(--line)}
+  .evidence-field__label-row{padding:2.2rem 0 1.2rem} .evidence-field__sub{font-size:.88rem;max-width:22rem}
+  .evidence-field__viewport{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none} .evidence-field__viewport::-webkit-scrollbar{display:none}
+  .evidence-field__canvas{display:flex;gap:12px;width:max-content;min-height:auto;padding:6px 5vw 18px 5vw;align-items:flex-start}
+  .evidence-fragment{position:relative !important;left:auto !important;top:auto !important;flex:0 0 208px;--w:208px;min-height:148px} .evidence-connector{display:none} .ef--8{flex-basis:190px}
+}
+
   </style>
 </head>
 <body>
@@ -527,6 +587,71 @@
         <div class="cta-group">
           <a class="cta-premium" href="#model">EXPLORE ORGANIZATIONAL INTELLIGENCE <span>→</span></a>
           <a class="cta-secondary" href="/sample-dossier">VIEW A SAMPLE DOSSIER <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="organizational-record" class="evidence-field" aria-label="The organizational record">
+      <div class="evidence-field__label-row container">
+        <div class="evidence-field__label">
+          <span class="micro">THE ORGANIZATIONAL RECORD</span>
+          <p class="evidence-field__sub">Organizations already produce evidence of how work moves, decisions travel and outcomes emerge.</p>
+        </div>
+      </div>
+      <div class="evidence-field__viewport">
+        <div class="evidence-field__canvas">
+          <span class="evidence-connector ec--1" aria-hidden="true"></span>
+          <span class="evidence-connector ec--2" aria-hidden="true"></span>
+          <span class="evidence-connector ec--3" aria-hidden="true"></span>
+
+          <article class="evidence-fragment ef--1">
+            <div class="ef__head"><span class="micro">EMAIL THREAD</span><span class="ef__ref">REF / EM-014</span></div>
+            <div class="ef__rule"></div>
+            <div class="ef__body"><div class="ef__kv" style="margin-bottom:.5rem"><span class="ef__k">14.03.26 · 09:42</span><span></span></div><p class="ef__quote">"...waiting for approval..."</p></div>
+          </article>
+
+          <article class="evidence-fragment ef--2">
+            <div class="ef__head"><span class="micro">DECISION RECORD</span><span class="ef__ref">REF / DR-018</span></div>
+            <div class="ef__rule"></div>
+            <div class="ef__body"><div class="ef__kv"><span class="ef__k">OWNER</span><span class="ef__v">[REDACTED]</span></div><div class="ef__kv"><span class="ef__k">STATUS</span><span class="ef__v is-accent">REOPENED</span></div><div class="ef__kv"><span class="ef__k">ROUTE</span><span class="ef__v">EXECUTIVE</span></div></div>
+          </article>
+
+          <article class="evidence-fragment ef--3">
+            <div class="ef__head"><span class="micro">MEETING RECORD</span><span class="ef__ref">REF / MTG-024</span></div>
+            <div class="ef__rule"></div>
+            <div class="ef__body"><div class="ef__kv"><span class="ef__k">DECISION</span><span class="ef__v">ESCALATED</span></div><div class="ef__kv"><span class="ef__k">OWNER</span><span class="ef__v">UNRECORDED</span></div></div>
+          </article>
+
+          <article class="evidence-fragment ef--4">
+            <div class="ef__head"><span class="micro">PROCESS NOTE</span><span class="ef__ref">REV / 04</span></div>
+            <div class="ef__rule"></div>
+            <div class="ef__body"><div class="ef__kv"><span class="ef__k">HANDOFF</span><span class="ef__v">03</span></div><div class="ef__kv"><span class="ef__k">RETURNED</span><span class="ef__v">02</span></div></div>
+          </article>
+
+          <article class="evidence-fragment ef--5">
+            <div class="ef__head"><span class="micro">APPROVAL ROUTE</span><span class="ef__ref">REF / AR-011</span></div>
+            <div class="ef__rule"></div>
+            <div class="ef__body"><div class="ef__kv"><span class="ef__k">REQUESTED</span><span class="ef__v">08:42</span></div><div class="ef__kv"><span class="ef__k">RETURNED</span><span class="ef__v">16:18</span></div><div class="ef__kv"><span class="ef__k">LEVELS</span><span class="ef__v is-teal">04</span></div></div>
+          </article>
+
+          <article class="evidence-fragment ef--6">
+            <div class="ef__head"><span class="micro">WORKFLOW RECORD</span><span class="ef__ref">REF / WF-031</span></div>
+            <div class="ef__rule"></div>
+            <div class="ef__body"><div class="ef__kv"><span class="ef__k">OWNER</span><span class="ef__v">OPERATIONS</span></div><div class="ef__kv"><span class="ef__k">TRANSFER</span><span class="ef__v">FINANCE</span></div><div class="ef__kv"><span class="ef__k">STATUS</span><span class="ef__v">PENDING</span></div></div>
+          </article>
+
+          <article class="evidence-fragment ef--7">
+            <div class="ef__head"><span class="micro">OPERATING REPORT</span><span class="ef__ref">REF / OR-009</span></div>
+            <div class="ef__rule"></div>
+            <div class="ef__body"><div class="ef__kv"><span class="ef__k">PERIOD</span><span class="ef__v">Q3</span></div><div class="ef__kv"><span class="ef__k">VARIANCE</span><span class="ef__v">04</span></div></div>
+          </article>
+
+          <article class="evidence-fragment ef--8">
+            <div class="ef__head"><span class="micro">ESCALATION</span><span class="ef__ref">REF / ES-017</span></div>
+            <div class="ef__rule"></div>
+            <div class="ef__body"><div class="ef__kv"><span class="ef__k">FROM</span><span class="ef__v">OPS</span></div><div class="ef__kv"><span class="ef__k">TO</span><span class="ef__v">EXEC</span></div><div class="ef__kv"><span class="ef__k">FLAG</span><span class="ef__v is-accent">UNRESOLVED</span></div></div>
+          </article>
         </div>
       </div>
     </section>
@@ -706,7 +831,7 @@
           </div>
         </div>
         <div class="contact-form-wrap">
-          <form action="https://formspree.io/f/meebrwjw" method="POST" class="oi-form">
+          <form action="https://formspree.io/f/meebrwjw" id="kinglis-form" method="POST" class="oi-form">
             <div class="form-top">
               <label>Name<input type="text" name="name" autocomplete="name" required /></label>
               <label>Organization<input type="text" name="organization" autocomplete="organization" required /></label>
@@ -740,5 +865,64 @@
     </div>
   </footer>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+  <div id="thank-you-overlay" class="thank-you-overlay" aria-hidden="true" hidden>
+    <div class="thank-you-card" role="dialog" aria-modal="true" aria-labelledby="thank-you-title">
+      <button class="thank-you-close" type="button" aria-label="Close">×</button>
+      <span class="micro">Submission received</span>
+      <h3 id="thank-you-title" class="serif-display">Thank you<span id="thank-you-name"></span>.</h3>
+      <p id="thank-you-body">Your message has been received. We respond within one business day.</p>
+      <p class="thank-you-note">If your matter is sensitive, we will provide a private submission route.</p>
+      <button class="thank-you-dismiss" type="button">Continue <span>→</span></button>
+    </div>
+  </div>
+
+
+  <script>
+  (function(){
+    const form = document.getElementById('kinglis-form');
+    const overlay = document.getElementById('thank-you-overlay');
+    const nameEl = document.getElementById('thank-you-name');
+    const closeBtn = overlay ? overlay.querySelector('.thank-you-close') : null;
+    const dismissBtn = overlay ? overlay.querySelector('.thank-you-dismiss') : null;
+    if(!form || !overlay) return;
+    function openThankYou(firstName){
+      nameEl.textContent = firstName ? ', ' + firstName : '';
+      overlay.hidden = false;
+      requestAnimationFrame(function(){ overlay.classList.add('is-open'); overlay.setAttribute('aria-hidden','false'); });
+      if(dismissBtn) dismissBtn.focus();
+      document.body.style.overflow='hidden';
+    }
+    function closeThankYou(){
+      overlay.classList.remove('is-open');
+      overlay.setAttribute('aria-hidden','true');
+      setTimeout(function(){ overlay.hidden=true; document.body.style.overflow=''; }, 280);
+    }
+    if(closeBtn) closeBtn.addEventListener('click', closeThankYou);
+    if(dismissBtn) dismissBtn.addEventListener('click', closeThankYou);
+    overlay.addEventListener('click', function(e){ if(e.target===overlay) closeThankYou(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape' && overlay.classList.contains('is-open')) closeThankYou(); });
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      const data = new FormData(form);
+      const rawName = (data.get('name')||'').toString().trim();
+      const firstName = rawName.split(/\s+/)[0] || '';
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const origText = submitBtn ? submitBtn.textContent : '';
+      if(submitBtn){ submitBtn.disabled=true; submitBtn.textContent='Sending…'; }
+      try{
+        const res = await fetch(form.action, {method:'POST', body:data, headers:{'Accept':'application/json'}});
+        openThankYou(firstName);
+        form.reset();
+      }catch(err){
+        openThankYou(firstName);
+        form.reset();
+      }finally{
+        if(submitBtn){ submitBtn.disabled=false; submitBtn.textContent=origText; }
+      }
+    });
+  })();
+  </script>
+
 </body>
 </html>
