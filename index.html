@@ -552,6 +552,18 @@
   .evidence-field__canvas{display:flex;gap:12px;width:max-content;min-height:auto;padding:6px 5vw 18px 5vw;align-items:flex-start}
   .evidence-fragment{position:relative !important;left:auto !important;top:auto !important;flex:0 0 208px;--w:208px;min-height:148px} .evidence-connector{display:none} .ef--8{flex-basis:190px}
 }
+    .ef--inverted{
+  background:var(--ink); /* #1A1816 */
+  border-color:rgba(248,247,245,.18);
+  color:var(--paper);
+}
+.ef--inverted .micro{color:rgba(248,247,245,.58)}
+.ef--inverted .ef__ref{color:rgba(248,247,245,.42)}
+.ef--inverted .ef__rule{background:rgba(248,247,245,.18)}
+.ef--inverted .ef__k{color:rgba(248,247,245,.52)}
+.ef--inverted .ef__v{color:var(--paper)}
+.ef--inverted .ef__v.is-accent{color:#D89A8C} /* lighter terracotta for dark bg */
+.ef--inverted .ef__v.is-teal{color:#8FB9B6}
 
   </style>
 </head>
@@ -611,11 +623,11 @@
             <div class="ef__body"><div class="ef__kv" style="margin-bottom:.5rem"><span class="ef__k">14.03.26 · 09:42</span><span></span></div><p class="ef__quote">"...waiting for approval..."</p></div>
           </article>
 
-          <article class="evidence-fragment ef--2">
-            <div class="ef__head"><span class="micro">DECISION RECORD</span><span class="ef__ref">REF / DR-018</span></div>
-            <div class="ef__rule"></div>
-            <div class="ef__body"><div class="ef__kv"><span class="ef__k">OWNER</span><span class="ef__v">[REDACTED]</span></div><div class="ef__kv"><span class="ef__k">STATUS</span><span class="ef__v is-accent">REOPENED</span></div><div class="ef__kv"><span class="ef__k">ROUTE</span><span class="ef__v">EXECUTIVE</span></div></div>
-          </article>
+          <article class="evidence-fragment ef--2 ef--inverted">
+  <div class="ef__head"><span class="micro">DECISION RECORD</span><span class="ef__ref">REF / DR-018</span></div>
+  <div class="ef__rule"></div>
+  <div class="ef__body"><div class="ef__kv"><span class="ef__k">OWNER</span><span class="ef__v">[REDACTED]</span></div><div class="ef__kv"><span class="ef__k">STATUS</span><span class="ef__v is-accent">REOPENED</span></div><div class="ef__kv"><span class="ef__k">ROUTE</span><span class="ef__v">EXECUTIVE</span></div></div>
+</article>
 
           <article class="evidence-fragment ef--3">
             <div class="ef__head"><span class="micro">MEETING RECORD</span><span class="ef__ref">REF / MTG-024</span></div>
@@ -629,11 +641,11 @@
             <div class="ef__body"><div class="ef__kv"><span class="ef__k">HANDOFF</span><span class="ef__v">03</span></div><div class="ef__kv"><span class="ef__k">RETURNED</span><span class="ef__v">02</span></div></div>
           </article>
 
-          <article class="evidence-fragment ef--5">
-            <div class="ef__head"><span class="micro">APPROVAL ROUTE</span><span class="ef__ref">REF / AR-011</span></div>
-            <div class="ef__rule"></div>
-            <div class="ef__body"><div class="ef__kv"><span class="ef__k">REQUESTED</span><span class="ef__v">08:42</span></div><div class="ef__kv"><span class="ef__k">RETURNED</span><span class="ef__v">16:18</span></div><div class="ef__kv"><span class="ef__k">LEVELS</span><span class="ef__v is-teal">04</span></div></div>
-          </article>
+          <article class="evidence-fragment ef--5 ef--inverted">
+  <div class="ef__head"><span class="micro">APPROVAL ROUTE</span><span class="ef__ref">REF / AR-011</span></div>
+  <div class="ef__rule"></div>
+  <div class="ef__body"><div class="ef__kv"><span class="ef__k">REQUESTED</span><span class="ef__v">08:42</span></div><div class="ef__kv"><span class="ef__k">RETURNED</span><span class="ef__v">16:18</span></div><div class="ef__kv"><span class="ef__k">LEVELS</span><span class="ef__v is-teal">04</span></div></div>
+</article>
 
           <article class="evidence-fragment ef--6">
             <div class="ef__head"><span class="micro">WORKFLOW RECORD</span><span class="ef__ref">REF / WF-031</span></div>
@@ -641,11 +653,11 @@
             <div class="ef__body"><div class="ef__kv"><span class="ef__k">OWNER</span><span class="ef__v">OPERATIONS</span></div><div class="ef__kv"><span class="ef__k">TRANSFER</span><span class="ef__v">FINANCE</span></div><div class="ef__kv"><span class="ef__k">STATUS</span><span class="ef__v">PENDING</span></div></div>
           </article>
 
-          <article class="evidence-fragment ef--7">
-            <div class="ef__head"><span class="micro">OPERATING REPORT</span><span class="ef__ref">REF / OR-009</span></div>
-            <div class="ef__rule"></div>
-            <div class="ef__body"><div class="ef__kv"><span class="ef__k">PERIOD</span><span class="ef__v">Q3</span></div><div class="ef__kv"><span class="ef__k">VARIANCE</span><span class="ef__v">04</span></div></div>
-          </article>
+          <article class="evidence-fragment ef--7 ef--inverted">
+  <div class="ef__head"><span class="micro">OPERATING REPORT</span><span class="ef__ref">REF / OR-009</span></div>
+  <div class="ef__rule"></div>
+  <div class="ef__body"><div class="ef__kv"><span class="ef__k">PERIOD</span><span class="ef__v">Q3</span></div><div class="ef__kv"><span class="ef__k">VARIANCE</span><span class="ef__v">04</span></div></div>
+</article>
 
           <article class="evidence-fragment ef--8">
             <div class="ef__head"><span class="micro">ESCALATION</span><span class="ef__ref">REF / ES-017</span></div>
