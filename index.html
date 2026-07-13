@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/og-image.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/og-image.png">
   <link rel="apple-touch-icon" href="assets/og-image.png">
-  <meta name="theme-color" content="#F9F8F7">
+  <meta name="theme-color" content="#FBF6F0">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="KINGLIS" />
   <meta property="og:title" content="KINGLIS | Organizational Intelligence" />
@@ -18,31 +18,458 @@
   <meta property="og:url" content="https://thisiskinglis.com/" />
   <meta property="og:image" content="https://thisiskinglis.com/assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="KINGLIS | Organizational Intelligence" />
-  <meta name="twitter:description" content="Independent Organizational Intelligence before transformation." />
-  <meta name="twitter:image" content="https://thisiskinglis.com/assets/og-image.png" />
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="KINGLIS | Organizational Intelligence">
   <link rel="stylesheet" href="/assets/css/style.css" />
   <style>
-    .hero-model{margin:1.75rem 0 2.25rem;font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;line-height:1.6;color:#2F4D4F}
-    .cta-group{display:flex;flex-wrap:wrap;gap:1rem 1.75rem;align-items:center;margin-top:1.25rem}
-    .cta-secondary{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
-    .model-sequence{display:grid;gap:2.25rem;margin-top:2.5rem}
-    .model-stage{border-top:1px solid rgba(17,17,17,.12);padding-top:1.6rem}
-    .section-dark .model-stage{border-top-color:rgba(251,246,240,.14)}
-    .model-label{display:block;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:#8A7A5A;margin-bottom:.7rem}
-    .model-arrow{font-size:1.1rem;line-height:1;opacity:.32;margin:.2rem 0}
-    .close-statement{margin-top:2.75rem;padding-top:1.6rem;border-top:1px solid rgba(17,17,17,.12)}
-    .section-dark .close-statement{border-top-color:rgba(251,246,240,.14)}
-    .close-statement p{margin:0;line-height:1.6}
-    .close-statement p+p{margin-top:.4rem}
-    .product-intro{max-width:48rem;margin:0 0 2rem}
-    @media(min-width:900px){
-      .model-sequence.three-col{grid-template-columns:1fr 1fr 1fr;align-items:start}
-      .model-sequence.three-col .model-arrow{display:none}
+    :root{
+      --paper:#FBF6F0;
+      --ink:#111111;
+      --teal:#2F4D4F;
+      --olive:#8A7A5A;
+      --terra:#A9442A;
+      --line:rgba(17,17,17,.12);
+      --line-strong:rgba(17,17,17,.18);
+      --line-light:rgba(251,246,240,.14);
     }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .container{
+      width:min(1180px,92vw);
+      margin-inline:auto;
+    }
+    /* Header - quiet institutional */
+    header{
+      border-bottom:1px solid var(--line);
+      background:var(--paper);
+    }
+    header .container{padding:1.25rem 0}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:2rem}
+    .brand .small{
+      font-size:.62rem;
+      letter-spacing:.28em;
+      text-transform:uppercase;
+      color:var(--olive);
+    }
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:1.6rem;
+      margin:0;
+      padding:0;
+      flex-wrap:wrap;
+    }
+    nav a{
+      font-size:.72rem;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:rgba(17,17,17,.72);
+      padding-bottom:2px;
+      border-bottom:1px solid transparent;
+      transition:border-color .2s, color .2s;
+    }
+    nav a:hover{color:var(--ink);border-color:var(--line-strong)}
+    .skip-link{position:absolute;left:-9999px}
+    /* Micro labels */
+    .micro{
+      display:inline-block;
+      font-size:.62rem;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:var(--olive);
+      line-height:1.4;
+    }
+    .serif-display{
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      font-weight:400;
+      letter-spacing:-.02em;
+      line-height:.98;
+      text-wrap:balance;
+    }
+    /* Sections */
+    section{padding:7.5rem 0;border-bottom:1px solid var(--line)}
+    section.section-dark{
+      background:var(--ink);
+      color:var(--paper);
+      border-bottom-color:rgba(251,246,240,.08);
+    }
+    section.section-dark .micro{color:var(--olive)}
+    /* HERO - monograph opening */
+    .hero{padding:6rem 0 8rem;background:var(--paper);border-bottom:1px solid var(--line)}
+    .hero-top{margin-bottom:5.5rem}
+    .hero h1{
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      font-weight:400;
+      font-size:clamp(2.9rem,6.2vw,5.4rem);
+      line-height:.92;
+      letter-spacing:-.03em;
+      margin:0;
+      max-width:11.5em;
+      text-align:left;
+      text-wrap:balance;
+      hyphens:none;
+    }
+    .hero .lead{
+      margin:2rem 0 0;
+      max-width:34rem;
+      font-size:1.08rem;
+      line-height:1.65;
+      color:var(--teal);
+    }
+    .hero-rule{
+      width:100%;
+      height:1px;
+      background:var(--line);
+      margin:2.25rem 0 1.5rem;
+      max-width:34rem;
+    }
+    .hero-model{
+      font-size:.72rem;
+      letter-spacing:.26em;
+      text-transform:uppercase;
+      color:var(--teal);
+      margin-bottom:2.5rem;
+    }
+    .cta-group{display:flex;flex-wrap:wrap;gap:1rem 2.25rem;align-items:center}
+    .cta-premium, .cta-secondary, .product-cta, .lineage-link, .founder-link{
+      display:inline-flex;
+      align-items:center;
+      gap:.45rem;
+      font-size:.74rem;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      border-bottom:1px solid currentColor;
+      padding-bottom:3px;
+      line-height:1.2;
+    }
+    .cta-premium{color:var(--ink)}
+    .cta-secondary{color:rgba(17,17,17,.68);border-bottom-color:rgba(17,17,17,.22)}
+    .cta-secondary:hover, .cta-premium:hover{opacity:.78}
+    /* MODEL - architectural system */
+    .section-header .serif-display{font-size:clamp(2.2rem,4.5vw,3.6rem);margin:.9rem 0 1.5rem}
+    .intro-grid{max-width:48rem}
+    .intro-grid p{line-height:1.65;color:rgba(17,17,17,.82);margin:0 0 .9rem}
+    .model-system{margin-top:4rem;border-top:1px solid var(--line);padding-top:0}
+    .model-stages{
+      display:grid;
+      grid-template-columns:1fr 48px 1.25fr 48px 1fr;
+      gap:0;
+      align-items:start;
+    }
+    .stage{
+      padding:2.2rem 1.6rem 0 0;
+      border-right:1px solid transparent;
+      position:relative;
+    }
+    .stage--emphasis{
+      padding-left:1.8rem;
+      padding-right:1.8rem;
+      background:rgba(47,77,79,.04);
+      border-left:1px solid var(--line);
+      border-right:1px solid var(--line);
+      margin-top:-1px;
+    }
+    .stage-index{
+      font-size:.68rem;
+      letter-spacing:.18em;
+      color:var(--olive);
+      margin-bottom:1.1rem;
+    }
+    .stage-meta{display:flex;flex-direction:column;gap:.18rem;margin-bottom:1rem}
+    .stage-sub{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
+    .stage h3{
+      font-family:Georgia, Times, serif;
+      font-weight:400;
+      font-size:1.28rem;
+      line-height:1.18;
+      letter-spacing:-.01em;
+      margin:0 0 .9rem;
+      max-width:14em;
+    }
+    .stage p{font-size:.92rem;line-height:1.62;color:rgba(17,17,17,.78);margin:0 0 .75rem}
+    .stage-list{
+      margin-top:1.4rem;
+      padding-top:1rem;
+      border-top:1px solid var(--line);
+      display:flex;
+      flex-direction:column;
+      gap:.32rem;
+    }
+    .stage-list span{
+      font-size:.68rem;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:rgba(17,17,17,.56);
+    }
+    .stage-connector{
+      display:flex;align-items:flex-start;justify-content:center;
+      padding-top:4.2rem;
+      font-size:.9rem;
+      opacity:.28;
+    }
+    .close-statement{
+      margin-top:3.5rem;
+      padding-top:1.6rem;
+      border-top:1px solid var(--line);
+      display:grid;
+      gap:.2rem;
+      max-width:28rem;
+    }
+    .close-statement p{
+      font-family:Georgia, Times, serif;
+      font-size:1.18rem;
+      line-height:1.35;
+      margin:0;
+      letter-spacing:-.01em;
+    }
+    /* PROBLEM - condition field */
+    #problem .serif-display{font-size:clamp(1.9rem,3.8vw,3rem);margin:.8rem 0 3rem}
+    .condition-field{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      border-top:1px solid var(--line);
+      border-left:1px solid var(--line);
+    }
+    .condition{
+      padding:1.6rem 1.5rem;
+      border-right:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      min-height:92px;
+    }
+    .condition--wide{grid-column:1 / -1}
+    .condition p{margin:.55rem 0 0;font-size:.95rem;line-height:1.5;color:rgba(17,17,17,.78)}
+    .outcome-statement{margin-top:4.5rem;max-width:42rem}
+    .outcome-statement .serif-display{font-size:clamp(1.8rem,3.2vw,2.6rem);margin:0 0 .9rem;letter-spacing:-.015em}
+    .outcome-sub{font-family:Georgia, Times, serif;font-size:1.25rem;line-height:1.3;margin:0 0 1.2rem}
+    .outcome-note{font-size:.92rem;line-height:1.6;color:rgba(17,17,17,.62);max-width:36rem}
+    /* PRODUCTS - index */
+    #products .serif-display{font-size:clamp(1.9rem,3.6vw,2.9rem);margin:.8rem 0 1.2rem;max-width:16em}
+    .product-intro{max-width:38rem;margin:0 0 3.5rem}
+    .product-intro p{line-height:1.65;color:rgba(17,17,17,.78);margin:0 0 .8rem}
+    .product-index{border-top:1px solid var(--line)}
+    .product{
+      display:grid;
+      grid-template-columns:110px 1fr;
+      gap:.4rem 2.8rem;
+      padding:3.2rem 0;
+    }
+    .product-index-num{grid-column:1;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--olive);padding-top:.35rem}
+    .product-header{grid-column:2;display:flex;flex-wrap:wrap;align-items:baseline;gap:.9rem 1.2rem;margin-bottom:.6rem}
+    .product-header h3{font-family:Georgia, Times, serif;font-weight:400;font-size:1.45rem;letter-spacing:-.01em;margin:0;line-height:1.1}
+    .product-statement{
+      grid-column:2;
+      font-family:Georgia, Times, serif;
+      font-size:1.28rem;
+      line-height:1.35;
+      letter-spacing:-.01em;
+      margin:.2rem 0 1.6rem;
+      max-width:28em;
+    }
+    .product-meta{
+      grid-column:2;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1.2rem 2rem;
+      padding:1.4rem 0 1.2rem;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .product-meta p{margin:.4rem 0 0;font-size:.88rem;line-height:1.5;color:rgba(17,17,17,.76)}
+    .product-foot{
+      grid-column:2;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:1rem;
+      padding-top:1.2rem;
+    }
+    .product-foot .micro{color:rgba(17,17,17,.54)}
+    .product-doctrine{
+      grid-column:2;
+      margin:1.8rem 0 0;
+      font-family:Georgia, Times, serif;
+      font-size:1.05rem;
+      line-height:1.35;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      color:var(--teal);
+    }
+    .product-rule{height:1px;background:var(--line)}
+    /* METHOD - doctrine */
+    #method .serif-display{font-size:clamp(2rem,4vw,3.4rem);margin:.8rem 0 1.2rem}
+    .method-intro{max-width:36rem}
+    .method-intro p{line-height:1.65;color:rgba(17,17,17,.78);margin:0 0 .7rem}
+    .doctrine{position:relative;margin-top:4rem;padding-left:3.2rem;max-width:56rem}
+    .doctrine-line{position:absolute;left:0;top:.4rem;bottom:.4rem;width:1px;background:var(--line)}
+    .doctrine-steps{display:flex;flex-direction:column;gap:4.2rem}
+    .doctrine-step{display:grid;grid-template-columns:56px 1fr;gap:1rem 1.8rem;align-items:start}
+    .doctrine-index{font-size:.68rem;letter-spacing:.18em;color:var(--olive);padding-top:.45rem}
+    .doctrine-content h3{
+      font-family:Georgia, Times, serif;
+      font-weight:400;
+      font-size:clamp(1.6rem,3vw,2.4rem);
+      line-height:.92;
+      letter-spacing:-.02em;
+      margin:0 0 .9rem;
+      text-transform:uppercase;
+    }
+    .doctrine-content p{margin:0;font-size:.95rem;line-height:1.6;color:rgba(17,17,17,.72);max-width:28em}
+    .doctrine-arrow{margin-left:56px;font-size:1rem;opacity:.28;line-height:1}
+    .method-close{margin-top:4rem;max-width:32rem;font-size:1rem;line-height:1.6;color:rgba(17,17,17,.72)}
+    /* DOSSIER - high contrast evidence */
+    #dossier{padding:7rem 0 6.5rem}
+    #dossier .serif-display{color:var(--paper);font-size:clamp(2rem,4.2vw,3.5rem);line-height:.96;margin:.9rem 0 3.2rem;max-width:14em}
+    .lineage{
+      display:grid;
+      grid-template-columns:1fr 64px 1fr;
+      gap:0;
+      align-items:stretch;
+      border-top:1px solid var(--line-light);
+      border-left:1px solid var(--line-light);
+      max-width:56rem;
+    }
+    .lineage-block{
+      padding:2rem 1.8rem;
+      border-right:1px solid var(--line-light);
+      border-bottom:1px solid var(--line-light);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      min-height:200px;
+    }
+    .lineage-block h3{
+      font-family:Georgia, Times, serif;
+      font-weight:400;
+      font-size:1.2rem;
+      line-height:1.15;
+      letter-spacing:-.01em;
+      color:var(--paper);
+      margin:.8rem 0 1.6rem;
+    }
+    .lineage-connector{
+      display:flex;align-items:center;justify-content:center;
+      border-right:1px solid var(--line-light);
+      border-bottom:1px solid var(--line-light);
+      color:rgba(251,246,240,.38);
+      font-size:1.1rem;
+    }
+    .lineage-link{color:var(--paper);border-bottom-color:rgba(251,246,240,.28);font-size:.7rem}
+    .lineage-link:hover{border-bottom-color:var(--paper)}
+    /* FOUNDER */
+    .founder-grid{
+      display:grid;
+      grid-template-columns:42% 1fr;
+      gap:4.5rem;
+      align-items:start;
+    }
+    .founder-photo-wrap{
+      position:relative;
+      background:#EDE7DF;
+      padding:0;
+      overflow:hidden;
+    }
+    .founder-photo-wrap img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;filter:saturate(.1) contrast(1.05)}
+    .founder-content .serif-display{font-size:clamp(1.8rem,3vw,2.6rem);margin:.6rem 0 1rem;letter-spacing:-.015em}
+    .founder-principle{
+      font-family:Georgia, Times, serif;
+      font-size:1.28rem;
+      line-height:1.32;
+      letter-spacing:-.01em;
+      margin:0 0 2rem;
+      max-width:20em;
+      color:var(--teal);
+    }
+    .founder-bio p{font-size:.96rem;line-height:1.68;color:rgba(17,17,17,.78);margin:0 0 1rem;max-width:34em}
+    .founder-link{margin-top:.6rem;color:var(--ink)}
+    /* CONTACT */
+    .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:5rem;align-items:start}
+    .contact-intro h2{font-family:Georgia, Times, serif;font-weight:400;font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:.96;letter-spacing:-.02em;margin:.7rem 0 .9rem}
+    .contact-intro .muted{color:rgba(251,246,240,.78);line-height:1.6;margin:.5rem 0;font-size:.95rem}
+    .contact-copy{margin-top:1.8rem;padding-top:1.6rem;border-top:1px solid var(--line-light);max-width:24rem}
+    .contact-form-wrap{padding-top:.4rem}
+    .oi-form{display:flex;flex-direction:column;gap:1.2rem}
+    .form-top{display:grid;grid-template-columns:1fr;gap:1.2rem}
+    .oi-form label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(251,246,240,.56);display:flex;flex-direction:column;gap:.5rem}
+    .oi-form input, .oi-form textarea{
+      background:transparent;
+      border:0;
+      border-bottom:1px solid rgba(251,246,240,.18);
+      color:var(--paper);
+      padding:.7rem 0;
+      font-size:.95rem;
+      line-height:1.5;
+      outline:0;
+      border-radius:0;
+      transition:border-color .2s;
+    }
+    .oi-form input:focus, .oi-form textarea:focus{border-bottom-color:rgba(251,246,240,.52)}
+    .oi-form textarea{resize:vertical;min-height:110px}
+    .form-note{font-size:.78rem;line-height:1.55;color:rgba(251,246,240,.48);margin:.2rem 0 0;max-width:32rem}
+    .oi-form .cta{
+      align-self:flex-start;
+      background:transparent;
+      border:0;
+      border-bottom:1px solid var(--paper);
+      color:var(--paper);
+      font-size:.74rem;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      padding:0 0 4px;
+      margin-top:.6rem;
+      cursor:pointer;
+    }
+    /* FIRST PRINCIPLES */
+    #first-principles{padding:7rem 0 6rem}
+    #first-principles .large-close{
+      font-size:clamp(2rem,4.6vw,3.6rem);
+      line-height:.98;
+      max-width:18em;
+      margin:.9rem 0 1.4rem;
+    }
+    .close-sub{font-size:1.05rem;line-height:1.6;color:rgba(17,17,17,.68);max-width:28rem}
+    /* FOOTER */
+    footer{padding:3rem 0 4rem;border-top:1px solid var(--line);background:var(--paper)}
+    footer .container{font-size:.78rem;line-height:1.6;color:rgba(17,17,17,.62)}
+    footer .small{font-size:.76rem}
+    footer a{border-bottom:1px solid rgba(17,17,17,.18);padding-bottom:1px}
+    footer a:hover{border-color:var(--ink);color:var(--ink)}
+    /* Responsive */
+    @media(max-width:980px){
+      section{padding:5.5rem 0}
+      .model-stages{grid-template-columns:1fr;gap:0}
+      .stage, .stage--emphasis{padding:2rem 0;border-left:0;border-right:0;border-bottom:1px solid var(--line);background:transparent}
+      .stage-connector{display:none}
+      .stage--emphasis{border-left:0;border-right:0}
+      .condition-field{grid-template-columns:1fr}
+      .condition--wide{grid-column:auto}
+      .product{grid-template-columns:1fr;gap:.6rem}
+      .product-index-num, .product-header, .product-statement, .product-meta, .product-foot, .product-doctrine{grid-column:auto}
+      .product-meta{grid-template-columns:1fr;gap:1rem}
+      .doctrine{padding-left:1.8rem}
+      .lineage{grid-template-columns:1fr;max-width:100%}
+      .lineage-connector{display:none}
+      .lineage-block{min-height:auto}
+      .founder-grid{grid-template-columns:1fr;gap:2.5rem}
+      .founder-photo-wrap{max-width:420px}
+      .contact-grid{grid-template-columns:1fr;gap:3rem}
+    }
+    @media(max-width:640px){
+      .container{width:min(92vw,100%)}
+      nav{flex-direction:column;align-items:flex-start;gap:1rem}
+      nav ul{gap:1rem 1.2rem}
+      .hero{padding:3.5rem 0 5rem}
+      .hero-top{margin-bottom:3.5rem}
+      section{padding:4.5rem 0}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
 <body>
@@ -50,9 +477,7 @@
   <header>
     <div class="container">
       <nav aria-label="Primary">
-        <div class="brand">
-          <span class="small">O R G A N I Z A T I O N A L&nbsp;&nbsp;I N T E L L I G E N C E</span>
-        </div>
+        <div class="brand"><span class="small">O R G A N I Z A T I O N A L&nbsp;&nbsp;I N T E L L I G E N C E</span></div>
         <ul>
           <li><a href="#model">About</a></li>
           <li><a href="#model-intelligence">Intelligence</a></li>
@@ -67,211 +492,217 @@
   </header>
 
   <main>
-    <section class="hero section-light" id="top">
+    <section class="hero" id="top">
       <div class="container">
-        <img src="assets/kinglis_logo.png" alt="KINGLIS" width="168" height="48" decoding="async" />
+        <div class="hero-top">
+          <img src="assets/kinglis_logo.png" alt="KINGLIS" width="168" height="48" decoding="async" />
+        </div>
         <h1>Every organizational outcome has a cause.</h1>
         <p class="lead">KINGLIS transforms organizational evidence into executive intelligence—helping leaders understand the conditions shaping how their organization operates before deciding what to change.</p>
+        <div class="hero-rule"></div>
         <div class="hero-model">EVIDENCE → INTELLIGENCE → ADVISORY</div>
         <div class="cta-group">
-          <a class="cta" href="#model">EXPLORE ORGANIZATIONAL INTELLIGENCE →</a>
-          <a class="cta-secondary" href="/sample-dossier">VIEW A SAMPLE DOSSIER →</a>
+          <a class="cta-premium" href="#model">EXPLORE ORGANIZATIONAL INTELLIGENCE <span>→</span></a>
+          <a class="cta-secondary" href="/sample-dossier">VIEW A SAMPLE DOSSIER <span>→</span></a>
         </div>
       </div>
     </section>
 
-    <section id="model" class="section-light">
+    <section id="model">
       <div class="container">
-        <p class="kicker">THE KINGLIS MODEL</p>
-        <h2>Evidence. Intelligence. Advisory.</h2>
-        <div class="product-intro">
+        <span class="micro">THE KINGLIS MODEL</span>
+        <h2 class="serif-display">Evidence. Intelligence. Advisory.</h2>
+        <div class="intro-grid">
           <p>Organizations already produce evidence of how work moves, decisions travel, responsibility is held and outcomes are produced.</p>
           <p>KINGLIS examines that evidence to establish what the available organizational record supports, identify structurally significant conditions and give leadership a clearer basis for decision.</p>
         </div>
-        <div class="model-sequence three-col">
-          <div class="model-stage" id="model-evidence">
-            <span class="model-label">EVIDENCE</span>
-            <h3>We begin with the organizational record.</h3>
-            <p>Reports. Communications. Meeting records. Process documents. Decision records. Operational material.</p>
-            <p>Where required, KINGLIS diagnostic instruments generate additional structured evidence from leadership, workforce or defined organizational groups.</p>
+
+        <div class="model-system">
+          <div class="model-stages">
+            <div class="stage" id="model-evidence">
+              <div class="stage-index">01</div>
+              <div class="stage-meta"><span class="micro">EVIDENCE</span><span class="stage-sub">THE RECORD</span></div>
+              <h3>We begin with the organizational record.</h3>
+              <p>Reports. Communications. Meeting records. Process documents. Decision records. Operational material.</p>
+              <p>Where required, KINGLIS diagnostic instruments generate additional structured evidence from leadership, workforce or defined organizational groups.</p>
+              <div class="stage-list"><span>Organizational records</span><span>Diagnostic evidence</span></div>
+            </div>
+            <div class="stage-connector" aria-hidden="true"><span>→</span></div>
+            <div class="stage stage--emphasis" id="model-intelligence">
+              <div class="stage-index">02</div>
+              <div class="stage-meta"><span class="micro">INTELLIGENCE</span><span class="stage-sub">THE INTERPRETATION</span></div>
+              <h3>We structure, compare and interpret the evidence.</h3>
+              <p>KINGLIS examines chronology, routes, differing accounts, divergence, dependencies, handoffs and potential constraints.</p>
+              <p>Findings remain source-grounded and bounded by the available evidence.</p>
+              <div class="stage-list"><span>Structure</span><span>Compare</span><span>Interpret</span></div>
+            </div>
+            <div class="stage-connector" aria-hidden="true"><span>→</span></div>
+            <div class="stage" id="model-advisory">
+              <div class="stage-index">03</div>
+              <div class="stage-meta"><span class="micro">ADVISORY</span><span class="stage-sub">THE APPLICATION</span></div>
+              <h3>Where change is required, intelligence informs the intervention.</h3>
+              <p>KINGLIS validates structural hypotheses, designs organizational architecture and supports implementation and review.</p>
+              <div class="stage-list"><span>Validate</span><span>Design</span><span>Implement</span><span>Review</span></div>
+            </div>
           </div>
-          <div class="model-arrow" aria-hidden="true">↓</div>
-          <div class="model-stage" id="model-intelligence">
-            <span class="model-label">INTELLIGENCE</span>
-            <h3>We structure, compare and interpret the evidence.</h3>
-            <p>KINGLIS examines chronology, routes, differing accounts, divergence, dependencies, handoffs and potential constraints.</p>
-            <p>Findings remain source-grounded and bounded by the available evidence.</p>
-          </div>
-          <div class="model-arrow" aria-hidden="true">↓</div>
-          <div class="model-stage" id="model-advisory">
-            <span class="model-label">ADVISORY</span>
-            <h3>Where change is required, intelligence informs the intervention.</h3>
-            <p>KINGLIS validates structural hypotheses, designs organizational architecture and supports implementation and review.</p>
-          </div>
-        </div>
-        <div class="close-statement">
-          <p>We do not begin with a preferred solution.</p>
-          <p>We begin with what the available evidence supports.</p>
+          <div class="close-statement"><p>We do not begin with a preferred solution.</p><p>We begin with what the available evidence supports.</p></div>
         </div>
       </div>
     </section>
 
-    <section id="problem" class="section-light problem-section">
+    <section id="problem">
       <div class="container">
-        <p class="kicker">THE PROBLEM</p>
-        <h2>Organizations engage KINGLIS when...</h2>
-        <ul class="problem-list">
-          <li>Growth is becoming harder to sustain</li>
-          <li>Complexity is increasing faster than capability</li>
-          <li>Governance requires independent assessment</li>
-          <li>Technology is not producing the expected outcomes</li>
-          <li>Decision-making has slowed</li>
-          <li>Accountability has become unclear</li>
-          <li>Previous transformation has not solved the problem</li>
-          <li>Something feels fundamentally wrong, but nobody can explain why</li>
-        </ul>
-        <p>These are rarely isolated problems. They are organizational outcomes.</p>
-        <p>The question is what is producing them.</p>
-        <p><em>KINGLIS does not begin with a preferred intervention. We first establish what the available evidence supports and which organizational conditions require executive attention.</em></p>
+        <span class="micro">THE PROBLEM</span>
+        <h2 class="serif-display">Organizations engage KINGLIS when...</h2>
+        <div class="condition-field">
+          <div class="condition"><span class="micro">GROWTH</span><p>Becoming harder to sustain.</p></div>
+          <div class="condition"><span class="micro">COMPLEXITY</span><p>Increasing faster than capability.</p></div>
+          <div class="condition"><span class="micro">GOVERNANCE</span><p>Requiring independent assessment.</p></div>
+          <div class="condition"><span class="micro">TECHNOLOGY</span><p>Not producing expected outcomes.</p></div>
+          <div class="condition"><span class="micro">DECISIONS</span><p>Moving more slowly.</p></div>
+          <div class="condition"><span class="micro">ACCOUNTABILITY</span><p>Becoming less clear.</p></div>
+          <div class="condition"><span class="micro">TRANSFORMATION</span><p>Not resolving the problem.</p></div>
+          <div class="condition condition--wide"><span class="micro">UNEXPLAINED OUTCOME</span><p>Something feels fundamentally wrong, but nobody can explain why.</p></div>
+        </div>
+        <div class="outcome-statement">
+          <h3 class="serif-display">THESE ARE ORGANIZATIONAL OUTCOMES.</h3>
+          <p class="outcome-sub">The question is what is producing them.</p>
+          <p class="outcome-note"><em>KINGLIS does not begin with a preferred intervention. We first establish what the available evidence supports and which organizational conditions require executive attention.</em></p>
+        </div>
       </div>
     </section>
 
-    <section id="products" class="section-light">
+    <section id="products">
       <div class="container">
-        <p class="kicker">INTELLIGENCE PRODUCTS</p>
-        <h2>Defined questions. Evidence-led investigation. Executive intelligence.</h2>
+        <span class="micro">INTELLIGENCE PRODUCTS</span>
+        <h2 class="serif-display">Defined questions. Evidence-led investigation. Executive intelligence.</h2>
         <div class="product-intro">
           <p>KINGLIS Intelligence Products investigate defined organizational or professional questions using existing records, purpose-built diagnostic evidence, or both.</p>
           <p>Each product applies KINGLIS evidence processing and intelligence methods to a specific decision problem.</p>
         </div>
-        <div class="offer-grid">
-          <div class="offer-card">
-            <div class="founding-header" style="margin-bottom:1rem;">
-              <div class="kicker" style="margin:0 0 .35rem;">BUSINESS X-RAY™</div>
-              <div class="founding-price">From $1,900</div>
+        <div class="product-index">
+          <article class="product">
+            <div class="product-index-num">PRODUCT 01</div>
+            <div class="product-header"><h3>BUSINESS X-RAY™</h3><span class="micro">ONE DEFINED ORGANIZATIONAL OUTCOME</span></div>
+            <p class="product-statement">Examine the evidence surrounding an outcome the usual explanation no longer accounts for.</p>
+            <div class="product-meta">
+              <div><span class="micro">EVIDENCE</span><p>Organizational record</p></div>
+              <div><span class="micro">INVESTIGATES</span><p>Work · Decisions · Information · Ownership · Dependency</p></div>
+              <div><span class="micro">OUTPUT</span><p>Private Intelligence Dossier</p></div>
             </div>
-            <p><strong>Examine one defined organizational outcome through the evidence your organization already generates.</strong></p>
-            <p>Something is happening in the business. The usual explanation no longer fully accounts for it.</p>
-            <p>Business X-Ray™ traces the work, decisions, information, ownership and dependencies evidenced around one defined outcome.</p>
-            <a href="/business-xray" class="offer-link">EXPLORE BUSINESS X-RAY™ →</a>
-            <span class="offer-note">Private evidence-led organizational diagnostic.</span>
-          </div>
-          <div class="offer-card">
-            <div class="founding-header" style="margin-bottom:1rem;">
-              <div class="kicker" style="margin:0 0 .35rem;">EVIDENCE CHRONOLOGY™</div>
-              <div class="muted">Evidence structuring for new matters</div>
+            <div class="product-foot"><span class="micro">FROM $1,900</span><a href="/business-xray" class="product-cta">EXPLORE BUSINESS X-RAY™ <span>→</span></a></div>
+          </article>
+          <div class="product-rule"></div>
+          <article class="product">
+            <div class="product-index-num">PRODUCT 02</div>
+            <div class="product-header"><h3>EVIDENCE CHRONOLOGY™</h3><span class="micro">NEW CLIENT MATTER EVIDENCE</span></div>
+            <p class="product-statement">Initial chronology and evidence summary for new client matters.</p>
+            <div class="product-meta">
+              <div><span class="micro">EVIDENCE</span><p>Client-submitted material</p></div>
+              <div><span class="micro">INVESTIGATES</span><p>Events · Accounts · Evidence relationships · Gaps</p></div>
+              <div><span class="micro">OUTPUT</span><p>Evidence Chronology</p></div>
             </div>
-            <p><strong>Initial chronology and evidence summary for new client matters.</strong></p>
-            <p>Client evidence arrives fragmented. Evidence Chronology™ structures the submitted material into a source-grounded evidence index, people and parties record, chronology, material events, differing accounts and evidence questions.</p>
-            <p><em>We build the chronology. You apply the law.</em></p>
-            <span class="offer-note">Illustrative method component. Displayed without CTA to avoid broken route.</span>
-          </div>
+            <p class="product-doctrine">WE BUILD THE CHRONOLOGY.<br>YOU APPLY THE LAW.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="method" class="section-light">
+    <section id="method">
       <div class="container">
-        <p class="kicker">THE METHOD</p>
-        <h2>Intelligence before intervention.</h2>
-        <div class="product-intro">
+        <span class="micro">THE METHOD</span>
+        <h2 class="serif-display">Intelligence before intervention.</h2>
+        <div class="method-intro">
           <p>Organizations are often redesigned from reported problems, assumed causes or preferred solutions.</p>
           <p>KINGLIS begins earlier.</p>
           <p>We examine the available organizational evidence, establish what it supports and identify the conditions requiring executive attention.</p>
         </div>
-        <div class="method-steps">
-          <div class="step">
-            <h3>EVIDENCE BEFORE ASSUMPTION</h3>
-            <p>What does the available organizational record support?</p>
-          </div>
-          <div class="arrow" aria-hidden="true">↓</div>
-          <div class="step">
-            <h3>INTELLIGENCE BEFORE INTERVENTION</h3>
-            <p>What conditions, relationships, routes or patterns are structurally significant?</p>
-          </div>
-          <div class="arrow" aria-hidden="true">↓</div>
-          <div class="step">
-            <h3>ADVISORY WHERE REQUIRED</h3>
-            <p>What should leadership validate, redesign or change?</p>
+        <div class="doctrine">
+          <div class="doctrine-line"></div>
+          <div class="doctrine-steps">
+            <div class="doctrine-step">
+              <div class="doctrine-index">01</div>
+              <div class="doctrine-content"><h3>EVIDENCE<br>BEFORE<br>ASSUMPTION</h3><p>What does the available organizational record support?</p></div>
+            </div>
+            <div class="doctrine-arrow">↓</div>
+            <div class="doctrine-step">
+              <div class="doctrine-index">02</div>
+              <div class="doctrine-content"><h3>INTELLIGENCE<br>BEFORE<br>INTERVENTION</h3><p>What conditions, relationships, routes or patterns are structurally significant?</p></div>
+            </div>
+            <div class="doctrine-arrow">↓</div>
+            <div class="doctrine-step">
+              <div class="doctrine-index">03</div>
+              <div class="doctrine-content"><h3>ADVISORY<br>WHERE<br>REQUIRED</h3><p>What should leadership validate, redesign or change?</p></div>
+            </div>
           </div>
         </div>
-        <p style="margin-top:2rem;"><em>Better organizational decisions require a defensible understanding of the conditions producing the outcome.</em></p>
+        <p class="method-close"><em>Better organizational decisions require a defensible understanding of the conditions producing the outcome.</em></p>
       </div>
     </section>
 
-    <section id="dossier" class="section-light">
+    <section id="dossier" class="section-dark">
       <div class="container">
-        <p class="kicker">SEE THE METHOD APPLIED</p>
-        <h2>Illustrative Executive Dossier</h2>
-        <p>Explore a controlled evidence demonstration showing how KINGLIS moves from organizational evidence to executive intelligence.</p>
-        <div class="offer-grid" style="margin-top:1.75rem;">
-          <div class="offer-card">
-            <p>View an illustrative Executive Dossier built from a controlled evidence demonstration.</p>
-            <a href="/sample-dossier" class="offer-link">VIEW SAMPLE DOSSIER →</a>
-            <span class="offer-note">Organization details replaced. Illustrative evidence demonstration.</span>
-          </div>
-          <div class="offer-card">
-            <p><strong>Want to see the evidence behind the findings?</strong><br>View the 62-item Evidence Index used to support the sample analysis.</p>
-            <a href="/evidence-index" class="offer-link">VIEW EVIDENCE INDEX →</a>
-            <span class="offer-note">Source-grounded index. Evidence-led demonstration.</span>
-          </div>
+        <span class="micro">SEE THE METHOD APPLIED</span>
+        <h2 class="serif-display">62 evidence items.<br>One organizational outcome.<br>Every material finding source-linked.</h2>
+        <div class="lineage">
+          <div class="lineage-block"><div><span class="micro">EVIDENCE</span><h3>62-ITEM EVIDENCE INDEX</h3></div><a href="/evidence-index" class="lineage-link">VIEW EVIDENCE INDEX <span>→</span></a></div>
+          <div class="lineage-connector">→</div>
+          <div class="lineage-block"><div><span class="micro">INTELLIGENCE</span><h3>ILLUSTRATIVE EXECUTIVE DOSSIER</h3></div><a href="/sample-dossier" class="lineage-link">VIEW SAMPLE DOSSIER <span>→</span></a></div>
         </div>
+        <p class="micro" style="margin-top:2.2rem;color:rgba(251,246,240,.48);max-width:36rem;line-height:1.6">Same evidence set. Two views of the intelligence chain. Organization details replaced. Illustrative evidence demonstration.</p>
       </div>
     </section>
 
-    <section id="founder" class="section-light">
-      <div class="container">
-        <div class="founder-section">
-          <div class="founder-photo">
-            <img src="assets/kj.png" alt="Kaylee-Jane Inglis, founder of KINGLIS" width="300" height="400" loading="lazy" decoding="async" />
-          </div>
-          <div class="founder-text">
-            <p class="kicker">Founder</p>
-            <h2>Kaylee-Jane</h2>
+    <section id="founder">
+      <div class="container founder-grid">
+        <div class="founder-photo-wrap"><img src="assets/kj.png" alt="Kaylee-Jane Inglis, founder of KINGLIS" width="600" height="800" loading="lazy" decoding="async" /></div>
+        <div class="founder-content">
+          <span class="micro">FOUNDER</span>
+          <h2 class="serif-display">KAYLEE–JANE INGLIS</h2>
+          <p class="founder-principle">Organizational Intelligence as a practical discipline for executive decision-making.</p>
+          <div class="founder-bio">
             <p>Kaylee-Jane founded KINGLIS to establish Organizational Intelligence as a practical discipline for executive decision-making.</p>
             <p>Her work sits across organizational architecture, governance, operating models and evidence-led systems inquiry—examining how organizational conditions shape outcomes.</p>
             <p>Rather than beginning with assumptions or recommendations, she begins with evidence—examining the structures, relationships and patterns associated with organizational outcomes before determining what requires further investigation or change.</p>
-            <p><a href="https://www.linkedin.com/kaylee-jane/" target="_blank" rel="noopener">LinkedIn →</a></p>
+            <p><a href="https://www.linkedin.com/kaylee-jane/" target="_blank" rel="noopener" class="founder-link">LinkedIn <span>→</span></a></p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section-dark contact-section">
-      <div class="container">
-        <p class="kicker">Start a Conversation</p>
-        <h2>Perhaps the problem isn't the problem.</h2>
-        <p class="muted">The architecture producing it may be.</p>
-        <p class="muted">Tell us what you're seeing.</p>
-        <p class="muted">A recurring decision. Work that keeps returning. A process that doesn't hold. An outcome nobody can quite explain.</p>
-        <p class="muted">You don't need to diagnose the problem before you contact KINGLIS. Start with what keeps happening.</p>
-        <form action="https://formspree.io/f/meebrwjw" method="POST" class="oi-form">
-          <div class="form-top">
-            <label>Name
-              <input type="text" name="name" autocomplete="name" required />
-            </label>
-            <label>Organization
-              <input type="text" name="organization" autocomplete="organization" required />
-            </label>
-            <label>Work Email
-              <input type="email" name="email" autocomplete="email" required />
-            </label>
+    <section id="contact" class="section-dark">
+      <div class="container contact-grid">
+        <div class="contact-intro">
+          <span class="micro">Start a Conversation</span>
+          <h2>Perhaps the problem isn't the problem.</h2>
+          <p class="muted">The architecture producing it may be.</p>
+          <div class="contact-copy">
+            <p class="muted">Tell us what you're seeing.</p>
+            <p class="muted">A recurring decision. Work that keeps returning. A process that doesn't hold. An outcome nobody can quite explain.</p>
+            <p class="muted">You don't need to diagnose the problem before you contact KINGLIS. Start with what keeps happening.</p>
           </div>
-          <label class="form-full">What prompted you to reach out?
-            <textarea name="challenge" rows="5" required placeholder="Briefly describe the organizational challenge, outcome or question you'd like to discuss."></textarea>
-          </label>
-          <p class="form-note"><em>We respond within one business day. If your matter is sensitive, do not include confidential evidence in this form. We can provide a private submission route.</em></p>
-          <button type="submit" class="cta">REQUEST A PRIVATE REVIEW →</button>
-          <input type="hidden" name="_subject" value="New Organizational Intelligence Request — KINGLIS" />
-        </form>
+        </div>
+        <div class="contact-form-wrap">
+          <form action="https://formspree.io/f/meebrwjw" method="POST" class="oi-form">
+            <div class="form-top">
+              <label>Name<input type="text" name="name" autocomplete="name" required /></label>
+              <label>Organization<input type="text" name="organization" autocomplete="organization" required /></label>
+              <label>Work Email<input type="email" name="email" autocomplete="email" required /></label>
+            </div>
+            <label class="form-full">What prompted you to reach out?<textarea name="challenge" rows="5" required placeholder="Briefly describe the organizational challenge, outcome or question you'd like to discuss."></textarea></label>
+            <p class="form-note"><em>We respond within one business day. If your matter is sensitive, do not include confidential evidence in this form. We can provide a private submission route.</em></p>
+            <button type="submit" class="cta">REQUEST A PRIVATE REVIEW →</button>
+            <input type="hidden" name="_subject" value="New Organizational Intelligence Request — KINGLIS" />
+          </form>
+        </div>
       </div>
     </section>
 
-    <section id="first-principles" class="section-light">
+    <section id="first-principles">
       <div class="container">
-        <p class="kicker">FIRST PRINCIPLES</p>
-        <h2>Organizations leave evidence of how work moves, decisions travel, responsibility is held and outcomes emerge.</h2>
-        <p>KINGLIS examines that evidence to support better organizational decisions.</p>
+        <span class="micro">FIRST PRINCIPLES</span>
+        <h2 class="serif-display large-close">Organizations leave evidence of how work moves, decisions travel, responsibility is held and outcomes emerge.</h2>
+        <p class="close-sub">KINGLIS examines that evidence to support better organizational decisions.</p>
       </div>
     </section>
   </main>
@@ -285,6 +716,6 @@
       <p class="small"><em>KINGLIS™, Organizational Intelligence methods, diagnostic instruments, evidence classifications, analytical frameworks and associated product methodologies are proprietary to KINGLIS. Evidence submitted through KINGLIS technology remains client property.</em></p>
     </div>
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
