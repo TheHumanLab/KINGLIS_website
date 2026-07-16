@@ -8,751 +8,99 @@
   <meta name="description" content="KINGLIS is an organizational intelligence company that transforms organizational evidence into executive intelligence." />
   <link rel="canonical" href="https://thisiskinglis.com/" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/og-image.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/og-image.png">
-  <link rel="apple-touch-icon" href="assets/og-image.png">
   <meta name="theme-color" content="#F8F7F5">
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="KINGLIS" />
-  <meta property="og:title" content="KINGLIS | Organizational Intelligence" />
-  <meta property="og:description" content="Transform organizational evidence into executive intelligence." />
-  <meta property="og:url" content="https://thisiskinglis.com/" />
-  <meta property="og:image" content="https://thisiskinglis.com/assets/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
   <style>
-    :root{
-      --paper:#F8F7F5;
-      --ink:#1A1816;
-      --teal:#2F4D4F;
-      --olive:#8A7A5A;
-      --terra:#A9442A;
-      --line:rgba(17,17,17,.12);
-      --line-strong:rgba(17,17,17,.18);
-      --line-light:rgba(251,246,240,.14);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      background:var(--paper);
-      color:var(--ink);
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-    }
-    img{max-width:100%;display:block}
-    a{color:inherit;text-decoration:none}
-    .container{
-      width:min(1180px,92vw);
-      margin-inline:auto;
-    }
-    /* Header - quiet institutional */
-    header{
-      border-bottom:1px solid var(--line);
-      background:var(--paper);
-    }
-    header .container{padding:1.25rem 0}
-    nav{display:flex;justify-content:space-between;align-items:center;gap:2rem}
-    .brand .small{
-      font-size:.62rem;
-      letter-spacing:.28em;
-      text-transform:uppercase;
-      color:var(--olive);
-    }
-    nav ul{
-      list-style:none;
-      display:flex;
-      gap:1.6rem;
-      margin:0;
-      padding:0;
-      flex-wrap:wrap;
-    }
-    nav a{
-      font-size:.72rem;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      color:rgba(17,17,17,.72);
-      padding-bottom:2px;
-      border-bottom:1px solid transparent;
-      transition:border-color .2s, color .2s;
-    }
-    nav a:hover{color:var(--ink);border-color:var(--line-strong)}
-    .skip-link{position:absolute;left:-9999px}
-    /* Micro labels */
-    .micro{
-      display:inline-block;
-      font-size:.62rem;
-      letter-spacing:.22em;
-      text-transform:uppercase;
-      color:var(--olive);
-      line-height:1.4;
-    }
-    .serif-display{
-      font-family:Georgia, 'Times New Roman', Times, serif;
-      font-weight:400;
-      letter-spacing:-.02em;
-      line-height:.98;
-      text-wrap:balance;
-    }
-    /* Sections */
-    section{padding:7.5rem 0;border-bottom:1px solid var(--line)}
-    section.section-dark{
-      background:var(--ink);
-      color:var(--paper);
-      border-bottom-color:rgba(251,246,240,.08);
-    }
-    section.section-dark .micro{color:var(--olive)}
-    /* HERO - monograph opening */
-    .hero{padding:6rem 0 8rem;background:var(--paper);border-bottom:1px solid var(--line)}
-    .hero-top{margin-bottom:5.5rem}
-    .hero h1{
-      font-family:Georgia, 'Times New Roman', Times, serif;
-      font-weight:400;
-      font-size:clamp(2.9rem,6.2vw,5.4rem);
-      line-height:.92;
-      letter-spacing:-.03em;
-      margin:0;
-      max-width:11.5em;
-      text-align:left;
-      text-wrap:balance;
-      hyphens:none;
-    }
-    .hero .lead{
-      margin:2rem 0 0;
-      max-width:34rem;
-      font-size:1.08rem;
-      line-height:1.65;
-      color:var(--teal);
-    }
-    .hero-rule{
-      width:100%;
-      height:1px;
-      background:var(--line);
-      margin:2.25rem 0 1.5rem;
-      max-width:34rem;
-    }
-    .hero-model{
-      font-size:.72rem;
-      letter-spacing:.26em;
-      text-transform:uppercase;
-      color:var(--teal);
-      margin-bottom:2.5rem;
-    }
+    :root{--paper:#F8F7F5;--ink:#1A1816;--teal:#2F4D4F;--olive:#8A7A5A;--line:rgba(17,17,17,.12);--line-strong:rgba(17,17,17,.18);--line-light:rgba(251,246,240,.14)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    img{max-width:100%;display:block} a{color:inherit;text-decoration:none}
+    .container{width:min(1180px,92vw);margin-inline:auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(248,247,245,0.84);backdrop-filter:blur(9px);border-bottom:1px solid rgba(26,24,22,0.09)}
+    header .container{padding:1.25rem 0} nav{display:flex;justify-content:space-between;align-items:center;gap:2rem}
+    .brand .small{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--olive)}
+    nav ul{list-style:none;display:flex;gap:1.8rem;margin:0;padding:0;flex-wrap:wrap}
+    nav a{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(17,17,17,.72);padding-bottom:2px;border-bottom:1px solid transparent;transition:all .2s}
+    nav a:hover{color:var(--ink);border-color:var(--line-strong)} nav a.is-active{color:var(--ink);border-bottom-color:var(--line-strong);opacity:1}
+    .micro{display:inline-block;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);line-height:1.4}
+    .serif-display{font-family:Georgia, 'Times New Roman', Times, serif;font-weight:400;letter-spacing:-.02em;line-height:.98;text-wrap:balance}
+    section{padding:7.5rem 0;border-bottom:1px solid var(--line)} section.section-dark{background:var(--ink);color:var(--paper);border-bottom-color:rgba(251,246,240,.08)} section.section-dark .micro{color:var(--olive)}
+    .hero{padding:6rem 0 8rem;background:var(--paper);border-bottom:1px solid var(--line)} .hero-top{margin-bottom:5.5rem}
+    .hero h1{font-family:Georgia, serif;font-weight:400;font-size:clamp(2.9rem,6.2vw,5.4rem);line-height:.92;letter-spacing:-.03em;margin:0;max-width:11.5em}
+    .hero .lead{margin:2rem 0 0;max-width:34rem;font-size:1.08rem;line-height:1.65;color:var(--teal)}
+    .hero-rule{width:100%;height:1px;background:var(--line);margin:2.25rem 0 1.5rem;max-width:34rem}
+    .hero-model{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--teal);margin-bottom:2.5rem}
     .cta-group{display:flex;flex-wrap:wrap;gap:1rem 2.25rem;align-items:center}
-    .cta-premium, .cta-secondary, .product-cta, .lineage-link, .founder-link{
-      display:inline-flex;
-      align-items:center;
-      gap:.45rem;
-      font-size:.74rem;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      border-bottom:1px solid currentColor;
-      padding-bottom:3px;
-      line-height:1.2;
-    }
-    .cta-premium{color:var(--ink)}
-    .cta-secondary{color:rgba(17,17,17,.68);border-bottom-color:rgba(17,17,17,.22)}
-    .cta-secondary:hover, .cta-premium:hover{opacity:.78}
-    /* MODEL - architectural system - refined: open, no boxes */
-    .section-header .serif-display{font-size:clamp(2.2rem,4.5vw,3.6rem);margin:.9rem 0 1.5rem}
-    .intro-grid{max-width:48rem}
-    .intro-grid p{line-height:1.65;color:rgba(17,17,17,.82);margin:0 0 .9rem}
-    .model-system{margin-top:4.2rem;padding-top:2.4rem;border-top:1px solid var(--line);position:relative}
-    .model-system::before{content:"";position:absolute;top:0;left:0;width:64px;height:1px;background:var(--ink);margin-top:-1px}
-    .model-stages{
-      display:grid;
-      grid-template-columns:1fr 72px 1.38fr 72px 1fr;
-      gap:0 1rem;
-      align-items:start;
-    }
-    .stage{
-      padding:0;
-      border:0;
-      background:transparent;
-      position:relative;
-    }
-    .stage--emphasis{
-      padding:0 0 0 2.2rem;
-      background:transparent;
-      border:0;
-      border-left:1px solid var(--line);
-      margin-top:0;
-    }
-    .stage--emphasis h3{font-size:1.46rem;line-height:1.15;letter-spacing:-.015em}
-    .stage--emphasis p{color:rgba(17,17,17,.84)}
-    .stage-index{
-      font-size:.66rem;
-      letter-spacing:.2em;
-      color:var(--olive);
-      margin-bottom:1.2rem;
-      display:flex;align-items:center;gap:.8rem;
-    }
-    .stage-index::after{content:"";height:1px;width:28px;background:var(--line);display:inline-block;opacity:.9}
-    .stage-meta{display:flex;flex-direction:column;gap:.22rem;margin-bottom:1.15rem}
-    .stage-sub{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal)}
-    .stage h3{
-      font-family:Georgia, Times, serif;
-      font-weight:400;
-      font-size:1.28rem;
-      line-height:1.18;
-      letter-spacing:-.01em;
-      margin:0 0 1rem;
-      max-width:14em;
-    }
+    .cta-premium,.cta-secondary,.product-cta,.lineage-link,.founder-link{display:inline-flex;align-items:center;gap:.45rem;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:3px;line-height:1.2}
+    .cta-premium{color:var(--ink)} .cta-secondary{color:rgba(17,17,17,.68);border-bottom-color:rgba(17,17,17,.22)}
+    .section-header .serif-display{font-size:clamp(2.2rem,4.5vw,3.6rem);margin:.9rem 0 1.5rem} .intro-grid{max-width:48rem} .intro-grid p{line-height:1.65;color:rgba(17,17,17,.82);margin:0 0 .9rem}
+    .condition-field{display:grid;grid-template-columns:repeat(2,1fr);gap:2.6rem 4.2rem;max-width:58rem;padding-top:2.2rem;border-top:1px solid var(--line);position:relative}
+    .condition{padding:0;padding-top:1.15rem;border-top:1px solid var(--line)} .condition p{margin:.55rem 0 0;font-size:.94rem;line-height:1.55;color:rgba(17,17,17,.74);max-width:22em}
+    .model-system{margin-top:4.2rem;padding-top:2.4rem;border-top:1px solid var(--line);position:relative} .model-system::before{content:"";position:absolute;top:0;left:0;width:64px;height:1px;background:var(--ink);margin-top:-1px}
+    .model-stages{display:grid;grid-template-columns:1fr 72px 1.38fr 72px 1fr;gap:0 1rem;align-items:start}
+    .stage{padding:0} .stage--emphasis{padding:0 0 0 2.2rem;border-left:1px solid var(--line)} .stage-index{font-size:.66rem;letter-spacing:.2em;color:var(--olive);margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem} .stage-index::after{content:"";height:1px;width:28px;background:var(--line);display:inline-block}
+    .stage-meta{display:flex;flex-direction:column;gap:.22rem;margin-bottom:1.15rem} .stage-sub{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal)}
+    .stage h3{font-family:Georgia, Times, serif;font-weight:400;font-size:1.28rem;line-height:1.18;letter-spacing:-.01em;margin:0 0 1rem;max-width:14em}
     .stage p{font-size:.92rem;line-height:1.66;color:rgba(17,17,17,.76);margin:0 0 .8rem}
-    .stage-list{
-      margin-top:1.8rem;
-      padding-top:0;
-      border-top:0;
-      display:flex;
-      flex-direction:column;
-      gap:.32rem;
-      position:relative;
-    }
-    .stage-list::before{content:"";width:22px;height:1px;background:var(--line);display:block;margin-bottom:.9rem}
-    .stage-list span{
-      font-size:.66rem;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      color:rgba(17,17,17,.48);
-    }
-    .stage-connector{
-      display:flex;align-items:flex-start;justify-content:center;
-      padding-top:2.9rem;
-      font-size:.88rem;
-      opacity:.22;
-      letter-spacing:.02em;
-    }
-    .close-statement{
-      margin-top:4rem;
-      padding-top:0;
-      border-top:0;
-      display:grid;
-      gap:.22rem;
-      max-width:28rem;
-      position:relative;
-      padding-left:0;
-    }
-    .close-statement::before{content:"";width:32px;height:1px;background:var(--line);display:block;margin-bottom:1.4rem}
-    .close-statement p{
-      font-family:Georgia, Times, serif;
-      font-size:1.18rem;
-      line-height:1.35;
-      margin:0;
-      letter-spacing:-.01em;
-    }
-    /* PROBLEM - condition field - refined: open field, no boxes */
-    #problem .serif-display{font-size:clamp(1.9rem,3.8vw,3rem);margin:.8rem 0 3.2rem}
-    .condition-field{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:2.6rem 4.2rem;
-      border:0;
-      max-width:58rem;
-      padding-top:2.2rem;
-      border-top:1px solid var(--line);
-      position:relative;
-    }
-    .condition-field::before{content:"";position:absolute;top:0;left:0;width:64px;height:1px;background:var(--ink);margin-top:-1px}
-    .condition{
-      padding:0;
-      padding-top:1.15rem;
-      border:0;
-      border-top:1px solid var(--line);
-      min-height:auto;
-      background:transparent;
-    }
-    .condition--wide{
-      grid-column:1 / -1;
-      max-width:28rem;
-      border-top:1px solid var(--line);
-    }
-    .condition p{margin:.55rem 0 0;font-size:.94rem;line-height:1.55;color:rgba(17,17,17,.74);max-width:22em}
-    .outcome-statement{margin-top:5rem;max-width:44rem;padding-top:2.4rem;border-top:1px solid transparent;position:relative}
-    .outcome-statement::before{content:"";position:absolute;top:0;left:0;width:100%;height:1px;background:linear-gradient(to right, var(--line) 0 96px, transparent 96px)}
-    .outcome-statement .serif-display{font-size:clamp(1.9rem,3.4vw,2.7rem);margin:0 0 1rem;letter-spacing:-.015em;line-height:.96}
-    .outcome-sub{font-family:Georgia, Times, serif;font-size:1.28rem;line-height:1.32;margin:0 0 1.3rem;letter-spacing:-.01em}
-    .outcome-note{font-size:.9rem;line-height:1.65;color:rgba(17,17,17,.58);max-width:36rem}
-    /* PRODUCTS - index */
-    #products .serif-display{font-size:clamp(1.9rem,3.6vw,2.9rem);margin:.8rem 0 1.2rem;max-width:16em}
-    .product-intro{max-width:38rem;margin:0 0 3.5rem}
-    .product-intro p{line-height:1.65;color:rgba(17,17,17,.78);margin:0 0 .8rem}
-    .product-index{border-top:1px solid var(--line)}
-    .product{
-      display:grid;
-      grid-template-columns:110px 1fr;
-      gap:.4rem 2.8rem;
-      padding:3.2rem 0;
-    }
-    .product-index-num{grid-column:1;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--olive);padding-top:.35rem}
-    .product-header{grid-column:2;display:flex;flex-wrap:wrap;align-items:baseline;gap:.9rem 1.2rem;margin-bottom:.6rem}
-    .product-header h3{font-family:Georgia, Times, serif;font-weight:400;font-size:1.45rem;letter-spacing:-.01em;margin:0;line-height:1.1}
-    .product-statement{
-      grid-column:2;
-      font-family:Georgia, Times, serif;
-      font-size:1.28rem;
-      line-height:1.35;
-      letter-spacing:-.01em;
-      margin:.2rem 0 1.6rem;
-      max-width:28em;
-    }
-    .product-meta{
-      grid-column:2;
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:1.2rem 2rem;
-      padding:1.4rem 0 1.2rem;
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-    }
+    .stage-list{margin-top:1.8rem;display:flex;flex-direction:column;gap:.32rem} .stage-list span{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(17,17,17,.48)}
+    .stage-connector{display:flex;justify-content:center;padding-top:2.9rem;font-size:.88rem;opacity:.22}
+    .close-statement{margin-top:4rem;max-width:28rem} .close-statement p{font-family:Georgia, serif;font-size:1.18rem;line-height:1.35;margin:0}
+    #products .serif-display{font-size:clamp(1.9rem,3.6vw,2.9rem);margin:.8rem 0 1.2rem;max-width:16em} .product-intro{max-width:38rem;margin:0 0 3.5rem} .product-intro p{line-height:1.65;color:rgba(17,17,17,.78);margin:0 0 .8rem}
+    .product-index{border-top:1px solid var(--line)} .product{display:grid;grid-template-columns:110px 1fr;gap:.4rem 2.8rem;padding:3.2rem 0;border-bottom:1px solid var(--line)}
+    .product-index-num{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--olive);padding-top:.35rem} .product-header{display:flex;flex-wrap:wrap;align-items:baseline;gap:.9rem 1.2rem;margin-bottom:.6rem}
+    .product-header h3{font-family:Georgia, serif;font-weight:400;font-size:1.45rem;letter-spacing:-.01em;margin:0;line-height:1.1}
+    .product-statement{font-family:Georgia, serif;font-size:1.28rem;line-height:1.35;letter-spacing:-.01em;margin:.2rem 0 1.6rem;max-width:28em}
+    .product-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem 2rem;padding:1.4rem 0 1.2rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .product-meta p{margin:.4rem 0 0;font-size:.88rem;line-height:1.5;color:rgba(17,17,17,.76)}
-    .product-foot{
-      grid-column:2;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      flex-wrap:wrap;
-      gap:1rem;
-      padding-top:1.2rem;
-    }
-    .product-foot .micro{color:rgba(17,17,17,.54)}
-    .product-doctrine{
-      grid-column:2;
-      margin:1.8rem 0 0;
-      font-family:Georgia, Times, serif;
-      font-size:1.05rem;
-      line-height:1.35;
-      letter-spacing:.04em;
-      text-transform:uppercase;
-      color:var(--teal);
-    }
-    .product-rule{height:1px;background:var(--line)}
-    /* METHOD - doctrine */
-    #method .serif-display{font-size:clamp(2rem,4vw,3.4rem);margin:.8rem 0 1.2rem}
-    .method-intro{max-width:36rem}
-    .method-intro p{line-height:1.65;color:rgba(17,17,17,.78);margin:0 0 .7rem}
-    .doctrine{position:relative;margin-top:4rem;padding-left:3.2rem;max-width:56rem}
-    .doctrine-line{position:absolute;left:0;top:.4rem;bottom:.4rem;width:1px;background:var(--line)}
-    .doctrine-steps{display:flex;flex-direction:column;gap:4.2rem}
-    .doctrine-step{display:grid;grid-template-columns:56px 1fr;gap:1rem 1.8rem;align-items:start}
+    .product-foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding-top:1.2rem}
+    .product-doctrine{margin:1.8rem 0 0;font-family:Georgia, serif;font-size:1.05rem;line-height:1.35;letter-spacing:.04em;text-transform:uppercase;color:var(--teal)}
+    .doctrine{position:relative;margin-top:4rem;padding-left:3.2rem;max-width:56rem} .doctrine-line{position:absolute;left:0;top:.4rem;bottom:.4rem;width:1px;background:var(--line)}
+    .doctrine-steps{display:flex;flex-direction:column;gap:4.2rem} .doctrine-step{display:grid;grid-template-columns:56px 1fr;gap:1rem 1.8rem;align-items:start}
     .doctrine-index{font-size:.68rem;letter-spacing:.18em;color:var(--olive);padding-top:.45rem}
-    .doctrine-content h3{
-      font-family:Georgia, Times, serif;
-      font-weight:400;
-      font-size:clamp(1.6rem,3vw,2.4rem);
-      line-height:.92;
-      letter-spacing:-.02em;
-      margin:0 0 .9rem;
-      text-transform:uppercase;
-    }
-    .doctrine-content p{margin:0;font-size:.95rem;line-height:1.6;color:rgba(17,17,17,.72);max-width:28em}
-    .doctrine-arrow{margin-left:56px;font-size:1rem;opacity:.28;line-height:1}
-    .method-close{margin-top:4rem;max-width:32rem;font-size:1rem;line-height:1.6;color:rgba(17,17,17,.72)}
-    /* DOSSIER - high contrast evidence */
-    #dossier{padding:7rem 0 6.5rem}
-    #dossier .serif-display{color:var(--paper);font-size:clamp(2rem,4.2vw,3.5rem);line-height:.96;margin:.9rem 0 3.2rem;max-width:14em}
-    .lineage{
-      display:grid;
-      grid-template-columns:1fr 64px 1fr;
-      gap:0;
-      align-items:stretch;
-      border-top:1px solid var(--line-light);
-      border-left:1px solid var(--line-light);
-      max-width:56rem;
-    }
-    .lineage-block{
-      padding:2rem 1.8rem;
-      border-right:1px solid var(--line-light);
-      border-bottom:1px solid var(--line-light);
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      min-height:200px;
-    }
-    .lineage-block h3{
-      font-family:Georgia, Times, serif;
-      font-weight:400;
-      font-size:1.2rem;
-      line-height:1.15;
-      letter-spacing:-.01em;
-      color:var(--paper);
-      margin:.8rem 0 1.6rem;
-    }
-    .lineage-connector{
-      display:flex;align-items:center;justify-content:center;
-      border-right:1px solid var(--line-light);
-      border-bottom:1px solid var(--line-light);
-      color:rgba(251,246,240,.38);
-      font-size:1.1rem;
-    }
-    .lineage-link{color:var(--paper);border-bottom-color:rgba(251,246,240,.28);font-size:.7rem}
-    .lineage-link:hover{border-bottom-color:var(--paper)}
-    /* FOUNDER */
-    .founder-grid{
-      display:grid;
-      grid-template-columns:42% 1fr;
-      gap:4.5rem;
-      align-items:start;
-    }
-    .founder-photo-wrap{
-      position:relative;
-      background:#EDE7DF;
-      padding:0;
-      overflow:hidden;
-    }
-    .founder-photo-wrap img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;filter:saturate(.1) contrast(1.05)}
-    .founder-content .serif-display{font-size:clamp(1.8rem,3vw,2.6rem);margin:.6rem 0 1rem;letter-spacing:-.015em}
-    .founder-principle{
-      font-family:Georgia, Times, serif;
-      font-size:1.28rem;
-      line-height:1.32;
-      letter-spacing:-.01em;
-      margin:0 0 2rem;
-      max-width:20em;
-      color:var(--teal);
-    }
+    .doctrine-content h3{font-family:Georgia, serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.4rem);line-height:.92;letter-spacing:-.02em;margin:0 0 .9rem;text-transform:uppercase}
+    .doctrine-content p{margin:0;font-size:.95rem;line-height:1.6;color:rgba(17,17,17,.72);max-width:28em} .doctrine-arrow{margin-left:56px;font-size:1rem;opacity:.28;line-height:1}
+    #dossier{padding:7rem 0 6.5rem} #dossier .serif-display{color:var(--paper);font-size:clamp(2rem,4.2vw,3.5rem);line-height:.96;margin:.9rem 0 3.2rem;max-width:14em}
+    .lineage{display:grid;grid-template-columns:1fr 64px 1fr;gap:0;align-items:stretch;border-top:1px solid var(--line-light);border-left:1px solid var(--line-light);max-width:56rem}
+    .lineage-block{padding:2rem 1.8rem;border-right:1px solid var(--line-light);border-bottom:1px solid var(--line-light);display:flex;flex-direction:column;justify-content:space-between;min-height:200px}
+    .lineage-block h3{font-family:Georgia, serif;font-weight:400;font-size:1.2rem;line-height:1.15;color:var(--paper);margin:.8rem 0 1.6rem}
+    .lineage-connector{display:flex;align-items:center;justify-content:center;border-right:1px solid var(--line-light);border-bottom:1px solid var(--line-light);color:rgba(251,246,240,.38);font-size:1.1rem}
+    .founder-grid{display:grid;grid-template-columns:42% 1fr;gap:4.5rem;align-items:start} .founder-photo-wrap{background:#EDE7DF;overflow:hidden} .founder-photo-wrap img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:saturate(.1) contrast(1.05)}
+    .founder-content .serif-display{font-size:clamp(1.8rem,3vw,2.6rem);margin:.6rem 0 1rem} .founder-principle{font-family:Georgia, serif;font-size:1.28rem;line-height:1.32;margin:0 0 2rem;max-width:20em;color:var(--teal)}
     .founder-bio p{font-size:.96rem;line-height:1.68;color:rgba(17,17,17,.78);margin:0 0 1rem;max-width:34em}
-    .founder-link{margin-top:.6rem;color:var(--ink)}
-    /* CONTACT */
-    .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:5rem;align-items:start}
-    .contact-intro h2{font-family:Georgia, Times, serif;font-weight:400;font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:.96;letter-spacing:-.02em;margin:.7rem 0 .9rem}
-    .contact-intro .muted{color:rgba(251,246,240,.78);line-height:1.6;margin:.5rem 0;font-size:.95rem}
-    .contact-copy{margin-top:1.8rem;padding-top:1.6rem;border-top:1px solid var(--line-light);max-width:24rem}
-    .contact-form-wrap{padding-top:.4rem}
-    .oi-form{display:flex;flex-direction:column;gap:1.2rem}
-    .form-top{display:grid;grid-template-columns:1fr;gap:1.2rem}
-    .oi-form label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(251,246,240,.56);display:flex;flex-direction:column;gap:.5rem}
-    .oi-form input, .oi-form textarea{
-      background:transparent;
-      border:0;
-      border-bottom:1px solid rgba(251,246,240,.18);
-      color:var(--paper);
-      padding:.7rem 0;
-      font-size:.95rem;
-      line-height:1.5;
-      outline:0;
-      border-radius:0;
-      transition:border-color .2s;
-    }
-    .oi-form input:focus, .oi-form textarea:focus{border-bottom-color:rgba(251,246,240,.52)}
-    .oi-form textarea{resize:vertical;min-height:110px}
-    .form-note{font-size:.78rem;line-height:1.55;color:rgba(251,246,240,.48);margin:.2rem 0 0;max-width:32rem}
-    .oi-form .cta{
-      align-self:flex-start;
-      background:transparent;
-      border:0;
-      border-bottom:1px solid var(--paper);
-      color:var(--paper);
-      font-size:.74rem;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      padding:0 0 4px;
-      margin-top:.6rem;
-      cursor:pointer;
-    }
-    /* FIRST PRINCIPLES */
-    #first-principles{padding:7rem 0 6rem}
-    #first-principles .large-close{
-      font-size:clamp(2rem,4.6vw,3.6rem);
-      line-height:.98;
-      max-width:18em;
-      margin:.9rem 0 1.4rem;
-    }
-    .close-sub{font-size:1.05rem;line-height:1.6;color:rgba(17,17,17,.68);max-width:28rem}
-    /* FOOTER */
-    footer{padding:3rem 0 4rem;border-top:1px solid var(--line);background:var(--paper)}
-    footer .container{font-size:.78rem;line-height:1.6;color:rgba(17,17,17,.62)}
-    footer .small{font-size:.76rem}
-    footer a{border-bottom:1px solid rgba(17,17,17,.18);padding-bottom:1px}
-    footer a:hover{border-color:var(--ink);color:var(--ink)}
-    /* Responsive */
-    @media(max-width:980px){
-      section{padding:5.5rem 0}
-      .model-stages{grid-template-columns:1fr;gap:0}
-      .stage, .stage--emphasis{padding:2rem 0;border-left:0;border-right:0;border-bottom:1px solid var(--line);background:transparent}
-      .stage-connector{display:none}
-      .stage--emphasis{border-left:0;border-right:0}
-      .condition-field{grid-template-columns:1fr}
-      .condition--wide{grid-column:auto}
-      .product{grid-template-columns:1fr;gap:.6rem}
-      .product-index-num, .product-header, .product-statement, .product-meta, .product-foot, .product-doctrine{grid-column:auto}
-      .product-meta{grid-template-columns:1fr;gap:1rem}
-      .doctrine{padding-left:1.8rem}
-      .lineage{grid-template-columns:1fr;max-width:100%}
-      .lineage-connector{display:none}
-      .lineage-block{min-height:auto}
-      .founder-grid{grid-template-columns:1fr;gap:2.5rem}
-      .founder-photo-wrap{max-width:420px}
-      .contact-grid{grid-template-columns:1fr;gap:3rem}
-    }
-    @media(max-width:640px){
-      .container{width:min(92vw,100%)}
-      nav{flex-direction:column;align-items:flex-start;gap:1rem}
-      nav ul{gap:1rem 1.2rem}
-      .hero{padding:3.5rem 0 5rem}
-      .hero-top{margin-bottom:3.5rem}
-      section{padding:4.5rem 0}
-    }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  
-    /* THANK YOU MODAL - premium, quiet */
-    .thank-you-overlay{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:2rem;background:rgba(17,17,17,.48);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .28s ease}
-    .thank-you-overlay.is-open{opacity:1;pointer-events:auto} .thank-you-overlay[hidden]{display:none}
-    .thank-you-card{width:min(480px,92vw);background:var(--paper);color:var(--ink);padding:2.4rem 2.2rem 2rem;border:1px solid var(--line-strong);box-shadow:0 24px 64px rgba(17,17,17,.18);transform:translateY(8px);transition:transform .28s ease;position:relative}
-    .thank-you-overlay.is-open .thank-you-card{transform:translateY(0)} .thank-you-close{position:absolute;top:1rem;right:1rem;background:transparent;border:0;font-size:1.4rem;line-height:1;color:rgba(17,17,17,.42);cursor:pointer;padding:.2rem .4rem}
-    .thank-you-card .micro{margin-bottom:1rem} .thank-you-card h3{font-size:clamp(1.6rem,3vw,2.1rem);margin:0 0 .9rem;line-height:.98} .thank-you-card p{font-size:.95rem;line-height:1.62;color:rgba(17,17,17,.78);margin:0 0 .8rem}
-    .thank-you-note{font-size:.84rem!important;color:rgba(17,17,17,.56)!important} .thank-you-dismiss{margin-top:1.6rem;color:var(--ink)}
-
-
-/* EVIDENCE FIELD - proprietary full-bleed organizational record */
-.evidence-field{
-  width:100vw;
-  margin-left:calc(50% - 50vw);
-  margin-right:calc(50% - 50vw);
-  max-width:100vw;
-  background:var(--paper);
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  padding:0 0 3.8rem;
-  overflow:clip;
-  position:relative;
-}
-.evidence-field__label-row{padding:3.4rem 0 2.2rem}
-.evidence-field__sub{font-size:.92rem;line-height:1.6;color:rgba(17,17,17,.62);max-width:28rem;margin:.7rem 0 0}
-.evidence-field__viewport{width:100vw;overflow:visible;position:relative}
-.evidence-field__canvas{position:relative;width:100vw;min-height:460px}
-.evidence-fragment{
-  position:absolute;
-  background:var(--paper);
-  border:1px solid var(--line);
-  padding:.95rem 1rem .85rem;
-  width:var(--w,200px);
-  box-sizing:border-box;
-  border-radius:0;
-}
-.evidence-fragment .micro{font-size:.56rem;letter-spacing:.18em;line-height:1.3}
-.ef__head{display:flex;justify-content:space-between;align-items:flex-start;gap:.6rem;margin-bottom:.55rem}
-.ef__ref{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(17,17,17,.38);white-space:nowrap;line-height:1.4}
-.ef__rule{height:1px;background:var(--line);margin-bottom:.65rem}
-.ef__body{font-size:.76rem;line-height:1.5;color:rgba(17,17,17,.78)}
-.ef__quote{font-style:italic;color:rgba(17,17,17,.72);margin:0 0 .45rem;font-size:.78rem;line-height:1.45;max-width:14em}
-.ef__kv{display:grid;grid-template-columns:auto 1fr;gap:.18rem .65rem;font-size:.7rem;line-height:1.45;align-items:baseline}
-.ef__k{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(17,17,17,.46)}
-.ef__v{font-size:.7rem;color:var(--ink)} .ef__v.is-accent{color:var(--terra)} .ef__v.is-teal{color:var(--teal)}
-.evidence-connector{position:absolute;height:1px;background:var(--line);opacity:.22;pointer-events:none}
-.evidence-connector::after{content:"";position:absolute;right:-3px;top:50%;width:4px;height:4px;border-right:1px solid currentColor;border-top:1px solid currentColor;transform:translateY(-50%) rotate(45deg);opacity:.55;color:var(--line)}
-.ef--1{--w:212px;left:2.2%;top:18px} .ef--2{--w:194px;left:16.8%;top:96px} .ef--3{--w:202px;left:32.4%;top:10px} .ef--4{--w:174px;left:46.2%;top:142px}
-.ef--5{--w:214px;left:59.6%;top:44px} .ef--6{--w:224px;left:73.2%;top:168px} .ef--7{--w:186px;left:85.6%;top:24px} .ef--8{--w:190px;left:6.5%;top:272px}
-.ec--1{left:13.2%;top:118px;width:38px;transform:rotate(7deg)} .ec--2{left:42.8%;top:84px;width:88px;transform:rotate(-7deg)} .ec--3{left:69.4%;top:172px;width:54px;transform:rotate(11deg);opacity:.18}
-@media(max-width:1100px){.ef--7{left:82%} .ef--6{left:70%}}
-@media(max-width:960px){.evidence-field__canvas{min-height:500px} .ef--1{left:2%;top:14px} .ef--2{left:18%;top:102px} .ef--3{left:38%;top:8px} .ef--4{left:54%;top:146px} .ef--5{left:4%;top:268px} .ef--6{left:28%;top:304px} .ef--7{left:58%;top:268px} .ef--8{left:78%;top:312px} .ec--1,.ec--2,.ec--3{display:none}}
-@media(max-width:720px){
-  .evidence-field{padding-bottom:1.2rem;border-bottom:1px solid var(--line)}
-  .evidence-field__label-row{padding:2.2rem 0 1.2rem} .evidence-field__sub{font-size:.88rem;max-width:22rem}
-  .evidence-field__viewport{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none} .evidence-field__viewport::-webkit-scrollbar{display:none}
-  .evidence-field__canvas{display:flex;gap:12px;width:max-content;min-height:auto;padding:6px 5vw 18px 5vw;align-items:flex-start}
-  .evidence-fragment{position:relative !important;left:auto !important;top:auto !important;flex:0 0 208px;--w:208px;min-height:148px} .evidence-connector{display:none} .ef--8{flex-basis:190px}
-}
-    .ef--inverted{
-  background:var(--ink); /* #1A1816 */
-  border-color:rgba(248,247,245,.18);
-  color:var(--paper);
-}
-.ef--inverted .micro{color:rgba(248,247,245,.58)}
-.ef--inverted .ef__ref{color:rgba(248,247,245,.42)}
-.ef--inverted .ef__rule{background:rgba(248,247,245,.18)}
-.ef--inverted .ef__k{color:rgba(248,247,245,.52)}
-.ef--inverted .ef__v{color:var(--paper)}
-.ef--inverted .ef__v.is-accent{color:#D89A8C}
-.ef--inverted .ef__v.is-teal{color:#8FB9B6}
-
-/* Restrained classy target cursor - replaces default arrow */
-html, body {
-  cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMxQTE4MTYiIHN0cm9rZS13aWR0aD0iMSIg...") 12 12, crosshair;
-}
-.section-dark, .ef--inverted, .thank-you-overlay {
-  cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNGOEY3RjUiIHN0cm9rZS13aWR0aD0iMSIg...") 12 12, crosshair;
-}
-    /* Sticky archival-glass nav — tracing paper over dossier */
-header{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  /* paper #F8F7F5 at 68% — lets content show through like tracing paper */
-  background: rgba(248,247,245,0.84);
-  -webkit-backdrop-filter: blur(9px) saturate(1.03);
-  backdrop-filter: blur(9px) saturate(1.03);
-  border-bottom: 1px solid rgba(26,24,22,0.09);
-  /* preserve exact height — no shadow, no radius, no redesign */
-  box-shadow: none;
-  border-radius: 0;
-}
-@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))){
-  header{ background: #F8F7F5; }
-}
-    .video-wrap{
-  width:100%; /* was collapsing */
-  border:1px solid rgba(26,24,22,0.14);
-  background:#EDE7DF;
-  line-height:0;
-}
-.video-wrap video{
-  width:100%;
-  height:auto;
-  aspect-ratio:16/9; /* on the video itself, not the wrapper */
-  background:#EDE7DF;
-  object-fit:cover;
-}
-    .meta-dots{
-  font-size:.68rem;
-  font-weight:700;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  line-height:1.7;
-  color:rgba(26,24,22,.58);
-}
-
+    .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:5rem;align-items:start} .contact-intro h2{font-family:Georgia, serif;font-weight:400;font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:.96;letter-spacing:-.02em;margin:.7rem 0 .9rem}
+    .contact-intro .muted{color:rgba(251,246,240,.78);line-height:1.6;margin:.5rem 0;font-size:.95rem} .contact-copy{margin-top:1.8rem;padding-top:1.6rem;border-top:1px solid var(--line-light);max-width:24rem}
+    .oi-form{display:flex;flex-direction:column;gap:1.2rem} .oi-form label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(251,246,240,.56);display:flex;flex-direction:column;gap:.5rem}
+    .oi-form input,.oi-form textarea{background:transparent;border:0;border-bottom:1px solid rgba(251,246,240,.18);color:var(--paper);padding:.7rem 0;font-size:.95rem;outline:0}
+    footer{padding:3rem 0 4rem;border-top:1px solid var(--line);background:var(--paper)} footer .small{font-size:.76rem;color:rgba(17,17,17,.62)}
+    @media(max-width:980px){section{padding:5.5rem 0} .model-stages,.condition-field,.product,.lineage,.founder-grid,.contact-grid{grid-template-columns:1fr} .product{padding:2.2rem 0} .product-meta{grid-template-columns:1fr} .stage-connector,.lineage-connector{display:none} .stage--emphasis{padding-left:0;border-left:0}}
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#top">Skip to content</a>
   <header>
     <div class="container">
       <nav aria-label="Primary">
         <div class="brand"><span class="small">O R G A N I Z A T I O N A L&nbsp;&nbsp;I N T E L L I G E N C E</span></div>
         <ul>
-              <li><a href="#model">About</a></li>
-              <li><a href="#model-intelligence">Intelligence</a></li>
-              <li><a href="#products">Products</a></li>
-              <li><a href="/evidence-reconstruction/" style="color:var(--ink); border-bottom:1px solid var(--line-strong); opacity:1;">Evidence Reconstruction</a></li>
-              <li><a href="#model-advisory">Advisory</a></li>
-              <li><a href="#method">Method</a></li>
-              <li><a href="#founder">Founder</a></li>
-              <li><a href="#contact">Contact</a></li>
+          <li><a href="#problem">Problem</a></li>
+          <li><a href="#model">Model</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="/evidence-reconstruction/" class="is-active">Evidence Reconstruction™</a></li>
+          <li><a href="#method">Method</a></li>
+          <li><a href="#founder">Founder</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
-
   <main>
     <section class="hero" id="top">
       <div class="container">
-        <div class="hero-top">
-          <img src="assets/kinglis_logo.png" alt="KINGLIS" width="168" height="48" decoding="async" />
-        </div>
+        <div class="hero-top"><img src="assets/kinglis_logo.png" alt="KINGLIS" width="168" height="48" /></div>
         <h1>Every organizational outcome has a cause.</h1>
         <p class="lead">KINGLIS transforms organizational evidence into executive intelligence—helping leaders understand the conditions shaping how their organization operates before deciding what to change.</p>
         <div class="hero-rule"></div>
         <div class="hero-model">EVIDENCE → INTELLIGENCE → ADVISORY</div>
         <div class="cta-group">
           <a class="cta-premium" href="#model">EXPLORE ORGANIZATIONAL INTELLIGENCE <span>→</span></a>
-          <a class="cta-secondary" href="/sample-dossier">VIEW A SAMPLE DOSSIER <span>→</span></a>
-        </div>
-      </div>
-    </section>
-
-    
-    <section id="organizational-record" class="evidence-field" aria-label="The organizational record">
-      <div class="evidence-field__label-row container">
-        <div class="evidence-field__label">
-          <span class="micro">THE ORGANIZATIONAL RECORD</span>
-          <p class="evidence-field__sub">Organizations already produce evidence of how work moves, decisions travel and outcomes emerge.</p>
-        </div>
-      </div>
-      <div class="evidence-field__viewport">
-        <div class="evidence-field__canvas">
-          <span class="evidence-connector ec--1" aria-hidden="true"></span>
-          <span class="evidence-connector ec--2" aria-hidden="true"></span>
-          <span class="evidence-connector ec--3" aria-hidden="true"></span>
-
-          <article class="evidence-fragment ef--1">
-            <div class="ef__head"><span class="micro">EMAIL THREAD</span><span class="ef__ref">REF / EM-014</span></div>
-            <div class="ef__rule"></div>
-            <div class="ef__body"><div class="ef__kv" style="margin-bottom:.5rem"><span class="ef__k">14.03.26 · 09:42</span><span></span></div><p class="ef__quote">"...waiting for approval..."</p></div>
-          </article>
-
-          <article class="evidence-fragment ef--2 ef--inverted">
-  <div class="ef__head"><span class="micro">DECISION RECORD</span><span class="ef__ref">REF / DR-018</span></div>
-  <div class="ef__rule"></div>
-  <div class="ef__body"><div class="ef__kv"><span class="ef__k">OWNER</span><span class="ef__v">[REDACTED]</span></div><div class="ef__kv"><span class="ef__k">STATUS</span><span class="ef__v is-accent">REOPENED</span></div><div class="ef__kv"><span class="ef__k">ROUTE</span><span class="ef__v">EXECUTIVE</span></div></div>
-</article>
-
-          <article class="evidence-fragment ef--3">
-            <div class="ef__head"><span class="micro">MEETING RECORD</span><span class="ef__ref">REF / MTG-024</span></div>
-            <div class="ef__rule"></div>
-            <div class="ef__body"><div class="ef__kv"><span class="ef__k">DECISION</span><span class="ef__v">ESCALATED</span></div><div class="ef__kv"><span class="ef__k">OWNER</span><span class="ef__v">UNRECORDED</span></div></div>
-          </article>
-
-          <article class="evidence-fragment ef--4">
-            <div class="ef__head"><span class="micro">PROCESS NOTE</span><span class="ef__ref">REV / 04</span></div>
-            <div class="ef__rule"></div>
-            <div class="ef__body"><div class="ef__kv"><span class="ef__k">HANDOFF</span><span class="ef__v">03</span></div><div class="ef__kv"><span class="ef__k">RETURNED</span><span class="ef__v">02</span></div></div>
-          </article>
-
-          <article class="evidence-fragment ef--5 ef--inverted">
-  <div class="ef__head"><span class="micro">APPROVAL ROUTE</span><span class="ef__ref">REF / AR-011</span></div>
-  <div class="ef__rule"></div>
-  <div class="ef__body"><div class="ef__kv"><span class="ef__k">REQUESTED</span><span class="ef__v">08:42</span></div><div class="ef__kv"><span class="ef__k">RETURNED</span><span class="ef__v">16:18</span></div><div class="ef__kv"><span class="ef__k">LEVELS</span><span class="ef__v is-teal">04</span></div></div>
-</article>
-
-          <article class="evidence-fragment ef--6">
-            <div class="ef__head"><span class="micro">WORKFLOW RECORD</span><span class="ef__ref">REF / WF-031</span></div>
-            <div class="ef__rule"></div>
-            <div class="ef__body"><div class="ef__kv"><span class="ef__k">OWNER</span><span class="ef__v">OPERATIONS</span></div><div class="ef__kv"><span class="ef__k">TRANSFER</span><span class="ef__v">FINANCE</span></div><div class="ef__kv"><span class="ef__k">STATUS</span><span class="ef__v">PENDING</span></div></div>
-          </article>
-
-          <article class="evidence-fragment ef--7 ef--inverted">
-  <div class="ef__head"><span class="micro">OPERATING REPORT</span><span class="ef__ref">REF / OR-009</span></div>
-  <div class="ef__rule"></div>
-  <div class="ef__body"><div class="ef__kv"><span class="ef__k">PERIOD</span><span class="ef__v">Q3</span></div><div class="ef__kv"><span class="ef__k">VARIANCE</span><span class="ef__v">04</span></div></div>
-</article>
-
-          <article class="evidence-fragment ef--8">
-            <div class="ef__head"><span class="micro">ESCALATION</span><span class="ef__ref">REF / ES-017</span></div>
-            <div class="ef__rule"></div>
-            <div class="ef__body"><div class="ef__kv"><span class="ef__k">FROM</span><span class="ef__v">OPS</span></div><div class="ef__kv"><span class="ef__k">TO</span><span class="ef__v">EXEC</span></div><div class="ef__kv"><span class="ef__k">FLAG</span><span class="ef__v is-accent">UNRESOLVED</span></div></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="model">
-      <div class="container">
-        <span class="micro">THE KINGLIS MODEL</span>
-        <h2 class="serif-display">Evidence. Intelligence. Advisory.</h2>
-        <div class="intro-grid">
-          <p>Organizations already produce evidence of how work moves, decisions travel, responsibility is held and outcomes are produced.</p>
-          <p>KINGLIS examines that evidence to establish what the available organizational record supports, identify structurally significant conditions and give leadership a clearer basis for decision.</p>
-        </div>
-
-        <div class="model-system">
-          <div class="model-stages">
-            <div class="stage" id="model-evidence">
-              <div class="stage-index">01</div>
-              <div class="stage-meta"><span class="micro">EVIDENCE</span><span class="stage-sub">THE RECORD</span></div>
-              <h3>We begin with the organizational record.</h3>
-              <p>Reports. Communications. Meeting records. Process documents. Decision records. Operational material.</p>
-              <p>Where required, KINGLIS diagnostic instruments generate additional structured evidence from leadership, workforce or defined organizational groups.</p>
-              <div class="stage-list"><span>Organizational records</span><span>Diagnostic evidence</span></div>
-            </div>
-            <div class="stage-connector" aria-hidden="true"><span>→</span></div>
-            <div class="stage stage--emphasis" id="model-intelligence">
-              <div class="stage-index">02</div>
-              <div class="stage-meta"><span class="micro">INTELLIGENCE</span><span class="stage-sub">THE INTERPRETATION</span></div>
-              <h3>We structure, compare and interpret the evidence.</h3>
-              <p>KINGLIS examines chronology, routes, differing accounts, divergence, dependencies, handoffs and potential constraints.</p>
-              <p>Findings remain source-grounded and bounded by the available evidence.</p>
-              <div class="stage-list"><span>Structure</span><span>Compare</span><span>Interpret</span></div>
-            </div>
-            <div class="stage-connector" aria-hidden="true"><span>→</span></div>
-            <div class="stage" id="model-advisory">
-              <div class="stage-index">03</div>
-              <div class="stage-meta"><span class="micro">ADVISORY</span><span class="stage-sub">THE APPLICATION</span></div>
-              <h3>Where change is required, intelligence informs the intervention.</h3>
-              <p>KINGLIS validates structural hypotheses, designs organizational architecture and supports implementation and review.</p>
-              <div class="stage-list"><span>Validate</span><span>Design</span><span>Implement</span><span>Review</span></div>
-            </div>
-          </div>
-          <div class="close-statement"><p>We do not begin with a preferred solution.</p><p>We begin with what the available evidence supports.</p></div>
+          <a class="cta-secondary" href="/evidence-reconstruction/">EVIDENCE RECONSTRUCTION™ <span>→</span></a>
         </div>
       </div>
     </section>
@@ -769,12 +117,27 @@ header{
           <div class="condition"><span class="micro">DECISIONS</span><p>Moving more slowly.</p></div>
           <div class="condition"><span class="micro">ACCOUNTABILITY</span><p>Becoming less clear.</p></div>
           <div class="condition"><span class="micro">TRANSFORMATION</span><p>Not resolving the problem.</p></div>
-          <div class="condition condition--wide"><span class="micro">UNEXPLAINED OUTCOME</span><p>Something feels fundamentally wrong, but nobody can explain why.</p></div>
         </div>
-        <div class="outcome-statement">
-          <h3 class="serif-display">THESE ARE ORGANIZATIONAL OUTCOMES.</h3>
-          <p class="outcome-sub">The question is what is producing them.</p>
-          <p class="outcome-note"><em>KINGLIS does not begin with a preferred intervention. We first establish what the available evidence supports and which organizational conditions require executive attention.</em></p>
+      </div>
+    </section>
+
+    <section id="model">
+      <div class="container">
+        <span class="micro">THE KINGLIS MODEL</span>
+        <h2 class="serif-display">Evidence. Intelligence. Advisory.</h2>
+        <div class="intro-grid">
+          <p>Organizations already produce evidence of how work moves, decisions travel, responsibility is held and outcomes are produced.</p>
+          <p>KINGLIS examines that evidence to establish what the available organizational record supports, identify structurally significant conditions and give leadership a clearer basis for decision.</p>
+        </div>
+        <div class="model-system">
+          <div class="model-stages">
+            <div class="stage" id="model-evidence"><div class="stage-index">01</div><div class="stage-meta"><span class="micro">EVIDENCE</span><span class="stage-sub">THE RECORD</span></div><h3>We begin with the organizational record.</h3><p>Reports. Communications. Meeting records. Process documents. Decision records. Operational material.</p></div>
+            <div class="stage-connector">→</div>
+            <div class="stage stage--emphasis" id="model-intelligence"><div class="stage-index">02</div><div class="stage-meta"><span class="micro">INTELLIGENCE</span><span class="stage-sub">THE INTERPRETATION</span></div><h3>We structure, compare and interpret the evidence.</h3><p>KINGLIS examines chronology, routes, differing accounts, divergence, dependencies, handoffs and potential constraints.</p></div>
+            <div class="stage-connector">→</div>
+            <div class="stage" id="model-advisory"><div class="stage-index">03</div><div class="stage-meta"><span class="micro">ADVISORY</span><span class="stage-sub">THE APPLICATION</span></div><h3>Where change is required, intelligence informs the intervention.</h3><p>KINGLIS validates structural hypotheses, designs organizational architecture and supports implementation and review.</p></div>
+          </div>
+          <div class="close-statement"><p>We do not begin with a preferred solution.</p><p>We begin with what the available evidence supports.</p></div>
         </div>
       </div>
     </section>
@@ -783,85 +146,49 @@ header{
       <div class="container">
         <span class="micro">INTELLIGENCE PRODUCTS</span>
         <h2 class="serif-display">Defined questions. Evidence-led investigation. Executive intelligence.</h2>
-        <div class="product-intro">
-          <p>KINGLIS Intelligence Products investigate defined organizational or professional questions using existing records, purpose-built diagnostic evidence, or both.</p>
-          <p>Each product applies KINGLIS evidence processing and intelligence methods to a specific decision problem.</p>
-        </div>
         <div class="product-index">
-  <article class="product">
-    <div class="product-index-num">PRODUCT 01</div>
-    <div class="product-header"><h3>EVIDENCE RECONSTRUCTION™</h3><span class="micro">LEGAL MATTERS / DISPUTES / INVESTIGATIONS</span></div>
-    <p class="product-statement">Before legal judgement, evidence must be reconstructed.</p>
-    <p class="product-statement">Document-heavy matters arrive fragmented across emails, WhatsApp, correspondence, agreements and supporting documents. We reconstruct the evidential record.</p>
-    <div class="product-meta">
-      <div><span class="micro">EVIDENCE</span><p>Emails · WhatsApp · Correspondence · Agreements · Reports</p></div>
-      <div><span class="micro">INVESTIGATES</span><p>Events · People · Decisions · Actions · Differing accounts · Relationships · Gaps</p></div>
-      <div><span class="micro">OUTPUT</span><p>Evidence Index™ · Evidence Chronology™ · Professional Review Package</p></div>
-    </div>
-    <p class="product-doctrine">WE RECONSTRUCT THE RECORD.<br>YOUR TEAM APPLIES JUDGEMENT.</p>
-    <div class="product-foot"><a href="/evidence-reconstruction/" class="product-cta">EXPLORE EVIDENCE RECONSTRUCTION™ <span>→</span></a></div>
-  </article>
-    <div class="product-meta">
-    </div>
-  <div class="product-rule"></div>
-  <article class="product">
-    <div class="product-index-num">PRODUCT 02</div>
-    <div class="product-header"><h3>BUSINESS X-RAY™</h3><span class="micro">ONE DEFINED ORGANIZATIONAL OUTCOME</span></div>
-    <p class="product-statement">Examine the evidence surrounding an outcome the usual explanation no longer accounts for.</p>
-    <div class="product-meta">
-      <div><span class="micro">EVIDENCE</span><p>Organizational record</p></div>
-      <div><span class="micro">INVESTIGATES</span><p>Work · Decisions · Information · Ownership · Dependency</p></div>
-      <div><span class="micro">OUTPUT</span><p>Private Intelligence Dossier</p></div>
-    </div>
-    <div class="product-foot"><span class="micro">FROM $1,900</span><a href="/business-xray" class="product-cta">EXPLORE BUSINESS X-RAY™ <span>→</span></a></div>
-  </article>
-</div>
+          <article class="product">
+            <div class="product-index-num">PRODUCT 01 — FLAGSHIP</div>
+            <div class="product-header"><h3>EVIDENCE RECONSTRUCTION™</h3><span class="micro">LEGAL MATTERS / DISPUTES / INVESTIGATIONS</span></div>
+            <p class="product-statement">Before legal judgement, evidence must be reconstructed.</p>
+            <p class="product-statement" style="font-size:1rem;opacity:.7">Document-heavy matters arrive fragmented across emails, WhatsApp, correspondence, agreements and supporting documents. We reconstruct the evidential record into a structured, source-traceable record prepared for professional review.</p>
+            <div class="product-meta">
+              <div><span class="micro">EVIDENCE</span><p>Emails · WhatsApp · Correspondence · Agreements · Reports</p></div>
+              <div><span class="micro">INVESTIGATES</span><p>Events · People · Decisions · Actions · Differing accounts · Relationships · Gaps</p></div>
+              <div><span class="micro">OUTPUT</span><p>Evidence Index™ · Evidence Chronology™ · Professional Review Package</p></div>
+            </div>
+            <p class="product-doctrine">WE RECONSTRUCT THE RECORD. YOUR LEGAL TEAM APPLIES JUDGEMENT.</p>
+            <div class="product-foot"><span class="micro">Confidential · Fixed-fee · Source-traceable</span><a href="/evidence-reconstruction/" class="product-cta">EXPLORE EVIDENCE RECONSTRUCTION™ <span>→</span></a></div>
+          </article>
+          <article class="product">
+            <div class="product-index-num">PRODUCT 02</div>
+            <div class="product-header"><h3>BUSINESS X-RAY™</h3><span class="micro">ONE DEFINED ORGANIZATIONAL OUTCOME</span></div>
+            <p class="product-statement">Examine the evidence surrounding an outcome the usual explanation no longer accounts for.</p>
+            <div class="product-meta">
+              <div><span class="micro">EVIDENCE</span><p>Organizational record</p></div>
+              <div><span class="micro">INVESTIGATES</span><p>Work · Decisions · Information · Ownership · Dependency</p></div>
+              <div><span class="micro">OUTPUT</span><p>Private Intelligence Dossier</p></div>
+            </div>
+            <div class="product-foot"><span class="micro">Fixed-fee · Confidential</span><a href="/business-xray" class="product-cta">EXPLORE BUSINESS X-RAY™ <span>→</span></a></div>
+          </article>
+        </div>
+      </div>
     </section>
-    
-    <section id="field-record" class="video-field">
-  <div class="container">
-    <span class="micro">FIELD RECORD</span>
-    <div class="video-wrap">
-      <video
-        src="assets/Secure_Drop_Demo.mp4"
-        poster="assets/Secure_Drop_Demo.mp4"
-        playsinline muted loop controls preload="metadata">
-      </video>
-    </div>
-    <p class="video-caption"><em>Organizational evidence in motion.</em></p>
-    <p class="micro meta-dots">Private submission · Client ownership · Defined processing · Access · Retention · Deletion · DPA available</p>
-  </div>
-</section>
 
     <section id="method">
       <div class="container">
         <span class="micro">THE METHOD</span>
         <h2 class="serif-display">Intelligence before intervention.</h2>
-        <div class="method-intro">
-          <p>Organizations are often redesigned from reported problems, assumed causes or preferred solutions.</p>
-          <p>KINGLIS begins earlier.</p>
-          <p>We examine the available organizational evidence, establish what it supports and identify the conditions requiring executive attention.</p>
-        </div>
         <div class="doctrine">
           <div class="doctrine-line"></div>
           <div class="doctrine-steps">
-            <div class="doctrine-step">
-              <div class="doctrine-index">01</div>
-              <div class="doctrine-content"><h3>EVIDENCE<br>BEFORE<br>ASSUMPTION</h3><p>What does the available organizational record support?</p></div>
-            </div>
+            <div class="doctrine-step"><div class="doctrine-index">01</div><div class="doctrine-content"><h3>EVIDENCE<br>BEFORE<br>ASSUMPTION</h3><p>What does the available organizational record support?</p></div></div>
             <div class="doctrine-arrow">↓</div>
-            <div class="doctrine-step">
-              <div class="doctrine-index">02</div>
-              <div class="doctrine-content"><h3>INTELLIGENCE<br>BEFORE<br>INTERVENTION</h3><p>What conditions, relationships, routes or patterns are structurally significant?</p></div>
-            </div>
+            <div class="doctrine-step"><div class="doctrine-index">02</div><div class="doctrine-content"><h3>INTELLIGENCE<br>BEFORE<br>INTERVENTION</h3><p>What conditions, relationships, routes or patterns are structurally significant?</p></div></div>
             <div class="doctrine-arrow">↓</div>
-            <div class="doctrine-step">
-              <div class="doctrine-index">03</div>
-              <div class="doctrine-content"><h3>ADVISORY<br>WHERE<br>REQUIRED</h3><p>What should leadership validate, redesign or change?</p></div>
-            </div>
+            <div class="doctrine-step"><div class="doctrine-index">03</div><div class="doctrine-content"><h3>ADVISORY<br>WHERE<br>REQUIRED</h3><p>What should leadership validate, redesign or change?</p></div></div>
           </div>
         </div>
-        <p class="method-close"><em>Better organizational decisions require a defensible understanding of the conditions producing the outcome.</em></p>
       </div>
     </section>
 
@@ -874,22 +201,19 @@ header{
           <div class="lineage-connector">→</div>
           <div class="lineage-block"><div><span class="micro">INTELLIGENCE</span><h3>ILLUSTRATIVE EXECUTIVE DOSSIER</h3></div><a href="/sample-dossier" class="lineage-link">VIEW SAMPLE DOSSIER <span>→</span></a></div>
         </div>
-        <p class="micro" style="margin-top:2.2rem;color:rgba(251,246,240,.48);max-width:36rem;line-height:1.6">Same evidence set. Two views of the intelligence chain. Organization details replaced. Illustrative evidence demonstration.</p>
       </div>
     </section>
 
     <section id="founder">
       <div class="container founder-grid">
-        <div class="founder-photo-wrap"><img src="assets/kj.png" alt="Kaylee-Jane Inglis, founder of KINGLIS" width="600" height="800" loading="lazy" decoding="async" /></div>
+        <div class="founder-photo-wrap"><img src="assets/kj.png" alt="Kaylee-Jane Inglis" width="600" height="800" /></div>
         <div class="founder-content">
           <span class="micro">FOUNDER</span>
           <h2 class="serif-display">KAYLEE–JANE INGLIS</h2>
           <p class="founder-principle">Organizational Intelligence as a practical discipline for executive decision-making.</p>
           <div class="founder-bio">
             <p>Kaylee-Jane founded KINGLIS to establish Organizational Intelligence as a practical discipline for executive decision-making.</p>
-            <p>Her work sits across organizational architecture, governance, operating models and evidence-led systems inquiry—examining how organizational conditions shape outcomes.</p>
-            <p>Rather than beginning with assumptions or recommendations, she begins with evidence—examining the structures, relationships and patterns associated with organizational outcomes before determining what requires further investigation or change.</p>
-            <p><a href="https://www.linkedin.com/kaylee-jane/" target="_blank" rel="noopener" class="founder-link">LinkedIn <span>→</span></a></p>
+            <p>Her work sits across organizational architecture, governance, operating models and evidence-led systems inquiry.</p>
           </div>
         </div>
       </div>
@@ -902,104 +226,27 @@ header{
           <h2>Perhaps the problem isn't the problem.</h2>
           <p class="muted">The architecture producing it may be.</p>
           <div class="contact-copy">
-            <p class="muted">Tell us what you're seeing.</p>
-            <p class="muted">A recurring decision. Work that keeps returning. A process that doesn't hold. An outcome nobody can quite explain.</p>
-            <p class="muted">You don't need to diagnose the problem before you contact KINGLIS. Start with what keeps happening.</p>
+            <p class="muted">Tell us what you're seeing. A recurring decision. Work that keeps returning. An outcome nobody can explain.</p>
           </div>
         </div>
         <div class="contact-form-wrap">
-          <form action="https://formspree.io/f/meebrwjw" id="kinglis-form" method="POST" class="oi-form">
-            <div class="form-top">
-              <label>Name<input type="text" name="name" autocomplete="name" required /></label>
-              <label>Organization<input type="text" name="organization" autocomplete="organization" required /></label>
-              <label>Work Email<input type="email" name="email" autocomplete="email" required /></label>
-            </div>
-            <label class="form-full">What prompted you to reach out?<textarea name="challenge" rows="5" required placeholder="Briefly describe the organizational challenge, outcome or question you'd like to discuss."></textarea></label>
-            <p class="form-note"><em>We respond within one business day. If your matter is sensitive, do not include confidential evidence in this form. We can provide a private submission route.</em></p>
-            <button type="submit" class="cta">REQUEST A PRIVATE REVIEW →</button>
-            <input type="hidden" name="_subject" value="New Organizational Intelligence Request — KINGLIS" />
+          <form action="https://formspree.io/f/meebrwjw" method="POST" class="oi-form">
+            <label>Name<input type="text" name="name" required /></label>
+            <label>Organization<input type="text" name="organization" required /></label>
+            <label>Work Email<input type="email" name="email" required /></label>
+            <label>What prompted you to reach out?<textarea name="challenge" rows="5" required></textarea></label>
+            <button type="submit" class="cta" style="background:transparent;border:0;border-bottom:1px solid var(--paper);color:var(--paper);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;padding:0 0 4px;margin-top:.6rem">REQUEST A PRIVATE REVIEW →</button>
           </form>
         </div>
       </div>
     </section>
-
-    <section id="first-principles">
-      <div class="container">
-        <span class="micro">FIRST PRINCIPLES</span>
-        <h2 class="serif-display large-close">Organizations leave evidence of how work moves, decisions travel, responsibility is held and outcomes emerge.</h2>
-        <p class="close-sub">KINGLIS examines that evidence to support better organizational decisions.</p>
-      </div>
-    </section>
   </main>
-
   <footer>
     <div class="container">
-      <div>© <span id="y"></span> KINGLIS</div>
-      <div class="small">Organizational Intelligence</div>
-      <div class="small">Founded by Kaylee-Jane Inglis</div>
-      <div class="small">www.thisiskinglis.com · <a href="resources/">Research Library</a></div>
-      <p class="small"><em>KINGLIS™, Organizational Intelligence methods, diagnostic instruments, evidence classifications, analytical frameworks and associated product methodologies are proprietary to KINGLIS. Evidence submitted through KINGLIS technology remains client property.</em></p>
+      <div>© 2026 KINGLIS</div>
+      <div class="small">Organizational Intelligence — Confidential · Fixed-fee · Source-traceable</div>
+      <div class="small">www.thisiskinglis.com · <a href="/evidence-reconstruction/">Evidence Reconstruction™</a></div>
     </div>
   </footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-
-  <div id="thank-you-overlay" class="thank-you-overlay" aria-hidden="true" hidden>
-    <div class="thank-you-card" role="dialog" aria-modal="true" aria-labelledby="thank-you-title">
-      <button class="thank-you-close" type="button" aria-label="Close">×</button>
-      <span class="micro">Submission received</span>
-      <h3 id="thank-you-title" class="serif-display">Thank you<span id="thank-you-name"></span>.</h3>
-      <p id="thank-you-body">Your message has been received. We respond within one business day.</p>
-      <p class="thank-you-note">If your matter is sensitive, we will provide a private submission route.</p>
-      <button class="thank-you-dismiss" type="button">Continue <span>→</span></button>
-    </div>
-  </div>
-
-
-  <script>
-  (function(){
-    const form = document.getElementById('kinglis-form');
-    const overlay = document.getElementById('thank-you-overlay');
-    const nameEl = document.getElementById('thank-you-name');
-    const closeBtn = overlay ? overlay.querySelector('.thank-you-close') : null;
-    const dismissBtn = overlay ? overlay.querySelector('.thank-you-dismiss') : null;
-    if(!form || !overlay) return;
-    function openThankYou(firstName){
-      nameEl.textContent = firstName ? ', ' + firstName : '';
-      overlay.hidden = false;
-      requestAnimationFrame(function(){ overlay.classList.add('is-open'); overlay.setAttribute('aria-hidden','false'); });
-      if(dismissBtn) dismissBtn.focus();
-      document.body.style.overflow='hidden';
-    }
-    function closeThankYou(){
-      overlay.classList.remove('is-open');
-      overlay.setAttribute('aria-hidden','true');
-      setTimeout(function(){ overlay.hidden=true; document.body.style.overflow=''; }, 280);
-    }
-    if(closeBtn) closeBtn.addEventListener('click', closeThankYou);
-    if(dismissBtn) dismissBtn.addEventListener('click', closeThankYou);
-    overlay.addEventListener('click', function(e){ if(e.target===overlay) closeThankYou(); });
-    document.addEventListener('keydown', function(e){ if(e.key==='Escape' && overlay.classList.contains('is-open')) closeThankYou(); });
-    form.addEventListener('submit', async function(e){
-      e.preventDefault();
-      const data = new FormData(form);
-      const rawName = (data.get('name')||'').toString().trim();
-      const firstName = rawName.split(/\s+/)[0] || '';
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const origText = submitBtn ? submitBtn.textContent : '';
-      if(submitBtn){ submitBtn.disabled=true; submitBtn.textContent='Sending…'; }
-      try{
-        const res = await fetch(form.action, {method:'POST', body:data, headers:{'Accept':'application/json'}});
-        openThankYou(firstName);
-        form.reset();
-      }catch(err){
-        openThankYou(firstName);
-        form.reset();
-      }finally{
-        if(submitBtn){ submitBtn.disabled=false; submitBtn.textContent=origText; }
-      }
-    });
-  })();
-  </script>
-
 </body>
 </html>
