@@ -9,9 +9,10 @@
   <link rel="canonical" href="https://thisiskinglis.com/" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/og-image.png">
   <meta name="theme-color" content="#F8F7F5">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root{--paper:#F8F7F5;--ink:#1A1816;--teal:#2F4D4F;--olive:#8A7A5A;--line:rgba(17,17,17,.12);--line-strong:rgba(17,17,17,.18);--line-light:rgba(251,246,240,.14)}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-family:'Inter',sans-serif}
     img{max-width:100%;display:block} a{color:inherit;text-decoration:none}
     .container{width:min(1180px,92vw);margin-inline:auto}
     header{position:sticky;top:0;z-index:50;background:rgba(248,247,245,0.84);backdrop-filter:blur(9px);border-bottom:1px solid rgba(26,24,22,0.09)}
@@ -21,58 +22,60 @@
     nav a{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(17,17,17,.72);padding-bottom:2px;border-bottom:1px solid transparent;transition:all .2s}
     nav a:hover{color:var(--ink);border-color:var(--line-strong)} nav a.is-active{color:var(--ink);border-bottom-color:var(--line-strong);opacity:1}
     .micro{display:inline-block;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);line-height:1.4}
-    .serif-display{font-family:Georgia, 'Times New Roman', Times, serif;font-weight:400;letter-spacing:-.02em;line-height:.98;text-wrap:balance}
+    .serif-display{font-family:'Cormorant Garamond', Georgia, serif;font-weight:400;letter-spacing:-.02em;line-height:.98;text-wrap:balance}
     section{padding:7.5rem 0;border-bottom:1px solid var(--line)} section.section-dark{background:var(--ink);color:var(--paper);border-bottom-color:rgba(251,246,240,.08)} section.section-dark .micro{color:var(--olive)}
-    .hero{padding:6rem 0 8rem;background:var(--paper);border-bottom:1px solid var(--line)} .hero-top{margin-bottom:5.5rem}
-    .hero h1{font-family:Georgia, serif;font-weight:400;font-size:clamp(2.9rem,6.2vw,5.4rem);line-height:.92;letter-spacing:-.03em;margin:0;max-width:11.5em}
-    .hero .lead{margin:2rem 0 0;max-width:34rem;font-size:1.08rem;line-height:1.65;color:var(--teal)}
+    .hero{padding:120px 0 100px;background:var(--paper);border-bottom:1px solid var(--line)} .hero-top{margin-bottom:64px}
+    .hero h1{font-family:'Cormorant Garamond', Georgia, serif;font-weight:400;font-size:clamp(3.2rem,6.2vw,5.4rem);line-height:.9;letter-spacing:-.03em;margin:0;max-width:12em}
+    .hero h1 em{font-style:italic;font-weight:500}
+    .hero .lead{margin:2rem 0 0;max-width:34rem;font-size:1.08rem;line-height:1.65;color:var(--teal);font-weight:300}
     .hero-rule{width:100%;height:1px;background:var(--line);margin:2.25rem 0 1.5rem;max-width:34rem}
     .hero-model{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--teal);margin-bottom:2.5rem}
     .cta-group{display:flex;flex-wrap:wrap;gap:1rem 2.25rem;align-items:center}
     .cta-premium,.cta-secondary,.product-cta,.lineage-link,.founder-link{display:inline-flex;align-items:center;gap:.45rem;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:3px;line-height:1.2}
-    .cta-premium{color:var(--ink)} .cta-secondary{color:rgba(17,17,17,.68);border-bottom-color:rgba(17,17,17,.22)}
+    .cta-premium{color:var(--paper);background:var(--ink);padding:18px 28px;border-bottom:0;font-weight:600;font-size:.78rem}
+    .cta-secondary{color:rgba(17,17,17,.8);border:1px solid rgba(17,17,17,.2);padding:18px 28px;border-bottom:1px solid rgba(17,17,17,.2)}
     .section-header .serif-display{font-size:clamp(2.2rem,4.5vw,3.6rem);margin:.9rem 0 1.5rem} .intro-grid{max-width:48rem} .intro-grid p{line-height:1.65;color:rgba(17,17,17,.82);margin:0 0 .9rem}
-    .condition-field{display:grid;grid-template-columns:repeat(2,1fr);gap:2.6rem 4.2rem;max-width:58rem;padding-top:2.2rem;border-top:1px solid var(--line);position:relative}
-    .condition{padding:0;padding-top:1.15rem;border-top:1px solid var(--line)} .condition p{margin:.55rem 0 0;font-size:.94rem;line-height:1.55;color:rgba(17,17,17,.74);max-width:22em}
     .model-system{margin-top:4.2rem;padding-top:2.4rem;border-top:1px solid var(--line);position:relative} .model-system::before{content:"";position:absolute;top:0;left:0;width:64px;height:1px;background:var(--ink);margin-top:-1px}
     .model-stages{display:grid;grid-template-columns:1fr 72px 1.38fr 72px 1fr;gap:0 1rem;align-items:start}
     .stage{padding:0} .stage--emphasis{padding:0 0 0 2.2rem;border-left:1px solid var(--line)} .stage-index{font-size:.66rem;letter-spacing:.2em;color:var(--olive);margin-bottom:1.2rem;display:flex;align-items:center;gap:.8rem} .stage-index::after{content:"";height:1px;width:28px;background:var(--line);display:inline-block}
     .stage-meta{display:flex;flex-direction:column;gap:.22rem;margin-bottom:1.15rem} .stage-sub{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--teal)}
-    .stage h3{font-family:Georgia, Times, serif;font-weight:400;font-size:1.28rem;line-height:1.18;letter-spacing:-.01em;margin:0 0 1rem;max-width:14em}
+    .stage h3{font-family:'Cormorant Garamond', Times, serif;font-weight:400;font-size:1.28rem;line-height:1.18;letter-spacing:-.01em;margin:0 0 1rem;max-width:14em}
     .stage p{font-size:.92rem;line-height:1.66;color:rgba(17,17,17,.76);margin:0 0 .8rem}
     .stage-list{margin-top:1.8rem;display:flex;flex-direction:column;gap:.32rem} .stage-list span{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(17,17,17,.48)}
     .stage-connector{display:flex;justify-content:center;padding-top:2.9rem;font-size:.88rem;opacity:.22}
-    .close-statement{margin-top:4rem;max-width:28rem} .close-statement p{font-family:Georgia, serif;font-size:1.18rem;line-height:1.35;margin:0}
+    .close-statement{margin-top:4rem;max-width:28rem} .close-statement p{font-family:'Cormorant Garamond', serif;font-size:1.18rem;line-height:1.35;margin:0}
     #products .serif-display{font-size:clamp(1.9rem,3.6vw,2.9rem);margin:.8rem 0 1.2rem;max-width:16em} .product-intro{max-width:38rem;margin:0 0 3.5rem} .product-intro p{line-height:1.65;color:rgba(17,17,17,.78);margin:0 0 .8rem}
     .product-index{border-top:1px solid var(--line)} .product{display:grid;grid-template-columns:110px 1fr;gap:0 2.8rem;padding:3.2rem 0;border-bottom:1px solid var(--line);align-items:start}
-    .product-index-num{grid-column:1;grid-row:1 / span 10}
-    .product-header,.product-statement,.product-meta,.product-doctrine,.product-foot{grid-column:2}
-    .product-index-num{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--olive);padding-top:.35rem} .product-header{display:flex;flex-wrap:wrap;align-items:baseline;gap:.9rem 1.2rem;margin-bottom:.6rem}
-    .product-header h3{font-family:Georgia, serif;font-weight:400;font-size:1.45rem;letter-spacing:-.01em;margin:0;line-height:1.1}
-    .product-statement{font-family:Georgia, serif;font-size:1.28rem;line-height:1.35;letter-spacing:-.01em;margin:.2rem 0 1.6rem;max-width:28em}
+    .product-index-num{grid-column:1;grid-row:1 / span 10;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--olive);padding-top:.35rem}
+    .product-header,.product-statement,.product-meta,.product-doctrine,.product-foot,.product-apps{grid-column:2}
+    .product-header{display:flex;flex-wrap:wrap;align-items:baseline;gap:.9rem 1.2rem;margin-bottom:.6rem}
+    .product-header h3{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:1.45rem;letter-spacing:-.01em;margin:0;line-height:1.1}
+    .product-statement{font-family:'Cormorant Garamond', serif;font-size:1.28rem;line-height:1.35;letter-spacing:-.01em;margin:.2rem 0 1.6rem;max-width:28em}
     .product-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem 2rem;padding:1.4rem 0 1.2rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .product-meta p{margin:.4rem 0 0;font-size:.88rem;line-height:1.5;color:rgba(17,17,17,.76)}
     .product-foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding-top:1.2rem}
-    .product-doctrine{margin:1.8rem 0 0;font-family:Georgia, serif;font-size:1.05rem;line-height:1.35;letter-spacing:.04em;text-transform:uppercase;color:var(--teal)}
+    .product-doctrine{margin:1.8rem 0 0;font-family:'Cormorant Garamond', serif;font-size:1.05rem;line-height:1.35;letter-spacing:.04em;text-transform:uppercase;color:var(--teal)}
+    .product-apps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem 2rem;margin-top:.8rem}
+    .product-apps p{font-size:.9rem;line-height:1.5;color:rgba(17,17,17,.76);margin:0}
     .doctrine{position:relative;margin-top:4rem;padding-left:3.2rem;max-width:56rem} .doctrine-line{position:absolute;left:0;top:.4rem;bottom:.4rem;width:1px;background:var(--line)}
     .doctrine-steps{display:flex;flex-direction:column;gap:4.2rem} .doctrine-step{display:grid;grid-template-columns:56px 1fr;gap:1rem 1.8rem;align-items:start}
     .doctrine-index{font-size:.68rem;letter-spacing:.18em;color:var(--olive);padding-top:.45rem}
-    .doctrine-content h3{font-family:Georgia, serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.4rem);line-height:.92;letter-spacing:-.02em;margin:0 0 .9rem;text-transform:uppercase}
+    .doctrine-content h3{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.4rem);line-height:.92;letter-spacing:-.02em;margin:0 0 .9rem;text-transform:uppercase}
     .doctrine-content p{margin:0;font-size:.95rem;line-height:1.6;color:rgba(17,17,17,.72);max-width:28em} .doctrine-arrow{margin-left:56px;font-size:1rem;opacity:.28;line-height:1}
     #dossier{padding:7rem 0 6.5rem} #dossier .serif-display{color:var(--paper);font-size:clamp(2rem,4.2vw,3.5rem);line-height:.96;margin:.9rem 0 3.2rem;max-width:14em}
     .lineage{display:grid;grid-template-columns:1fr 64px 1fr;gap:0;align-items:stretch;border-top:1px solid var(--line-light);border-left:1px solid var(--line-light);max-width:56rem}
     .lineage-block{padding:2rem 1.8rem;border-right:1px solid var(--line-light);border-bottom:1px solid var(--line-light);display:flex;flex-direction:column;justify-content:space-between;min-height:200px}
-    .lineage-block h3{font-family:Georgia, serif;font-weight:400;font-size:1.2rem;line-height:1.15;color:var(--paper);margin:.8rem 0 1.6rem}
+    .lineage-block h3{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:1.2rem;line-height:1.15;color:var(--paper);margin:.8rem 0 1.6rem}
     .lineage-connector{display:flex;align-items:center;justify-content:center;border-right:1px solid var(--line-light);border-bottom:1px solid var(--line-light);color:rgba(251,246,240,.38);font-size:1.1rem}
     .founder-grid{display:grid;grid-template-columns:42% 1fr;gap:4.5rem;align-items:start} .founder-photo-wrap{background:#EDE7DF;overflow:hidden} .founder-photo-wrap img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:saturate(.1) contrast(1.05)}
-    .founder-content .serif-display{font-size:clamp(1.8rem,3vw,2.6rem);margin:.6rem 0 1rem} .founder-principle{font-family:Georgia, serif;font-size:1.28rem;line-height:1.32;margin:0 0 2rem;max-width:20em;color:var(--teal)}
+    .founder-content .serif-display{font-size:clamp(1.8rem,3vw,2.6rem);margin:.6rem 0 1rem} .founder-principle{font-family:'Cormorant Garamond', serif;font-size:1.28rem;line-height:1.32;margin:0 0 2rem;max-width:20em;color:var(--teal)}
     .founder-bio p{font-size:.96rem;line-height:1.68;color:rgba(17,17,17,.78);margin:0 0 1rem;max-width:34em}
-    .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:5rem;align-items:start} .contact-intro h2{font-family:Georgia, serif;font-weight:400;font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:.96;letter-spacing:-.02em;margin:.7rem 0 .9rem}
+    .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:5rem;align-items:start} .contact-intro h2{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:.96;letter-spacing:-.02em;margin:.7rem 0 .9rem}
     .contact-intro .muted{color:rgba(251,246,240,.78);line-height:1.6;margin:.5rem 0;font-size:.95rem} .contact-copy{margin-top:1.8rem;padding-top:1.6rem;border-top:1px solid var(--line-light);max-width:24rem}
     .oi-form{display:flex;flex-direction:column;gap:1.2rem} .oi-form label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(251,246,240,.56);display:flex;flex-direction:column;gap:.5rem}
     .oi-form input,.oi-form textarea{background:transparent;border:0;border-bottom:1px solid rgba(251,246,240,.18);color:var(--paper);padding:.7rem 0;font-size:.95rem;outline:0}
     footer{padding:3rem 0 4rem;border-top:1px solid var(--line);background:var(--paper)} footer .small{font-size:.76rem;color:rgba(17,17,17,.62)}
-    @media(max-width:980px){section{padding:5.5rem 0} .model-stages,.condition-field,.product,.lineage,.founder-grid,.contact-grid{grid-template-columns:1fr} .product{padding:2.2rem 0} .product-meta{grid-template-columns:1fr} .stage-connector,.lineage-connector{display:none} .stage--emphasis{padding-left:0;border-left:0}}
+    @media(max-width:980px){section{padding:5.5rem 0} .model-stages,.product,.lineage,.founder-grid,.contact-grid{grid-template-columns:1fr} .product{padding:2.2rem 0;grid-template-columns:1fr} .product-index-num{grid-row:auto} .product-header,.product-statement,.product-meta,.product-doctrine,.product-foot,.product-apps{grid-column:1} .product-meta{grid-template-columns:1fr} .product-apps{grid-template-columns:1fr} .stage-connector,.lineage-connector{display:none} .stage--emphasis{padding-left:0;border-left:0}}
   </style>
 </head>
 <body>
@@ -83,7 +86,7 @@
         <ul>
           <li><a href="#model">Model</a></li>
           <li><a href="#products">Products</a></li>
-          <li><a href="/evidence-reconstruction/" class="is-active">Evidence Reconstruction™</a></li>
+          <li><a href="/evidence-reconstruction/">Evidence Reconstruction™</a></li>
           <li><a href="#method">Method</a></li>
           <li><a href="#founder">Founder</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -92,42 +95,27 @@
     </div>
   </header>
   <main>
-    <section class="hero" id="top" style="padding: 120px 0 100px;">
-  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 32px;">
-    
-    <div class="hero-top" style="margin-bottom: 64px;">
-      <img src="assets/kinglis_logo.png" alt="KINGLIS" style="height: 74px; width: auto; display: block;" />
-    </div>
-      
-    <h1 class="serif text- sm:text- leading-[0.9] tracking-[-0.03em] font-[400]">
-  Every outcome has a<br>
-  <span class="italic font-[500]">cause.</span>
-</h1>
-<p class="mt-8 max-w- font-['Inter'] text- leading-[1.6] font-[300] text-black/60">
-  KINGLIS specializes in transforming evidence and expertise into strategic organizational intelligence.
-</p>
-    
-    <div class="hero-rule" style="height: 1px; background: rgba(0,0,0,0.12); margin-bottom: 24px; max-width: 640px;"></div>
-    
-    <div class="hero-model" style="font-size: 13px; letter-spacing: 0.2em; color: #888; margin-bottom: 48px; text-transform: uppercase;">
-      EVIDENCE → INTELLIGENCE → ADVISORY
-    </div>
-    
-    <div class="cta-group" style="display: flex; gap: 16px; flex-wrap: wrap;">
-      <a class="cta-premium" href="#model" style="background: #0a0a0a; color: #fff; padding: 18px 28px; font-size: 13px; letter-spacing: 0.08em; text-decoration: none; font-weight: 600;">EXPLORE FOUNDER ARCHITECTURE <span>→</span></a>
-      <a class="cta-secondary" href="/evidence-reconstruction/" style="border: 1px solid rgba(0,0,0,0.2); color: #0a0a0a; padding: 18px 28px; font-size: 13px; letter-spacing: 0.08em; text-decoration: none;">EVIDENCE RECONSTRUCTION™ <span>→</span></a>
-    </div>
-    <div style="margin-top: 32px;">
-  <a href="https://secure.thisiskinglis.com" target="_blank" rel="noopener noreferrer" style="font-size: 12px; letter-spacing: 0.15em; color: #888; text-decoration: none; border-bottom: 1px solid rgba(0,0,0,0.15); padding-bottom: 3px; text-transform: uppercase;">
-    🔒 SecureDrop — Confidential Submissions →
-  </a>
-  <div style="font-size: 11px; color: #aaa; margin-top: 8px; letter-spacing: 0.02em;">
-    Install App
-  </div>
-</div>
-
-  </div>
-</section>
+    <section class="hero" id="top">
+      <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 32px;">
+        <div class="hero-top">
+          <img src="assets/kinglis_logo.png" alt="KINGLIS" style="height: 74px; width: auto; display: block;" />
+        </div>
+        <h1>Every outcome has a<br><em>cause.</em></h1>
+        <p class="lead">KINGLIS specializes in transforming evidence and expertise into strategic organizational intelligence.</p>
+        <div class="hero-rule"></div>
+        <div class="hero-model">EVIDENCE → INTELLIGENCE → ADVISORY</div>
+        <div class="cta-group">
+          <a class="cta-premium" href="#model">EXPLORE FOUNDER ARCHITECTURE <span>→</span></a>
+          <a class="cta-secondary" href="/evidence-reconstruction/">EVIDENCE RECONSTRUCTION™ <span>→</span></a>
+        </div>
+        <div style="margin-top: 32px;">
+          <a href="https://secure.thisiskinglis.com" target="_blank" rel="noopener noreferrer" style="font-size: 12px; letter-spacing: 0.15em; color: #888; text-decoration: none; border-bottom: 1px solid rgba(0,0,0,0.15); padding-bottom: 3px; text-transform: uppercase;">
+            🔒 SecureDrop — Confidential Submissions →
+          </a>
+          <div style="font-size: 11px; color: #aaa; margin-top: 8px; letter-spacing: 0.02em;">Install App</div>
+        </div>
+      </div>
+    </section>
 
     <section id="model">
       <div class="container">
@@ -150,72 +138,64 @@
       </div>
     </section>
     
-   <section id="products">
-  <div class="container">
-    <span class="micro">INTELLIGENCE PRODUCTS</span>
-    <h2 class="serif-display">Defined questions. Evidence-led investigation. Executive intelligence.</h2>
-    
- <div class="product-index">
-  <!-- 01 -->
-  <article class="product">
-    <div class="product-index-num">01</div>
-    <div class="product-header">
-      <h3>EVIDENCE RECONSTRUCTION™</h3>
-      <span class="micro">RECONSTRUCTION · ANALYSIS · EXECUTIVE INTELLIGENCE</span>
-    </div>
-    <p class="product-statement">Transform fragmented evidence into decision-ready intelligence.</p>
-    
-    <div class="product-meta">
-      <div><span class="micro">EVIDENCE</span><p>Emails · WhatsApp · Reports · Agreements · Meeting Records · Operational Documents</p></div>
-      <div><span class="micro">ANALYSES</span><p>Events · Decisions · Relationships · Dependencies · Chronology · Contradictions · Patterns · Gaps</p></div>
-      <div><span class="micro">OUTPUTS</span><p>Executive Intelligence Report™ · Evidence Chronology™ · Evidence Index™ · Decision Brief™</p></div>
-    </div>
-
-    <p class="product-doctrine">APPLICATIONS.</p>
-    <div class="product-apps">
-      <p><strong>LEGAL</strong><br>Evidence prepared for legal review.</p>
-      <p><strong>ORGANIZATIONAL</strong><br>Operational intelligence to reveal how work actually happens.</p>
-      <p><strong>EXECUTIVE</strong><br>Decision-ready intelligence for leadership.</p>
-    </div>
-
-    <div class="product-foot" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-top:32px; padding-top:24px; border-top:1px solid rgba(0,0,0,0.08);">
-      <span class="micro">Confidential · Fixed-fee · Source-traceable</span>
-      <a href="/evidence-reconstruction/" class="product-cta" style="display:inline-flex; align-items:center; gap:10px; background:#000; color:#fff; padding:14px 28px; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; text-decoration:none; font-weight:400;">
-        EXPLORE EVIDENCE RECONSTRUCTION™ <span>→</span>
-      </a>
-    </div>
-  </article>
-
-  <!-- 02 -->
-  <article class="product">
-    <div class="product-index-num">02</div>
-    <div class="product-header">
-      <h3>EXPERTISE ARCHITECTURE</h3>
-      <span class="micro">KNOWLEDGE · STRUCTURE · INTELLECTUAL ASSETS</span>
-    </div>
-    <p class="product-statement">Transform expertise into scalable intellectual assets and organizational capability.</p>
-    
-    <div class="product-meta">
-      <div><span class="micro">SOURCES</span><p>Interviews · Documentation · Workshops · Processes · Existing IP · Operational Knowledge</p></div>
-      <div><span class="micro">ARCHITECTS</span><p>Methodologies · Frameworks · Products · Services · Knowledge Systems · AI Assets · Intellectual Property</p></div>
-      <div><span class="micro">OUTPUT</span><p>Expertise Architecture™ · Knowledge System™ · AI Knowledge Base™ · Product Blueprint™ · Founder Architecture™</p></div>
-    </div>
-
-    <p class="product-doctrine">APPLICATIONS.</p>
-    <div class="product-apps">
-      <p><strong>FOUNDERS</strong><br>Capture and scale decades of expertise.</p>
-      <p><strong>BUSINESSES</strong><br>Reduce dependency on key individuals.</p>
-      <p><strong>AI</strong><br>Prepare organizational knowledge for AI adoption.</p>
-    </div>
-
-    <div class="product-foot" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-top:32px; padding-top:24px; border-top:1px solid rgba(0,0,0,0.08);">
-      <span class="micro">Fixed-fee · Confidential</span>
-      <a href="/expertise-architecture/" class="product-cta" style="display:inline-flex; align-items:center; gap:10px; background:#000; color:#fff; padding:14px 28px; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; text-decoration:none; font-weight:400;">
-        EXPLORE EXPERTISE ARCHITECTURE <span>→</span>
-      </a>
-    </div>
-  </article>
-</div>
+    <section id="products">
+      <div class="container">
+        <span class="micro">INTELLIGENCE PRODUCTS</span>
+        <h2 class="serif-display">Defined questions. Evidence-led investigation. Executive intelligence.</h2>
+        <div class="product-index">
+          <article class="product">
+            <div class="product-index-num">01</div>
+            <div class="product-header">
+              <h3>EVIDENCE RECONSTRUCTION™</h3>
+              <span class="micro">RECONSTRUCTION · ANALYSIS · EXECUTIVE INTELLIGENCE</span>
+            </div>
+            <p class="product-statement">Transform fragmented evidence into decision-ready intelligence.</p>
+            <div class="product-meta">
+              <div><span class="micro">EVIDENCE</span><p>Emails · WhatsApp · Reports · Agreements · Meeting Records · Operational Documents</p></div>
+              <div><span class="micro">ANALYSES</span><p>Events · Decisions · Relationships · Dependencies · Chronology · Contradictions · Patterns · Gaps</p></div>
+              <div><span class="micro">OUTPUTS</span><p>Executive Intelligence Report™ · Evidence Chronology™ · Evidence Index™ · Decision Brief™</p></div>
+            </div>
+            <p class="product-doctrine">APPLICATIONS.</p>
+            <div class="product-apps">
+              <p><strong>LEGAL</strong><br>Evidence prepared for legal review.</p>
+              <p><strong>ORGANIZATIONAL</strong><br>Operational intelligence to reveal how work actually happens.</p>
+              <p><strong>EXECUTIVE</strong><br>Decision-ready intelligence for leadership.</p>
+            </div>
+            <div class="product-foot" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-top:32px; padding-top:24px; border-top:1px solid rgba(0,0,0,0.08);">
+              <span class="micro">Confidential · Fixed-fee · Source-traceable</span>
+              <a href="/evidence-reconstruction/" class="product-cta" style="display:inline-flex; align-items:center; gap:10px; background:#000; color:#fff; padding:14px 28px; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; text-decoration:none; font-weight:400;">
+                EXPLORE EVIDENCE RECONSTRUCTION™ <span>→</span>
+              </a>
+            </div>
+          </article>
+          <article class="product">
+            <div class="product-index-num">02</div>
+            <div class="product-header">
+              <h3>EXPERTISE ARCHITECTURE</h3>
+              <span class="micro">KNOWLEDGE · STRUCTURE · INTELLECTUAL ASSETS</span>
+            </div>
+            <p class="product-statement">Transform expertise into scalable intellectual assets and organizational capability.</p>
+            <div class="product-meta">
+              <div><span class="micro">SOURCES</span><p>Interviews · Documentation · Workshops · Processes · Existing IP · Operational Knowledge</p></div>
+              <div><span class="micro">ARCHITECTS</span><p>Methodologies · Frameworks · Products · Services · Knowledge Systems · AI Assets · Intellectual Property</p></div>
+              <div><span class="micro">OUTPUT</span><p>Expertise Architecture™ · Knowledge System™ · AI Knowledge Base™ · Product Blueprint™ · Founder Architecture™</p></div>
+            </div>
+            <p class="product-doctrine">APPLICATIONS.</p>
+            <div class="product-apps">
+              <p><strong>FOUNDERS</strong><br>Capture and scale decades of expertise.</p>
+              <p><strong>BUSINESSES</strong><br>Reduce dependency on key individuals.</p>
+              <p><strong>AI</strong><br>Prepare organizational knowledge for AI adoption.</p>
+            </div>
+            <div class="product-foot" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-top:32px; padding-top:24px; border-top:1px solid rgba(0,0,0,0.08);">
+              <span class="micro">Fixed-fee · Confidential</span>
+              <a href="/expertise-architecture/" class="product-cta" style="display:inline-flex; align-items:center; gap:10px; background:#000; color:#fff; padding:14px 28px; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; text-decoration:none; font-weight:400;">
+                EXPLORE EXPERTISE ARCHITECTURE <span>→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section id="founder">
       <div class="container founder-grid">
@@ -261,7 +241,7 @@
       </div>
     </section>
 
-        <section id="contact" class="section-dark">
+    <section id="contact" class="section-dark">
       <div class="container contact-grid">
         <div class="contact-intro">
           <span class="micro">Start a Conversation</span>
