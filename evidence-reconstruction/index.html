@@ -1,136 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KINGLIS 01 — Evidence Reconstruction</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-  body { font-family: 'Inter', sans-serif; }
-  .serif { font-family: 'Cormorant Garamond', serif; }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <title>KINGLIS — Evidence Reconstruction™</title>
+  <meta name="description" content="When the record is fragmented, disputed, or incomplete, you can't afford to guess — and you can't afford to be wrong. KINGLIS reconstructs all available evidence into a single, structured and source-traceable record." />
+  <link rel="canonical" href="https://thisiskinglis.com/evidence-reconstruction/" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/og-image.png">
+  <meta name="theme-color" content="#F8F7F5">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thisiskinglis.com/evidence-reconstruction/">
+  <meta property="og:title" content="KINGLIS — Evidence Reconstruction™">
+  <meta property="og:description" content="We reconstruct all available evidence into a single, structured and source-traceable record built to withstand scrutiny.">
+  <meta property="og:image" content="https://thisiskinglis.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KINGLIS — Evidence Reconstruction™">
+  <meta name="twitter:description" content="Establish what actually happened. When the record is fragmented, disputed, or incomplete.">
+  <meta name="twitter:image" content="https://thisiskinglis.com/assets/og-image.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#F8F7F5;--ink:#1A1816;--teal:#2F4D4F;--olive:#8A7A5A;--line:rgba(17,17,17,.12);--line-strong:rgba(17,17,17,.18);--line-light:rgba(251,246,240,.14)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-family:'Inter',sans-serif}
+    img{max-width:100%;display:block} a{color:inherit;text-decoration:none}
+    .container{width:min(1180px,92vw);margin-inline:auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(248,247,245,0.84);backdrop-filter:blur(9px);border-bottom:1px solid rgba(26,24,22,0.09)}
+    header .container{padding:1.25rem 0} nav{display:flex;justify-content:space-between;align-items:center;gap:2rem}
+    .brand .small{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--olive)}
+    nav ul{list-style:none;display:flex;gap:1.8rem;margin:0;padding:0;flex-wrap:wrap}
+    nav a{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(17,17,17,.72);padding-bottom:2px;border-bottom:1px solid transparent;transition:all .2s}
+    nav a:hover{color:var(--ink);border-color:var(--line-strong)} nav a.is-active{color:var(--ink);border-bottom-color:var(--line-strong)}
+    .micro{display:inline-block;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);line-height:1.4}
+    .serif-display{font-family:'Cormorant Garamond', Georgia, serif;font-weight:400;letter-spacing:-.02em;line-height:.98;text-wrap:balance}
+    section{padding:7.5rem 0;border-bottom:1px solid var(--line)} section.section-dark{background:var(--ink);color:var(--paper);border-bottom-color:rgba(251,246,240,.08)} section.section-dark .micro{color:var(--olive)}
+    .hero{padding:120px 0 80px;background:var(--paper);border-bottom:1px solid var(--line)}
+    .hero h1{font-family:'Cormorant Garamond', Georgia, serif;font-weight:400;font-size:clamp(2.8rem,5.5vw,4.8rem);line-height:.9;letter-spacing:-.03em;margin:0;max-width:12em}
+    .hero h1 em{font-style:italic;font-weight:500}
+    .hero .lead{margin:2rem 0 0;max-width:36rem;font-size:1.15rem;line-height:1.65;color:var(--teal);font-weight:300}
+    .hero .sub{margin:1.5rem 0 0;max-width:38rem;font-size:1rem;line-height:1.7;color:rgba(17,17,17,.72)}
+    .cap-section{padding-top:2rem}
+    .cap-grid{display:flex;flex-direction:column;gap:0}
+    .cap-item{display:grid;grid-template-columns:120px 1fr;gap:2rem;padding:3rem 0;border-bottom:1px solid var(--line)}
+    .cap-index{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);padding-top:.4rem}
+    .cap-content h3{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:1.45rem;margin:0 0 1rem;line-height:1.2}
+    .cap-content p{font-size:.95rem;line-height:1.7;color:rgba(17,17,17,.76);margin:0;max-width:48rem}
+    .receive-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:2.5rem}
+    .receive-card{border:1px solid rgba(0,0,0,0.08);border-radius:10px;padding:24px;background:#fff;font-size:.9rem;line-height:1.5}
+    .receive-card strong{display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--olive);margin-bottom:12px}
+    .cta-premium{display:inline-flex;align-items:center;gap:.6rem;color:var(--paper);background:var(--ink);padding:18px 28px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border:0}
+    .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:5rem;align-items:start} .contact-intro h2{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:.96;letter-spacing:-.02em;margin:.7rem 0 .9rem}
+    .contact-intro .muted{color:rgba(251,246,240,.78);line-height:1.6;margin:.5rem 0;font-size:.95rem}
+    footer{padding:3rem 0 4rem;border-top:1px solid var(--line);background:var(--paper)} footer .small{font-size:.76rem;color:rgba(17,17,17,.62)}
+    @media(max-width:980px){section{padding:5.5rem 0} .cap-item{grid-template-columns:1fr} .receive-grid{grid-template-columns:1fr 1fr} .contact-grid{grid-template-columns:1fr}}
+    @media(max-width:600px){.receive-grid{grid-template-columns:1fr}}
+  </style>
 </head>
-<body class="bg-white text-black antialiased">
-<div class="mx-auto max-w-[1120px] px-6 sm:px-10 lg:px-16 py-10 sm:py-14">
-  <!-- Header -->
-  <header class="flex justify-between items-start pt- sm:pt- pb-5 border-b border-black/[0.12]">
-  <a href="/" class="flex items-baseline gap- sm:gap- no-underline hover:opacity-60 transition-opacity">
-    <span class="font-['Inter'] text- tracking-[0.18em] uppercase font-medium leading-none text-black">KINGLIS 01</span>
-    <span class="font-['Cormorant_Garamond'] text- sm:text-[12.5px] tracking-[0.08em] uppercase font-[500] text-black/90 leading-none">Expertise Architecture™</span>
-  </a>
-  <a href="/" class="font-['Inter'] text- tracking-[0.18em] uppercase font-[400] text-black/40 hover:text-black/80 transition-colors">
-    ← Main Site
-  </a>
-</header>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary">
+        <div class="brand"><a href="/"><span class="small">O R G A N I Z A T I O N A L&nbsp;&nbsp;I N T E L L I G E N C E</span></a></div>
+        <ul>
+          <li><a href="/#model">Model</a></li>
+          <li><a href="/evidence-reconstruction/" class="is-active">Services</a></li>
+          <li><a href="/#method">Method</a></li>
+          <li><a href="/#founder">Founder</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <!-- Hero -->
-  <section class="pt-16 sm:pt-24 pb-14">
-    <div class="max-w-[760px]">
-      <h1 class="serif text-[38px] sm:text-[54px] lg:text-[60px] leading-[0.95] tracking-tight font-normal">
-        Transform fragmented evidence<br>into <span class="italic font-medium">decision-ready</span> intelligence.
-      </h1>
-      <p class="mt-8 max-w-[520px] text-[14px] sm:text-[15px] leading-[1.7] font-light text-black/70">
-        Evidence Reconstruction™ combines evidence-led inquiry, chronology, analysis and executive reporting to establish what the available record actually supports. Traceable and confidential.
-      </p>
-    </div>
-  </section>
-  
-  <section class="pb-14">
-  <div class="border border-black/10 bg-black/[0.02]">
-    <div class="aspect-[16/9] w-full overflow-hidden bg-black">
-      <video class="h-full w-full object-cover" autoplay muted loop playsinline controls>
-        <source src="/assets/Secure_Drop_Demo.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="flex justify-between items-center px-4 py-3 border-t border-black/10">
-      <span class="font-['Inter'] text- tracking-[0.2em] uppercase text-black/40">Evidence Reconstruction™ · Confidential Process</span>
-      <span class="font-['Inter'] text- tracking-[0.2em] uppercase text-black/30">01</span>
-    </div>
-  </div>
-</section>
+  <main>
+    <section class="hero" id="top">
+      <div class="container">
+        <span class="micro">01 — EVIDENCE</span>
+        <h1 class="serif-display">Establish What<br><em>Actually Happened</em></h1>
+        <p class="lead">When the record is fragmented, disputed, or incomplete, you can't afford to guess — and you can't afford to be wrong.</p>
+        <p class="sub">We reconstruct all available evidence into a single, structured and source-traceable record. Methodical in its construction. Rigorous in its sourcing. Built to withstand the scrutiny of investigation, governance, litigation and executive decision-making — wherever the record is ultimately tested.</p>
+      </div>
+    </section>
 
-  <!-- Top Meta -->
-  <section class="border-y border-black/10 grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-black/10">
-    <div class="py-7 lg:pr-8">
-      <div class="text-[10px] tracking-[0.2em] uppercase font-medium text-black/40 mb-3">01 — Evidence</div>
-      <div class="serif text-[18px] leading-[1.55]">Emails · WhatsApp · Reports · Agreements · Meeting Records · Operational Documents</div>
-    </div>
-    <div class="py-7 lg:px-8">
-      <div class="text-[10px] tracking-[0.2em] uppercase font-medium text-black/40 mb-3">02 — Analyses</div>
-      <div class="serif text-[18px] leading-[1.55]">Events · Decisions · Relationships · Dependencies · Chronology · Contradictions · Patterns · Gaps</div>
-    </div>
-    <div class="py-7 lg:pl-8">
-      <div class="text-[10px] tracking-[0.2em] uppercase font-medium text-black/40 mb-3">03 — Outputs</div>
-      <div class="serif text-[18px] leading-[1.55]">Evidence Index™ · Chronology™ · Relationship Maps™ · Event Reconstruction™ · Executive Dossier™ · Source Register™ · Intelligence Summary™</div>
-    </div>
-  </section>
+    <section id="capabilities">
+      <div class="container">
+        <span class="micro">CAPABILITIES</span>
+        <h2 class="serif-display" style="font-size:clamp(1.8rem,3.2vw,2.6rem); margin:0.8rem 0 1rem;">What we do when the record does not hold.</h2>
+        <div class="cap-grid">
+          <div class="cap-item">
+            <div class="cap-index">01</div>
+            <div class="cap-content">
+              <h3>Evidence Reconstruction™</h3>
+              <p>When the factual record is unclear, contested or incomplete, we locate, organise and verify all available documentation to produce a structured, source-traceable account of events. Every finding is attributed. Every conclusion is grounded. The result is an authoritative record built to hold up under legal, regulatory and governance scrutiny — including active litigation and enforcement proceedings.</p>
+            </div>
+          </div>
+          <div class="cap-item">
+            <div class="cap-index">02</div>
+            <div class="cap-content">
+              <h3>Document Intelligence Review</h3>
+              <p>Most organisations don't know what their documents actually say — or what they fail to say. We conduct a structured examination of your documentary record to surface inconsistencies, evidentiary gaps, contractual risks and material weaknesses before they are discovered by someone else. What you don't know about your own record is often your greatest liability.</p>
+            </div>
+          </div>
+          <div class="cap-item">
+            <div class="cap-index">03</div>
+            <div class="cap-content">
+              <h3>Workplace & Conduct Investigations</h3>
+              <p>When allegations arise — misconduct, governance breaches, executive disputes — the quality of the investigation determines the quality of the outcome. We conduct independent, impartial investigations that are structured for defensibility from the outset. Every finding is documented. Every conclusion is supported. The result is a record that can be relied upon by boards, legal counsel and regulators alike.</p>
+            </div>
+          </div>
+          <div class="cap-item" style="border-bottom:0;">
+            <div class="cap-index">04</div>
+            <div class="cap-content">
+              <h3>Litigation & Regulatory Support</h3>
+              <p>In adversarial proceedings, the organisation of your evidence is as important as the evidence itself. We prepare, structure and present your documentary record for legal proceedings, regulatory responses and external review — ensuring that what you have is accessible, coherent and credible under pressure. The goal is to reduce exposure, strengthen your position and accelerate resolution.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Services -->
-  <section class="border-b border-black/10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-black/10">
-    <div class="py-9 md:pr-6 lg:pr-8">
-      <h3 class="serif text-[16px] font-semibold uppercase tracking-wide leading-tight mb-4">Legal &<br>Disputes</h3>
-      <p class="text-[11.5px] font-light text-black/60 leading-[1.6] mb-5">For commercial disputes, litigation preparation, employment matters and legal review.</p>
-      <ul class="space-y-2 text-[12px] leading-[1.4]">
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Commercial litigation</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Employment disputes</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Contract disputes</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Director disputes</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Shareholder matters</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Arbitration support</li>
-      </ul>
-    </div>
-    <div class="py-9 md:px-6 lg:px-8">
-      <h3 class="serif text-[16px] font-semibold uppercase tracking-wide leading-tight mb-4">Workplace<br>Investigations</h3>
-      <p class="text-[11.5px] font-light text-black/60 leading-[1.6] mb-5">Establish an evidence-based understanding of workplace events.</p>
-      <ul class="space-y-2 text-[12px]">
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>HR investigations</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Misconduct</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Grievances</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Disciplinary matters</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Whistleblower investigations</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Executive investigations</li>
-      </ul>
-    </div>
-    <div class="py-9 md:px-6 lg:px-8">
-      <h3 class="serif text-[16px] font-semibold uppercase tracking-wide leading-tight mb-4">Executive<br>Intelligence Reviews</h3>
-      <p class="text-[11.5px] font-light text-black/60 leading-[1.6] mb-5">When leaders need clarity.</p>
-      <ul class="space-y-2 text-[12px]">
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Executive briefings</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Board matters</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Decision reconstruction</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Historical reconstruction</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Governance reviews</li>
-      </ul>
-    </div>
-    <div class="py-9 md:pl-6 lg:pl-8">
-      <h3 class="serif text-[16px] font-semibold uppercase tracking-wide leading-tight mb-4">Operational<br>Reviews</h3>
-      <p class="text-[11.5px] font-light text-black/60 leading-[1.6] mb-5">Understand how events unfolded.</p>
-      <ul class="space-y-2 text-[12px]">
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Operational failures</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Process breakdowns</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Customer complaints</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Internal incidents</li>
-        <li class="flex gap-2"><span class="mt-2 h-px w-3 bg-black/20"></span>Root cause analysis</li>
-      </ul>
-    </div>
-  </section>
+    <section id="deliverables" style="background:#fff;">
+      <div class="container">
+        <span class="micro">YOU'LL RECEIVE</span>
+        <h2 class="serif-display" style="font-size:clamp(1.8rem,3.2vw,2.6rem); margin:0.8rem 0 1rem;">A record you can act on.</h2>
+        <div class="receive-grid">
+          <div class="receive-card"><strong>Evidence Register</strong>Structured index of every source, verified and traceable.</div>
+          <div class="receive-card"><strong>Verified Chronology</strong>Timeline of events grounded in the evidence, not assumption.</div>
+          <div class="receive-card"><strong>Executive Investigation Report</strong>Decision-ready findings built for board and legal review.</div>
+          <div class="receive-card"><strong>Document Gap Analysis</strong>What is missing, what is weak, and where you are exposed.</div>
+        </div>
+        <div style="margin-top:3rem;">
+          <a href="/#contact" class="cta-premium">Get The Record Straight <span>→</span></a>
+        </div>
+      </div>
+    </section>
 
-  <footer class="pt-12 pb-8 sm:pb-10">
-  <div class="h-px w-full bg-black/10 mb-10"></div>
-  <div class="flex flex-col items-center gap-8">
-    <!-- Enquiry - the only button you need -->
-    <a href="mailto:enquiries@kinglis01.com?subject=Confidential Enquiry - Expertise Architecture"
-       class="group flex items-center gap-4 bg-black text-white px-8 py- font-['Inter'] text- tracking-[0.18em] uppercase font-[400] hover:bg-black/80 transition-colors">
-      Request Confidential Briefing
-      <span class="group-hover:translate-x-1 transition-transform">→</span>
-    </a>
-    <div class="flex flex-col items-center gap-">
-      <span class="font-['Inter'] text- tracking-[0.32em] uppercase font-[500] text-black">KINGLIS 01</span>
-      <span class="font-['Inter'] text- tracking-[0.18em] uppercase font-[400] text-black/30">Confidential · Traceable · Scalable</span>
+    <section id="contact" class="section-dark">
+      <div class="container contact-grid">
+        <div class="contact-intro">
+          <span class="micro">Start a Conversation</span>
+          <h2>Perhaps the problem isn't the problem.</h2>
+          <p class="muted">The architecture producing it may be.</p>
+          <div style="margin-top:2rem; padding-top:1.6rem; border-top:1px solid var(--line-light); max-width:24rem;">
+            <p class="muted">Tell us what you're seeing. A recurring decision. Work that keeps returning. An outcome nobody can explain.</p>
+          </div>
+        </div>
+        <div>
+          <p class="muted" style="margin-bottom:2rem;">This is for boards, executives and legal teams when accuracy matters.</p>
+          <a href="/#contact" class="cta-premium" style="background:var(--paper); color:var(--ink);">Request A Private Review →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© 2026 KINGLIS</div>
+      <div class="small">Organizational Intelligence — Confidential · Global · Secure</div>
+      <div class="small">www.thisiskinglis.com · <a href="/evidence-reconstruction/">Evidence Reconstruction™</a> · <a href="/intelligence/">Intelligence</a> · <a href="/advisory/">Advisory</a></div>
     </div>
-  </div>
-</footer>
-</div>
+  </footer>
 </body>
 </html>
