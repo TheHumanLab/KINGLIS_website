@@ -14,18 +14,15 @@
 <body class="bg-white text-black antialiased selection:bg-black selection:text-white">
 <div class="mx-auto max-w-[1480px] px-[22px] sm:px-8 lg:px-[40px]">
   <!-- Header - exact same as Evidence -->
-  <header class="flex justify-between items-start pt-[22px] sm:pt-[26px] pb-5 border-b border-black/[0.12]">
-    <div class="flex items-baseline gap-[14px] sm:gap-[18px]">
-      <span class="font-['Inter'] text-[11px] tracking-[0.18em] uppercase font-medium leading-none">KINGLIS 01</span>
-      <span class="font-['Cormorant_Garamond'] text-[12px] sm:text-[12.5px] tracking-[0.08em] uppercase font-[500] text-black/90 leading-none">Expertise Architecture™</span>
-    </div>
-    <div class="hidden lg:block text-right pt-[1px]">
-      <span class="font-['Inter'] text-[10px] tracking-[0.18em] uppercase font-[400] text-black/60 leading-none">Founder Intelligence · Product Architecture · AI Readiness</span>
-    </div>
-    <div class="lg:hidden text-right max-w-[150px] sm:max-w-none pt-[1px]">
-      <span class="font-['Inter'] text-[9px] sm:text-[10px] tracking-[0.16em] uppercase font-[400] text-black/60 leading-[1.3] block">Founder Intelligence · Product Architecture · AI Readiness</span>
-    </div>
-  </header>
+  <header class="flex justify-between items-start pt- sm:pt- pb-5 border-b border-black/[0.12]">
+  <a href="/" class="flex items-baseline gap- sm:gap- no-underline hover:opacity-60 transition-opacity">
+    <span class="font-['Inter'] text- tracking-[0.18em] uppercase font-medium leading-none text-black">KINGLIS 01</span>
+    <span class="font-['Cormorant_Garamond'] text- sm:text-[12.5px] tracking-[0.08em] uppercase font-[500] text-black/90 leading-none">Expertise Architecture™</span>
+  </a>
+  <a href="/" class="font-['Inter'] text- tracking-[0.18em] uppercase font-[400] text-black/40 hover:text-black/80 transition-colors">
+    ← Main Site
+  </a>
+</header>
 
   <!-- Hero - exact same spacing as Evidence -->
   <section class="pt-14 sm:pt-20 lg:pt-24 pb-12 sm:pb-14 lg:pb-[56px]">
@@ -129,12 +126,20 @@ Readiness</h3>
 
   <!-- Footer - exact same as Evidence -->
   <footer class="pt-12 pb-8 sm:pb-10">
-    <div class="h-px w-full bg-black/10 mb-10"></div>
-    <div class="flex flex-col items-center gap-[14px]">
-      <span class="font-['Inter'] text-[10px] tracking-[0.32em] uppercase font-[500] text-black">KINGLIS 02</span>
-      <span class="font-['Inter'] text-[9px] tracking-[0.18em] uppercase font-[400] text-black/30">Confidential · Traceable · Scalable</span>
+  <div class="h-px w-full bg-black/10 mb-10"></div>
+  <div class="flex flex-col items-center gap-8">
+    <!-- Enquiry - the only button you need -->
+    <a href="mailto:enquiries@kinglis01.com?subject=Confidential Enquiry - Expertise Architecture"
+       class="group flex items-center gap-4 bg-black text-white px-8 py- font-['Inter'] text- tracking-[0.18em] uppercase font-[400] hover:bg-black/80 transition-colors">
+      Request Confidential Briefing
+      <span class="group-hover:translate-x-1 transition-transform">→</span>
+    </a>
+    <div class="flex flex-col items-center gap-">
+      <span class="font-['Inter'] text- tracking-[0.32em] uppercase font-[500] text-black">KINGLIS 01</span>
+      <span class="font-['Inter'] text- tracking-[0.18em] uppercase font-[400] text-black/30">Confidential · Traceable · Scalable</span>
     </div>
-  </footer>
+  </div>
+</footer>
 </div>
 </body>
 </html>
