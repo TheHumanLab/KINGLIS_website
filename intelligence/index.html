@@ -1,137 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light" />
-  <title>KINGLIS — Intelligence</title>
-  <meta name="description" content="Evidence alone doesn't make decisions. Intelligence does. We transform evidence, organisational information and operational data into decision-ready intelligence." />
-  <link rel="canonical" href="https://thisiskinglis.com/intelligence/" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/og-image.png">
-  <meta name="theme-color" content="#F8F7F5">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    :root{--paper:#F8F7F5;--ink:#1A1816;--teal:#2F4D4F;--olive:#8A7A5A;--line:rgba(17,17,17,.12);--line-strong:rgba(17,17,17,.18)}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;font-family:'Inter',sans-serif}
-    .container{width:min(1180px,92vw);margin-inline:auto}
-    header{position:sticky;top:0;z-index:50;background:rgba(248,247,245,0.84);backdrop-filter:blur(9px);border-bottom:1px solid rgba(26,24,22,0.09)}
-    header .container{padding:1.25rem 0} nav{display:flex;justify-content:space-between;align-items:center;gap:2rem}
-    .brand .small{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--olive)}
-    nav ul{list-style:none;display:flex;gap:1.8rem;margin:0;padding:0;flex-wrap:wrap}
-    nav a{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(17,17,17,.72);padding-bottom:2px;border-bottom:1px solid transparent}
-    nav a.is-active{color:var(--ink);border-bottom-color:var(--line-strong)}
-    .micro{display:inline-block;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);line-height:1.4}
-    .serif-display{font-family:'Cormorant Garamond', Georgia, serif;font-weight:400;letter-spacing:-.02em;line-height:.98}
-    section{padding:7.5rem 0;border-bottom:1px solid var(--line)} section.section-dark{background:var(--ink);color:var(--paper);border-bottom-color:rgba(251,246,240,.08)} section.section-dark .micro{color:var(--olive)}
-    .hero{padding:120px 0 80px;background:var(--paper);border-bottom:1px solid var(--line)}
-    .hero h1{font-family:'Cormorant Garamond', Georgia, serif;font-weight:400;font-size:clamp(2.8rem,5.5vw,4.8rem);line-height:.9;letter-spacing:-.03em;margin:0}
-    .hero .lead{margin:2rem 0 0;max-width:36rem;font-size:1.15rem;line-height:1.65;color:var(--teal);font-weight:300}
-    .hero .sub{margin:1.5rem 0 0;max-width:38rem;font-size:1rem;line-height:1.7;color:rgba(17,17,17,.72)}
-    .cap-grid{display:flex;flex-direction:column}
-    .cap-item{display:grid;grid-template-columns:120px 1fr;gap:2rem;padding:3.5rem 0;border-bottom:1px solid var(--line)}
-    .cap-index{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);padding-top:.4rem}
-    .cap-content h3{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:1.6rem;margin:0 0 1.2rem;line-height:1.2}
-    .cap-content p{font-size:.96rem;line-height:1.75;color:rgba(17,17,17,.76);margin:0;max-width:52rem}
-    .receive-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:2.5rem}
-    .receive-card{border:1px solid rgba(0,0,0,0.08);border-radius:10px;padding:24px;background:#fff;font-size:.9rem;line-height:1.5}
-    .receive-card strong{display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--olive);margin-bottom:12px}
-    .cta-premium{display:inline-flex;align-items:center;gap:.6rem;color:var(--paper);background:var(--ink);padding:18px 28px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border:0}
-    .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:5rem;align-items:start}
-    footer{padding:3rem 0 4rem;border-top:1px solid var(--line);background:var(--paper)} footer .small{font-size:.76rem;color:rgba(17,17,17,.62)}
-    @media(max-width:980px){section{padding:5.5rem 0} .cap-item{grid-template-columns:1fr} .receive-grid{grid-template-columns:1fr 1fr} .contact-grid{grid-template-columns:1fr}}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KINGLIS — Intelligence</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F8F7F5;
+  --ink:#121212;
+  --muted:#6B6560;
+  --rust:#8c3a2e;
+  --rust-hover:#9b4d20;
+  --line:rgba(18,18,18,.12);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;font-family:'Inter',sans-serif}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
+.topbar{background:var(--ink);color:var(--paper);text-align:center;padding:9px 16px;font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+.topbar b{font-weight:600;border:1px solid rgba(248,247,245,.25);padding:2px 8px;border-radius:20px;margin-left:8px}
+.container{width:min(1180px,92vw);margin-inline:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(248,247,245,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(18,18,18,.08)}
+header .container{padding:18px 0}
+nav{display:flex;justify-content:space-between;align-items:center;gap:2rem}
+.brand .small{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:500}
+nav ul{list-style:none;display:flex;gap:2rem;margin:0;padding:0}
+nav a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(18,18,18,.68);padding-bottom:4px;border-bottom:2px solid transparent;transition:.2s}
+nav a.is-active{color:var(--ink);border-bottom-color:var(--rust)}
+.micro{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);line-height:1.4;display:inline-block}
+.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;letter-spacing:-.02em}
+.hero{padding:96px 0 72px;border-bottom:1px solid var(--line)}
+.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.8rem,5.5vw,4.8rem);line-height:.9;letter-spacing:-.03em;margin:18px 0 0}
+.hero .lead{margin:22px 0 0;max-width:36rem;font-size:18px;line-height:1.65;color:#2A2725;font-weight:300}
+.hero .sub{margin:16px 0 0;max-width:40rem;font-size:15px;line-height:1.7;color:rgba(18,18,18,.72);font-weight:300}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--ink);cursor:pointer;transition:.2s}
+.btn-primary{background:var(--ink);color:var(--paper)}
+.btn-primary:hover{background:#000}
+.link-rust{color:var(--rust);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.link-rust:hover{color:var(--rust-hover)}
+.cap-section{padding:0}
+.cap-item{display:grid;grid-template-columns:120px 1fr;gap:2rem;padding:48px 0;border-bottom:1px solid var(--line)}
+.cap-index{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+.cap-content h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.7rem;margin:0 0 14px;line-height:1.15}
+.cap-content p{font-size:15px;line-height:1.75;color:rgba(18,18,18,.76);margin:0;max-width:52rem;font-weight:300}
+.cap-content .action{margin-top:20px}
+.receive-section{padding:72px 0;background:#fff;border-bottom:1px solid var(--line)}
+.receive-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:24px}
+.receive-card{background:#fff;padding:24px;font-size:14px;line-height:1.6;font-weight:300}
+.receive-card strong{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.section-dark{background:var(--ink);color:var(--paper);padding:88px 0}
+.section-dark .micro{color:#8A8683}
+.section-dark .cta-white{color:var(--paper);background:transparent;border:1px solid rgba(248,247,245,.18);padding:16px 28px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px}
+.section-dark .cta-white.ring{box-shadow:0 0 0 2px var(--paper);border-color:var(--paper)}
+.section-dark .cta-white:hover{background:var(--paper);color:var(--ink)}
+footer{padding:32px 0 48px;border-top:1px solid var(--line)}
+footer .small{font-size:11px;color:var(--muted);margin-top:8px}
+@media(max-width:900px){.cap-item{grid-template-columns:1fr}.receive-grid{grid-template-columns:1fr 1fr}}
+</style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="brand"><a href="/"><span class="small">O R G A N I Z A T I O N A L&nbsp;&nbsp;I N T E L L I G E N C E</span></a></div>
-        <ul>
-          <li><a href="/#model">Model</a></li>
-          <li><a href="/evidence/" class="is-active">Services</a></li>
-          <li><a href="/#method">Method</a></li>
-          <li><a href="/#founder">Founder</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <section class="hero">
-      <div class="container">
-        <span class="micro">02 — INTELLIGENCE</span>
-        <h1 class="serif-display">Understand What<br><em>It Actually Means</em></h1>
-        <p class="lead">Evidence alone doesn't make decisions. Intelligence does.</p>
-        <p class="sub">We transform evidence, organisational information and operational data into decision-ready intelligence — revealing the patterns, structural conditions, risks and opportunities that ordinary reviews rarely uncover.</p>
-      </div>
-    </section>
+<div class="topbar">PRIVATE RETAINER: 2 OF 5 SEATS AVAILABLE FOR Q3 <b>INTAKE CLOSES 31 JULY</b></div>
+<header>
+<div class="container">
+<nav>
+<div class="brand"><a href="/"><span class="small">KINGLIS — ORGANIZATIONAL INTELLIGENCE</span></a></div>
+<ul>
+<li><a href="/evidence/">Evidence</a></li>
+<li><a href="/intelligence/" class="is-active">Intelligence</a></li>
+<li><a href="/advisory/">Advisory</a></li>
+<li><a href="/#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<section class="hero">
+<div class="container">
+<span class="micro">02 — INTELLIGENCE</span>
+<h1 class="serif">Understand What<br><em>It Actually Means</em></h1>
+<p class="lead">Evidence alone doesn't make decisions. Intelligence does.</p>
+<p class="sub">We transform evidence, organisational information and operational data into decision-ready intelligence — revealing the patterns, structural conditions, risks and opportunities that ordinary reviews rarely uncover.</p>
+</div>
+</section>
 
-    <section>
-      <div class="container">
-        <span class="micro">CAPABILITIES</span>
-        <h2 class="serif-display" style="font-size:clamp(1.8rem,3.2vw,2.6rem); margin:0.8rem 0 1rem;">From information to intelligence.</h2>
-        <div class="cap-grid">
-          
-          <div class="cap-item">
-            <div class="cap-index">01</div>
-            <div class="cap-content">
-              <h3>Founder Intellectual Identity™</h3>
-              <p>Your thinking lives across conversations, decisions, client work, proposals, presentations, notebooks, emails and experience. It has shaped businesses, teams and industries—but it exists as fragmented knowledge that depends entirely on you.</p>
-              <div style="margin-top:20px;display:flex;gap:12px;">
-                <a href="/intelligence/founder-intellectual-identity/" style="border:1px solid #121212;padding:12px 22px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:#FAF8F3;background:#121212;">View Protocol →</a>
-              </div>
-            </div>
-          </div>
+<section class="cap-section">
+<div class="container">
+<span class="micro" style="margin-top:48px">CAPABILITIES</span>
+<h2 class="serif" style="font-size:clamp(1.8rem,3.2vw,2.6rem);margin:.8rem 0 1rem;">From information to intelligence.</h2>
+<div class="cap-item">
+<div class="cap-index">01</div>
+<div class="cap-content">
+<h3>Founder Intellectual Identity™</h3>
+<p>Your thinking lives across conversations, decisions, client work, proposals, presentations, notebooks, emails and experience. It has shaped businesses, teams and industries—but it exists as fragmented knowledge that depends entirely on you.</p>
+<div class="action"><a href="/intelligence/founder-intellectual-identity/" class="link-rust" style="border:1px solid var(--ink);background:var(--ink);color:var(--paper);padding:12px 22px;text-decoration:none;display:inline-flex">View Protocol →</a></div>
+</div>
+</div>
+<div class="cap-item">
+<div class="cap-index">02</div>
+<div class="cap-content">
+<h3>Business X-Ray™</h3>
+<p>Every organisation has a version of itself it presents to the world — and a version that actually exists. The gap between the two is where risk accumulates, performance erodes and decisions go wrong. We conduct a structured, evidence-based examination of how your organisation actually functions — its real decision-making patterns, its actual information flows, its genuine accountability structures — and surface what the official picture consistently misses.</p>
+</div>
+</div>
+<div class="cap-item">
+<div class="cap-index">03</div>
+<div class="cap-content">
+<h3>Governance Intelligence</h3>
+<p>Governance failures rarely announce themselves. They accumulate — in unclear accountabilities, undocumented decisions, structural gaps and oversight blind spots — until the cost of ignoring them becomes unavoidable. We examine your governance structures, board documentation and decision-making processes to identify where accountability is unclear, where risk is unmanaged and where the organisation is exposed. Before it becomes a crisis, not after.</p>
+</div>
+</div>
+<div class="cap-item" style="border-bottom:0">
+<div class="cap-index">04</div>
+<div class="cap-content">
+<h3>Decision Architecture</h3>
+<p>We map how critical decisions are actually made — who holds influence, what information is used, where it stalls and where it fails — to build decision systems that are defensible, repeatable and aligned with governance.</p>
+</div>
+</div>
+</div>
+</section>
 
-          <div class="cap-item">
-            <div class="cap-index">02</div>
-            <div class="cap-content">
-              <h3>Business X-Ray™</h3>
-              <p>Every organisation has a version of itself it presents to the world — and a version that actually exists. The gap between the two is where risk accumulates, performance erodes and decisions go wrong. We conduct a structured, evidence-based examination of how your organisation actually functions — its real decision-making patterns, its actual information flows, its genuine accountability structures — and surface what the official picture consistently misses.</p>
-            </div>
-          </div>
+<section class="receive-section">
+<div class="container">
+<span class="micro">YOU'LL RECEIVE</span>
+<h2 class="serif" style="font-size:clamp(1.8rem,3.2vw,2.6rem);margin:.8rem 0 1rem;">Intelligence you can act on.</h2>
+<div class="receive-grid">
+<div class="receive-card"><strong>Board Intelligence Report</strong>Prioritised intelligence for board-level decision making.</div>
+<div class="receive-card"><strong>Executive Intelligence Brief</strong>Concise brief that tells leadership what to do next.</div>
+<div class="receive-card"><strong>Organisational Risk Register</strong>Structured register of risks, conditions and structural drivers.</div>
+<div class="receive-card"><strong>Intelligence Findings Report</strong>Full findings, patterns, and implications with source traceability.</div>
+</div>
+<div style="margin-top:24px"><a href="/#contact" class="btn btn-primary">Surface What Matters →</a></div>
+</div>
+</section>
 
-          <div class="cap-item">
-            <div class="cap-index">03</div>
-            <div class="cap-content">
-              <h3>Governance Intelligence</h3>
-              <p>Governance failures rarely announce themselves. They accumulate — in unclear accountabilities, undocumented decisions, structural gaps and oversight blind spots — until the cost of ignoring them becomes unavoidable. We examine your governance structures, board documentation and decision-making processes to identify where accountability is unclear, where risk is unmanaged and where the organisation is exposed. Before it becomes a crisis, not after.</p>
-            </div>
-          </div>
-
-          <div class="cap-item" style="border-bottom:0;">
-            <div class="cap-index">04</div>
-            <div class="cap-content">
-              <h3>Decision Architecture</h3>
-              <p>We map how critical decisions are actually made — who holds influence, what information is used, where it stalls and where it fails — to build decision systems that are defensible, repeatable and aligned with governance.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section style="background:#fff;">
-      <div class="container">
-        <span class="micro">YOU'LL RECEIVE</span>
-        <h2 class="serif-display" style="font-size:clamp(1.8rem,3.2vw,2.6rem); margin:0.8rem 0 1rem;">Intelligence you can act on.</h2>
-        <div class="receive-grid">
-          <div class="receive-card"><strong>Board Intelligence Report</strong>Prioritised intelligence for board-level decision making.</div>
-          <div class="receive-card"><strong>Executive Intelligence Brief</strong>Concise brief that tells leadership what to do next.</div>
-          <div class="receive-card"><strong>Organisational Risk Register</strong>Structured register of risks, conditions and structural drivers.</div>
-          <div class="receive-card"><strong>Intelligence Findings Report</strong>Full findings, patterns, and implications with source traceability.</div>
-        </div>
-        <div style="margin-top:3rem;"><a href="/#contact" class="cta-premium">Surface What Matters <span>→</span></a></div>
-      </div>
-    </section>
-
-    <section class="section-dark">
-      <div class="container contact-grid">
-        <div><span class="micro">Start a Conversation</span><h2 style="font-family:'Cormorant Garamond', serif; font-weight:400; font-size:clamp(1.9rem,3.4vw,2.8rem); line-height:.96; margin:.7rem 0 .9rem;">Intelligence before intervention.</h2><p style="color:rgba(251,246,240,.78); line-height:1.6; max-width:24rem;">Tell us what you're seeing. An outcome that keeps repeating. A risk that keeps resurfacing.</p></div>
-        <div><p style="color:rgba(251,246,240,.78); margin-bottom:2rem;">For boards and executives when understanding the conditions matters more than collecting more data.</p><a href="/#contact" class="cta-premium" style="background:var(--paper); color:var(--ink);">Request A Private Review →</a></div>
-      </div>
-    </section>
-  </main>
-  <footer><div class="container"><div>© 2026 KINGLIS</div><div class="small">Organizational Intelligence — Confidential · Global · Secure</div><div class="small">www.thisiskinglis.com · <a href="/evidence/">Evidence</a> · <a href="/intelligence/">Intelligence</a> · <a href="/advisory/">Advisory</a></div></div></footer>
+<section class="section-dark">
+<div class="container" style="display:grid;grid-template-columns:1fr 1.05fr;gap:5rem">
+<div><span class="micro">Start a Conversation</span><h2 class="serif" style="font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:.96;margin:.7rem 0 .9rem;color:var(--paper)">Intelligence before intervention.</h2><p style="color:rgba(251,246,240,.72);line-height:1.6;max-width:24rem;font-weight:300">Tell us what you're seeing. An outcome that keeps repeating. A risk that keeps resurfacing.</p></div>
+<div><p style="color:rgba(251,246,240,.72);margin-bottom:24px;font-weight:300">For boards and executives when understanding the conditions matters more than collecting more data.</p><a href="/#contact" class="cta-white ring">Request A Private Review →</a></div>
+</div>
+</section>
+</main>
+<footer><div class="container"><div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase">© 2026 KINGLIS</div><div class="small">Organizational Intelligence — Confidential · Global · Secure · NDA by default</div><div class="small"><a href="/evidence/" class="link-rust" style="font-size:11px">Evidence</a> · <a href="/intelligence/" class="link-rust" style="font-size:11px">Intelligence</a> · <a href="/advisory/" class="link-rust" style="font-size:11px">Advisory</a> — All links now use rust #8c3a2e</div></div></footer>
 </body>
 </html>
