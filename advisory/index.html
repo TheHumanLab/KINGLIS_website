@@ -5,137 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light" />
   <title>KINGLIS — Advisory</title>
-  <meta name="description" content="Insight without execution is expensive. Where intelligence reveals structural risk or opportunity, we design the systems, knowledge architecture and operating models required to create lasting organisational capability." />
+  <meta name="description" content="What to do + who stays with you. Private advisory for founders and boards when the decision can't be delegated." />
   <link rel="canonical" href="https://thisiskinglis.com/advisory/" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/og-image.png">
   <meta name="theme-color" content="#F8F7F5">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://thisiskinglis.com/advisory/">
-  <meta property="og:title" content="KINGLIS — Advisory">
-  <meta property="og:description" content="Design what comes next. We design systems, knowledge architecture and operating models built for your organisation, not borrowed from a template.">
-  <meta property="og:image" content="https://thisiskinglis.com/assets/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="KINGLIS — Advisory">
-  <meta name="twitter:description" content="Design what comes next. Architecture to address structural risk — and make sure it gets implemented.">
-  <meta name="twitter:image" content="https://thisiskinglis.com/assets/og-image.png">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    :root{--paper:#F8F7F5;--ink:#1A1816;--teal:#2F4D4F;--olive:#8A7A5A;--line:rgba(17,17,17,.12);--line-strong:rgba(17,17,17,.18);--line-light:rgba(251,246,240,.14)}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;font-family:'Inter',sans-serif}
-    img{max-width:100%;display:block} a{color:inherit;text-decoration:none}
+    :root{--paper:#F8F7F5;--ink:#1A1816;--teal:#2F4D4F;--olive:#8A7A5A;--line:rgba(17,17,17,.12);--line-strong:rgba(17,17,17,.18)}
+    *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
     .container{width:min(1180px,92vw);margin-inline:auto}
     header{position:sticky;top:0;z-index:50;background:rgba(248,247,245,0.84);backdrop-filter:blur(9px);border-bottom:1px solid rgba(26,24,22,0.09)}
-    header .container{padding:1.25rem 0} nav{display:flex;justify-content:space-between;align-items:center;gap:2rem}
+    header .container{padding:1.25rem 0} nav{display:flex;justify-content:space-between;align-items:center}
     .brand .small{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--olive)}
-    nav ul{list-style:none;display:flex;gap:1.8rem;margin:0;padding:0;flex-wrap:wrap}
-    nav a{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(17,17,17,.72);padding-bottom:2px;border-bottom:1px solid transparent;transition:all .2s}
-    nav a:hover{color:var(--ink);border-color:var(--line-strong)} nav a.is-active{color:var(--ink);border-bottom-color:var(--line-strong)}
-    .micro{display:inline-block;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);line-height:1.4}
-    .serif-display{font-family:'Cormorant Garamond', Georgia, serif;font-weight:400;letter-spacing:-.02em;line-height:.98}
-    section{padding:7.5rem 0;border-bottom:1px solid var(--line)} section.section-dark{background:var(--ink);color:var(--paper);border-bottom-color:rgba(251,246,240,.08)} section.section-dark .micro{color:var(--olive)}
-    .hero{padding:120px 0 80px;background:var(--paper);border-bottom:1px solid var(--line)}
-    .hero h1{font-family:'Cormorant Garamond', Georgia, serif;font-weight:400;font-size:clamp(2.8rem,5.5vw,4.8rem);line-height:.9;letter-spacing:-.03em;margin:0}
-    .hero .lead{margin:2rem 0 0;max-width:36rem;font-size:1.15rem;line-height:1.65;color:var(--teal);font-weight:300}
-    .hero .sub{margin:1.5rem 0 0;max-width:38rem;font-size:1rem;line-height:1.7;color:rgba(17,17,17,.72)}
-    .cap-item{display:grid;grid-template-columns:120px 1fr;gap:2rem;padding:3.5rem 0;border-bottom:1px solid var(--line)}
-    .cap-index{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);padding-top:.4rem}
-    .cap-content h3{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:1.6rem;margin:0 0 1.2rem;line-height:1.2}
-    .cap-content p{font-size:.96rem;line-height:1.75;color:rgba(17,17,17,.76);margin:0;max-width:52rem}
-    .receive-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:2.5rem}
-    .receive-card{border:1px solid rgba(0,0,0,0.08);border-radius:10px;padding:24px;background:#fff;font-size:.9rem;line-height:1.5}
-    .receive-card strong{display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--olive);margin-bottom:12px}
-    .cta-premium{display:inline-flex;align-items:center;gap:.6rem;color:var(--paper);background:var(--ink);padding:18px 28px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border:0}
-    .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:5rem;align-items:start}
-    footer{padding:3rem 0 4rem;border-top:1px solid var(--line);background:var(--paper)} footer .small{font-size:.76rem;color:rgba(17,17,17,.62)}
-    @media(max-width:980px){section{padding:5.5rem 0} .cap-item{grid-template-columns:1fr} .receive-grid{grid-template-columns:1fr 1fr} .contact-grid{grid-template-columns:1fr}}
-    @media(max-width:600px){.receive-grid{grid-template-columns:1fr}}
+    nav ul{list-style:none;display:flex;gap:1.8rem;margin:0;padding:0} nav a{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(17,17,17,.72);text-decoration:none;padding-bottom:2px;border-bottom:1px solid transparent} nav a.is-active{color:var(--ink);border-bottom-color:var(--line-strong)}
+    .micro{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--olive)}
+    .serif-display{font-family:'Cormorant Garamond', serif;font-weight:400;letter-spacing:-.02em;line-height:.98}
+    section{padding:7.5rem 0;border-bottom:1px solid var(--line)} .hero{padding:120px 0 80px} .hero h1{font-size:clamp(2.8rem,5.5vw,4.8rem);line-height:.9;margin:0} .hero .lead{max-width:36rem;font-size:1.15rem;line-height:1.65;color:var(--teal);font-weight:300;margin:2rem 0 0} .hero .sub{max-width:38rem;font-size:1rem;line-height:1.7;color:rgba(17,17,17,.72);margin:1.5rem 0 0}
+    .cap-grid{display:flex;flex-direction:column} .cap-item{display:grid;grid-template-columns:120px 1fr;gap:2rem;padding:3.5rem 0;border-bottom:1px solid var(--line)} .cap-index{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);padding-top:.4rem} .cap-content h3{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:1.6rem;margin:0 0 1.2rem;line-height:1.2} .cap-content p{font-size:.96rem;line-height:1.75;color:rgba(17,17,17,.76);margin:0;max-width:52rem}
+    .cta-premium{display:inline-flex;align-items:center;gap:.6rem;color:var(--paper);background:var(--ink);padding:18px 28px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border:0;text-decoration:none}
+    footer{padding:3rem 0 4rem;border-top:1px solid var(--line)} footer .small{font-size:.76rem;color:rgba(17,17,17,.62)}
+    @media(max-width:980px){.cap-item{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="brand"><a href="/"><span class="small">O R G A N I Z A T I O N A L&nbsp;&nbsp;I N T E L L I G E N C E</span></a></div>
-        <ul>
-          <li><a href="/#model">Model</a></li>
-          <li><a href="/evidence-reconstruction/">Services</a></li>
-          <li><a href="/#method">Method</a></li>
-          <li><a href="/#founder">Founder</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
-      </nav>
+<header><div class="container"><nav><div class="brand"><a href="/"><span class="small">O R G A N I Z A T I O N A L&nbsp;&nbsp;I N T E L L I G E N C E</span></a></div><ul><li><a href="/evidence/">Evidence</a></li><li><a href="/intelligence/">Intelligence</a></li><li><a href="/advisory/" class="is-active">Advisory</a></li><li><a href="/#contact">Contact</a></li></ul></nav></div></header>
+<main>
+<section class="hero"><div class="container"><span class="micro">03 — ADVISORY</span><h1 class="serif-display">What to do + who stays<br><em>with you.</em></h1><p class="lead">Evidence tells you what happened. Intelligence tells you what it means. Advisory tells you what to do — and stays with you while you do it.</p><p class="sub">Private, confidential counsel for founders, CEOs and boards when the decision can't be delegated and the cost of being wrong is not theoretical.</p></div></section>
+<section><div class="container"><span class="micro">ADVISORY — What to do + who stays with you</span><h2 class="serif-display" style="font-size:clamp(1.8rem,3.2vw,2.6rem); margin:0.8rem 0 1rem;">When the decision can't be delegated.</h2>
+<div class="cap-grid">
+  <div class="cap-item">
+    <div class="cap-index">01</div>
+    <div class="cap-content">
+      <h3>Founder's Counsel™ — Private Advisory</h3>
+      <p>For founders and CEOs where the organisation is still an extension of the founder's thinking. You get direct, private access for pre-decision review, post-decision debrief and protection of your intellectual identity. Not coaching. Not consulting. Counsel for when you can't afford to think out loud in public. Retainer only. Application only.</p>
+      <div style="margin-top:20px;display:flex;gap:12px;">
+        <a href="/advisory/founders-counsel/" style="border:1px solid #121212;padding:12px 22px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:#FAF8F3;background:#121212;">View Protocol →</a>
+      </div>
     </div>
-  </header>
-  <main>
-    <section class="hero">
-      <div class="container">
-        <span class="micro">03 — ADVISORY</span>
-        <h1 class="serif-display">Design What<br><em>Comes Next</em></h1>
-        <p class="lead">Insight without execution is expensive.</p>
-        <p class="sub">Where intelligence reveals structural risk or opportunity, we design the systems, knowledge architecture and operating models required to create lasting organisational capability — built for your organisation, not borrowed from a template.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <span class="micro">CAPABILITIES</span>
-        <h2 class="serif-display" style="font-size:clamp(1.8rem,3.2vw,2.6rem); margin:0.8rem 0 1rem;">Architecture that lasts.</h2>
-        <div>
-          <div class="cap-item">
-            <div class="cap-index">01</div>
-            <div class="cap-content">
-              <h3>Knowledge Architecture™</h3>
-              <p>In most organisations, critical knowledge — expertise, judgement, process, institutional memory — exists inside individuals rather than inside the organisation itself. When those individuals leave, that knowledge leaves with them. We design the structures, systems and governance frameworks through which your organisation captures, organises and applies its expertise — so that what the organisation knows is durable, transferable and genuinely accessible when it matters most.</p>
-            </div>
-          </div>
-          <div class="cap-item">
-            <div class="cap-index">02</div>
-            <div class="cap-content">
-              <h3>Founder & Leadership Advisory™</h3>
-              <p>Founders and senior leaders are frequently the single greatest point of dependency in their own organisations. Their expertise is irreplaceable — until it isn't structured, documented or transferable. We work directly with founders and leadership teams to externalise their expertise, codify their decision-making frameworks and build the organisational structures required to operate and scale beyond any single individual. The goal is an organisation that carries the founder's intelligence without requiring the founder's constant presence.</p>
-            </div>
-          </div>
-          <div class="cap-item">
-            <div class="cap-index">03</div>
-            <div class="cap-content">
-              <h3>Operating Model Design</h3>
-              <p>An organisation's operating model — its governance structures, decision rights, reporting lines and accountability frameworks — determines whether it can function with clarity and resilience or whether it operates on assumption and goodwill. We design operating models that reflect how the organisation actually needs to work, not how it historically has. The result is a structure built for the demands the organisation actually faces — with clear accountability, coherent decision-making and the resilience to perform under pressure.</p>
-            </div>
-          </div>
-          <div class="cap-item" style="border-bottom:0;">
-            <div class="cap-index">04</div>
-            <div class="cap-content">
-              <h3>AI Knowledge Readiness</h3>
-              <p>Organisations investing in AI are discovering that the technology is rarely the limiting factor. The limiting factor is the quality, structure and accessibility of the knowledge the AI is expected to work with. We assess and redesign your organisation's knowledge infrastructure — its documentation, processes, data structures and institutional memory — to ensure it is genuinely structured for AI integration. Because AI is only as intelligent as the information it is built on.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section style="background:#fff;">
-      <div class="container">
-        <span class="micro">YOU'LL RECEIVE</span>
-        <h2 class="serif-display" style="font-size:clamp(1.8rem,3.2vw,2.6rem); margin:0.8rem 0 1rem;">Capability that stays.</h2>
-        <div class="receive-grid">
-          <div class="receive-card"><strong>Knowledge Architecture Blueprint</strong>How knowledge is captured, governed and made accessible.</div>
-          <div class="receive-card"><strong>Founder Transition Plan</strong>From dependency to durable organisational capability.</div>
-          <div class="receive-card"><strong>Operating Model Design</strong>Governance, decision rights and accountability that actually works.</div>
-          <div class="receive-card"><strong>AI Readiness Roadmap</strong>Your knowledge infrastructure prepared for responsible AI adoption.</div>
-        </div>
-        <div style="margin-top:3rem;"><a href="/#contact" class="cta-premium">Design The Solution <span>→</span></a></div>
-      </div>
-    </section>
-
-    <section class="section-dark">
-      <div class="container contact-grid">
-        <div><span class="micro">Start a Conversation</span><h2 style="font-family:'Cormorant Garamond', serif; font-weight:400; font-size:clamp(1.9rem,3.4vw,2.8rem); line-height:.96; margin:.7rem 0 .9rem;">Insight without execution is expensive.</h2><p style="color:rgba(251,246,240,.78); line-height:1.6; max-width:24rem;">Tell us what intelligence is revealing. A structural risk. An opportunity to scale. A dependency that needs to be designed out.</p></div>
-        <div><p style="color:rgba(251,246,240,.78); margin-bottom:2rem;">For founders and leadership teams ready to turn intelligence into lasting architecture.</p><a href="/#contact" class="cta-premium" style="background:var(--paper); color:var(--ink);">Request A Private Review →</a></div>
-      </div>
-    </section>
-  </main>
-  <footer><div class="container"><div>© 2026 KINGLIS</div><div class="small">Organizational Intelligence — Confidential · Global · Secure</div><div class="small">www.thisiskinglis.com · <a href="/evidence-reconstruction/">Evidence</a> · <a href="/intelligence/">Intelligence</a> · <a href="/advisory/">Advisory</a></div></div></footer>
+  </div>
+  <div class="cap-item">
+    <div class="cap-index">02</div>
+    <div class="cap-content">
+      <h3>Board Intelligence Counsel™</h3>
+      <p>Intelligence before intervention. For chairs and boards when understanding the conditions matters more than collecting more data. We provide prioritised intelligence for board-level decision making, governance risk registers and executive briefs that tell leadership what to do next — before the meeting, not after.</p>
+    </div>
+  </div>
+  <div class="cap-item">
+    <div class="cap-index">03</div>
+    <div class="cap-content">
+      <h3>Organizational Architecture Advisory™</h3>
+      <p>Perhaps the problem isn't the problem. The architecture producing it is. We examine and redesign your governance structures, decision rights, reporting lines and accountability frameworks to reflect what the organisation actually needs to work, not how it has historically been. Built for resilience under pressure.</p>
+    </div>
+  </div>
+  <div class="cap-item" style="border-bottom:0;">
+    <div class="cap-index">04</div>
+    <div class="cap-content">
+      <h3>Crisis & Decision Advisory™</h3>
+      <p>When the record does not hold and the decision can't wait. Rapid containment, evidence protection, decision scaffolding and stakeholder sequencing when allegations, litigation, regulatory enquiry or public scrutiny hits. We protect the record while you protect the organisation.</p>
+    </div>
+  </div>
+</div></div></section>
+</main>
+<footer><div class="container"><div>© 2026 KINGLIS</div><div class="small">Organizational Intelligence — Confidential · Global · Secure</div></div></footer>
 </body>
 </html>
