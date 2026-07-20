@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <title>KINGLIS — Founder's Counsel™ — Private Advisory</title>
+  <meta name="description" content="When the decision can't be delegated and you can't afford to think out loud in public. Private, confidential counsel for founders and CEOs — pre-decision review, post-decision debrief, and protection of what you've built." />
+  <link rel="canonical" href="https://thisiskinglis.com/advisory/founders-counsel/" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/og-image.png">
+  <meta name="theme-color" content="#F8F7F5">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thisiskinglis.com/advisory/founders-counsel/">
+  <meta property="og:title" content="KINGLIS — Founder's Counsel™ — Private Advisory">
+  <meta property="og:description" content="Private counsel for founders and CEOs when the decision can't be delegated. Retainer only. Application only.">
+  <meta property="og:image" content="https://thisiskinglis.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#F8F7F5;--ink:#1A1816;--teal:#2F4D4F;--olive:#8A7A5A;--line:rgba(17,17,17,.12);--line-strong:rgba(17,17,17,.18);--line-light:rgba(251,246,240,.14)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;font-family:'Inter',sans-serif}
+    a{color:inherit;text-decoration:none} .container{width:min(1180px,92vw);margin-inline:auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(248,247,245,0.84);backdrop-filter:blur(9px);border-bottom:1px solid rgba(26,24,22,0.09)}
+    header .container{padding:1.25rem 0} nav{display:flex;justify-content:space-between;align-items:center;gap:2rem}
+    .brand .small{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--olive)}
+    nav ul{list-style:none;display:flex;gap:1.8rem;margin:0;padding:0;flex-wrap:wrap}
+    nav a{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(17,17,17,.72);padding-bottom:2px;border-bottom:1px solid transparent;transition:all .2s}
+    nav a:hover{color:var(--ink);border-color:var(--line-strong)} nav a.is-active{color:var(--ink);border-bottom-color:var(--line-strong)}
+    .micro{display:inline-block;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);line-height:1.4}
+    .serif-display{font-family:'Cormorant Garamond', Georgia, serif;font-weight:400;letter-spacing:-.02em;line-height:.98;text-wrap:balance}
+    section{padding:7.5rem 0;border-bottom:1px solid var(--line)} section.section-dark{background:var(--ink);color:var(--paper);border-bottom-color:rgba(251,246,240,.08)} section.section-dark .micro{color:var(--olive)}
+    .hero{padding:120px 0 80px;background:var(--paper);border-bottom:1px solid var(--line)}
+    .hero h1{font-family:'Cormorant Garamond', Georgia, serif;font-weight:400;font-size:clamp(2.8rem,5.5vw,4.8rem);line-height:.9;letter-spacing:-.03em;margin:0;max-width:12em}
+    .hero h1 em{font-style:italic;font-weight:500}
+    .hero .lead{margin:2rem 0 0;max-width:36rem;font-size:1.15rem;line-height:1.65;color:var(--teal);font-weight:300}
+    .hero .sub{margin:1.5rem 0 0;max-width:38rem;font-size:1rem;line-height:1.7;color:rgba(17,17,17,.72)}
+    .cap-item{display:grid;grid-template-columns:120px 1fr;gap:2rem;padding:3.5rem 0;border-bottom:1px solid var(--line)}
+    .cap-index{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);padding-top:.4rem}
+    .cap-content h3{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:1.6rem;margin:0 0 1.2rem;line-height:1.2}
+    .cap-content p{font-size:.96rem;line-height:1.75;color:rgba(17,17,17,.76);margin:0;max-width:52rem}
+    .receive-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:2.5rem}
+    .receive-card{border:1px solid rgba(0,0,0,0.08);border-radius:10px;padding:24px;background:#fff;font-size:.9rem;line-height:1.5}
+    .receive-card strong{display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--olive);margin-bottom:12px}
+    .cta-premium{display:inline-flex;align-items:center;gap:.6rem;color:var(--paper);background:var(--ink);padding:18px 28px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border:0}
+    .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:5rem;align-items:start} .contact-intro h2{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:.96;letter-spacing:-.02em;margin:.7rem 0 .9rem}
+    .contact-intro .muted{color:rgba(251,246,240,.78);line-height:1.6;margin:.5rem 0;font-size:.95rem}
+    .protocol-steps{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);margin-top:2rem;border:1px solid var(--line);max-width:56rem}
+    .protocol-steps div{background:var(--paper);padding:24px 28px} .protocol-steps b{display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--olive);margin-bottom:12px} .protocol-steps p{font-size:.9rem;line-height:1.6;color:rgba(17,17,17,.76)}
+    footer{padding:3rem 0 4rem;border-top:1px solid var(--line);background:var(--paper)} footer .small{font-size:.76rem;color:rgba(17,17,17,.62)}
+    @media(max-width:980px){section{padding:5.5rem 0} .cap-item{grid-template-columns:1fr} .receive-grid{grid-template-columns:1fr 1fr} .contact-grid{grid-template-columns:1fr} .protocol-steps{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand"><a href="/"><span class="small">O R G A N I Z A T I O N A L&nbsp;&nbsp;I N T E L L I G E N C E</span></a></div>
+      <ul>
+        <li><a href="/evidence/">Evidence</a></li>
+        <li><a href="/intelligence/">Intelligence</a></li>
+        <li><a href="/advisory/" class="is-active">Advisory</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="container">
+      <span class="micro">03 — ADVISORY / 01 — PRIVATE</span>
+      <h1 class="serif-display">Founder's Counsel™<br><em>Private Advisory</em></h1>
+      <p class="lead">When the decision can't be delegated and you can't afford to think out loud in public.</p>
+      <p class="sub">Private, confidential counsel for founders and CEOs. Direct access for pre-decision review, post-decision debrief and protection of what you've built. Not coaching. Not consulting. Counsel. Retainer only. Application only. Maximum 5 clients at any time.</p>
+      <div style="margin-top:2.5rem;display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#secure" class="cta-premium">Secure Drop™ — Request Review →</a>
+        <a href="/advisory/" style="border:1px solid var(--line-strong);padding:18px 28px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;">Back to Advisory</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="micro">WHEN REQUIRED</span>
+      <h2 class="serif-display" style="font-size:clamp(1.8rem,3.2vw,2.6rem); margin:0.8rem 0 1rem;">You are the system. You need counsel, not coaching.</h2>
+      <div class="cap-item">
+        <div class="cap-index">01</div>
+        <div class="cap-content">
+          <h3>High-stakes decisions with no neutral sounding board</h3>
+          <p>Your thinking is the asset — but it's fragmented, undocumented and non-transferable. Teams repeat questions. Boards get inconsistent versions. You re-explain what you've already solved. When information is incomplete and public thinking is a liability, you need a private, defensible thinking space.</p>
+        </div>
+      </div>
+      <div class="cap-item">
+        <div class="cap-index">02</div>
+        <div class="cap-content">
+          <h3>Board pressure, partnership tension or succession</h3>
+          <p>Founder transitions, partnership disputes, governance scrutiny or succession planning require confidential sequencing. We map influence, decision rights and information flows to ensure the organisation can carry your intelligence without requiring your constant presence.</p>
+        </div>
+      </div>
+      <div class="cap-item" style="border-bottom:0;">
+        <div class="cap-index">03</div>
+        <div class="cap-content">
+          <h3>After Founder Intellectual Identity™</h3>
+          <p>You've structured your thinking, codified your judgement and made your expertise transferable. Founder's Counsel is what happens next — operationalising that identity with you, day to day, decision to decision, so it holds up under real pressure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fff;">
+    <div class="container">
+      <span class="micro">PROTOCOL</span>
+      <h2 class="serif-display" style="font-size:clamp(1.8rem,3.2vw,2.6rem); margin:0.8rem 0 1rem;">Access. Review. Counsel. Protect.</h2>
+      <div class="protocol-steps">
+        <div><b>01 Access</b><p>Private retainer. Direct access via secure channel. No junior team. No ticketing. Response within hours, not days.</p></div>
+        <div><b>02 Review</b><p>Pre-decision review and post-decision debrief. We examine the evidence, intelligence and architecture behind the decision.</p></div>
+        <div><b>03 Counsel</b><p>Confidential, documented counsel that is source-traceable and defensible. What to do, what not to do, and in what sequence.</p></div>
+        <div><b>04 Protect</b><p>Protection of intellectual identity, decision record and organisational continuity. Built to hold up when scrutinised.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="micro">YOU'LL RECEIVE</span>
+      <h2 class="serif-display" style="font-size:clamp(1.8rem,3.2vw,2.6rem); margin:0.8rem 0 1rem;">What you receive.</h2>
+      <div class="receive-grid">
+        <div class="receive-card"><strong>Private Counsel Retainer</strong>Direct access to principal, not a team. Secure comms. Confidential by design.</div>
+        <div class="receive-card"><strong>Decision Review Memos</strong>Pre and post decision memos, documented and source-linked for defensibility.</div>
+        <div class="receive-card"><strong>Intellectual Identity Protection</strong>Ensuring your thinking becomes an organisational asset, not a single point of failure.</div>
+        <div class="receive-card"><strong>Continuity Architecture</strong>Structures so the organisation carries your intelligence without requiring your constant presence.</div>
+      </div>
+      <div style="margin-top:3rem;"><a href="#secure" class="cta-premium">Request Private Review →</a></div>
+    </div>
+  </section>
+
+  <section class="section-dark" id="secure">
+    <div class="container contact-grid">
+      <div class="contact-intro">
+        <span class="micro">Confidential · Global · Secure</span>
+        <h2>Not coaching. Not consulting. Counsel.</h2>
+        <p class="muted">For founders where the cost of being wrong is not theoretical.</p>
+        <div style="margin-top:2rem; padding-top:1.6rem; border-top:1px solid var(--line-light); max-width:24rem;">
+          <p class="muted">Retainer only. Application only. Maximum 5 clients at any time. All work under private engagement. Secure handling from intake to delivery. Privilege-aware workflow.</p>
+        </div>
+      </div>
+      <div>
+        <p class="muted" style="margin-bottom:2rem;">Secure intake. We review fit, conflict and capacity in 48 hours. If we cannot add value, we will tell you.</p>
+        <a href="/#contact" class="cta-premium" style="background:var(--paper); color:var(--ink);">Secure Drop™ — Founder's Counsel →</a>
+        <p class="muted" style="margin-top:1rem;font-size:.8rem;">www.thisiskinglis.com/advisory/founders-counsel/</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="container">
+    <div>© 2026 KINGLIS</div>
+    <div class="small">Organizational Intelligence — Confidential · Global · Secure</div>
+    <div class="small"><a href="/evidence/">Evidence</a> · <a href="/intelligence/">Intelligence</a> · <a href="/advisory/">Advisory</a> · <a href="/advisory/founders-counsel/">Founder's Counsel™</a></div>
+  </div>
+</footer>
+</body>
+</html>
