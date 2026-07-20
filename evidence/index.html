@@ -1,167 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light" />
-  <title>KINGLIS — Evidence Reconstruction™</title>
-  <meta name="description" content="When the record is fragmented, disputed, or incomplete, you can't afford to guess — and you can't afford to be wrong. KINGLIS reconstructs all available evidence into a single, structured and source-traceable record." />
-  <link rel="canonical" href="https://thisiskinglis.com/evidence-reconstruction/" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/og-image.png">
-  <meta name="theme-color" content="#F8F7F5">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://thisiskinglis.com/evidence-reconstruction/">
-  <meta property="og:title" content="KINGLIS — Evidence Reconstruction™">
-  <meta property="og:description" content="We reconstruct all available evidence into a single, structured and source-traceable record built to withstand scrutiny.">
-  <meta property="og:image" content="https://thisiskinglis.com/assets/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="KINGLIS — Evidence Reconstruction™">
-  <meta name="twitter:description" content="Establish what actually happened. When the record is fragmented, disputed, or incomplete.">
-  <meta name="twitter:image" content="https://thisiskinglis.com/assets/og-image.png">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    :root{--paper:#F8F7F5;--ink:#1A1816;--teal:#2F4D4F;--olive:#8A7A5A;--line:rgba(17,17,17,.12);--line-strong:rgba(17,17,17,.18);--line-light:rgba(251,246,240,.14)}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-family:'Inter',sans-serif}
-    img{max-width:100%;display:block} a{color:inherit;text-decoration:none}
-    .container{width:min(1180px,92vw);margin-inline:auto}
-    header{position:sticky;top:0;z-index:50;background:rgba(248,247,245,0.84);backdrop-filter:blur(9px);border-bottom:1px solid rgba(26,24,22,0.09)}
-    header .container{padding:1.25rem 0} nav{display:flex;justify-content:space-between;align-items:center;gap:2rem}
-    .brand .small{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--olive)}
-    nav ul{list-style:none;display:flex;gap:1.8rem;margin:0;padding:0;flex-wrap:wrap}
-    nav a{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(17,17,17,.72);padding-bottom:2px;border-bottom:1px solid transparent;transition:all .2s}
-    nav a:hover{color:var(--ink);border-color:var(--line-strong)} nav a.is-active{color:var(--ink);border-bottom-color:var(--line-strong)}
-    .micro{display:inline-block;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);line-height:1.4}
-    .serif-display{font-family:'Cormorant Garamond', Georgia, serif;font-weight:400;letter-spacing:-.02em;line-height:.98;text-wrap:balance}
-    section{padding:7.5rem 0;border-bottom:1px solid var(--line)} section.section-dark{background:var(--ink);color:var(--paper);border-bottom-color:rgba(251,246,240,.08)} section.section-dark .micro{color:var(--olive)}
-    .hero{padding:120px 0 80px;background:var(--paper);border-bottom:1px solid var(--line)}
-    .hero h1{font-family:'Cormorant Garamond', Georgia, serif;font-weight:400;font-size:clamp(2.8rem,5.5vw,4.8rem);line-height:.9;letter-spacing:-.03em;margin:0;max-width:12em}
-    .hero h1 em{font-style:italic;font-weight:500}
-    .hero .lead{margin:2rem 0 0;max-width:36rem;font-size:1.15rem;line-height:1.65;color:var(--teal);font-weight:300}
-    .hero .sub{margin:1.5rem 0 0;max-width:38rem;font-size:1rem;line-height:1.7;color:rgba(17,17,17,.72)}
-    .cap-section{padding-top:2rem}
-    .cap-grid{display:flex;flex-direction:column;gap:0}
-    .cap-item{display:grid;grid-template-columns:120px 1fr;gap:2rem;padding:3rem 0;border-bottom:1px solid var(--line)}
-    .cap-index{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);padding-top:.4rem}
-    .cap-content h3{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:1.45rem;margin:0 0 1rem;line-height:1.2}
-    .cap-content p{font-size:.95rem;line-height:1.7;color:rgba(17,17,17,.76);margin:0;max-width:48rem}
-    .receive-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:2.5rem}
-    .receive-card{border:1px solid rgba(0,0,0,0.08);border-radius:10px;padding:24px;background:#fff;font-size:.9rem;line-height:1.5}
-    .receive-card strong{display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--olive);margin-bottom:12px}
-    .cta-premium{display:inline-flex;align-items:center;gap:.6rem;color:var(--paper);background:var(--ink);padding:18px 28px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border:0}
-    .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:5rem;align-items:start} .contact-intro h2{font-family:'Cormorant Garamond', serif;font-weight:400;font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:.96;letter-spacing:-.02em;margin:.7rem 0 .9rem}
-    .contact-intro .muted{color:rgba(251,246,240,.78);line-height:1.6;margin:.5rem 0;font-size:.95rem}
-    footer{padding:3rem 0 4rem;border-top:1px solid var(--line);background:var(--paper)} footer .small{font-size:.76rem;color:rgba(17,17,17,.62)}
-    @media(max-width:980px){section{padding:5.5rem 0} .cap-item{grid-template-columns:1fr} .receive-grid{grid-template-columns:1fr 1fr} .contact-grid{grid-template-columns:1fr}}
-    @media(max-width:600px){.receive-grid{grid-template-columns:1fr}}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KINGLIS — Evidence</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F8F7F5;
+  --ink:#121212;
+  --muted:#6B6560; /* NEW: 11px readable */
+  --rust:#8c3a2e; /* NEW: serious deep rust */
+  --line:rgba(18,18,18,.12);
+  --line-strong:rgba(18,18,18,.18);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;font-family:'Inter',sans-serif}
+a{color:inherit;text-decoration:none}
+a:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
+
+/* Top scarcity bar */
+.topbar{background:var(--ink);color:var(--paper);text-align:center;padding:9px 16px;font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+.topbar b{font-weight:600;border:1px solid rgba(248,247,245,.25);padding:2px 8px;border-radius:20px;margin-left:8px}
+
+.container{width:min(1180px,92vw);margin-inline:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(248,247,245,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(18,18,18,.08)}
+header .container{padding:18px 0}
+nav{display:flex;justify-content:space-between;align-items:center;gap:2rem}
+.brand .small{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:500}
+nav ul{list-style:none;display:flex;gap:2rem;margin:0;padding:0}
+nav a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(18,18,18,.68);padding-bottom:4px;border-bottom:2px solid transparent;transition:.2s}
+nav a:hover{color:var(--ink)}
+nav a.is-active{color:var(--ink);border-bottom-color:var(--rust)} /* FIX: rust underline */
+
+.hero{padding:96px 0 72px;border-bottom:1px solid var(--line)}
+.micro{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);line-height:1.4;display:inline-block} /* FIX: 11px #6B6560 */
+.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;letter-spacing:-.02em;line-height:.9}
+.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.8rem,5.5vw,4.8rem);margin:18px 0 0}
+.hero .lead{margin:22px 0 0;max-width:42rem;font-size:18px;line-height:1.65;font-weight:300;color:#2A2725}
+.hero .bullets{margin:20px 0 0;padding:0;list-style:none;max-width:42rem}
+.hero .bullets li{position:relative;padding-left:20px;margin-bottom:10px;font-size:14px;line-height:1.6;font-weight:300;color:#2A2725}
+.hero .bullets li:before{content:"—";position:absolute;left:0;color:var(--rust)} /* FIX: rust dash */
+.hero .meta{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--ink);cursor:pointer;transition:.2s}
+.btn-primary{background:var(--ink);color:var(--paper)}
+.btn-primary:hover{background:#000}
+.btn-ghost{background:transparent;color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.link-rust{color:var(--rust);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px} /* FIX: rust only for links */
+.link-rust:hover{color:#9b4d20} /* hover uses your second rust for warmth */
+.microcopy{font-size:10px;color:var(--muted);margin-top:10px}
+
+.trustbar{margin-top:28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;display:flex;gap:20px;flex-wrap:wrap;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.trustbar span{display:inline-flex;align-items:center;gap:6px}
+.trustbar span:before{content:"";width:5px;height:5px;border-radius:50%;background:var(--rust);display:inline-block} /* FIX: rust dot */
+
+.cap-section{padding:0;border-bottom:1px solid var(--line)}
+.cap-item{display:grid;grid-template-columns:120px 1fr;gap:2rem;padding:48px 0;border-bottom:1px solid var(--line)}
+.cap-index{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+.cap-content h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.7rem;margin:0 0 14px;line-height:1.15}
+.cap-content p{font-size:15px;line-height:1.75;color:rgba(18,18,18,.76);margin:0;max-width:52rem;font-weight:300}
+.cap-content .action{margin-top:20px}
+.cap-content .action a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);text-decoration:underline;text-underline-offset:4px} /* FIX: rust link */
+.cap-content .action a:hover{color:#9b4d20}
+
+.section-dark{background:var(--ink);color:var(--paper);padding:88px 0;border-bottom:1px solid #2A2A2A}
+.section-dark .micro{color:#8A8683}
+.section-dark .cta-white{color:var(--paper);background:transparent;border:1px solid rgba(248,247,245,.18);padding:16px 28px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px}
+.section-dark .cta-white.ring{box-shadow:0 0 0 2px var(--paper),0 0 0 4px transparent; border-color:var(--paper)} /* FIX: 2px white outer ring */
+.section-dark .cta-white:hover{background:var(--paper);color:var(--ink)}
+.section-dark a.link-dark{color:var(--rust);text-decoration:underline;text-underline-offset:3px;color:#C46A4F} /* rust adjusted for dark bg readability */
+.section-dark input{width:100%;background:rgba(248,247,245,.06);border:1px solid rgba(248,247,245,.14);padding:14px 16px;color:var(--paper);font-family:Inter;font-size:13px}
+.section-dark input:focus{border-color:var(--rust);outline:none} /* FIX: rust focus ring */
+
+footer{padding:32px 0 48px;border-top:1px solid var(--line)}
+footer .small{font-size:11px;color:var(--muted);margin-top:8px}
+@media(max-width:900px){.cap-item{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav aria-label="Primary">
-        <div class="brand"><a href="/"><span class="small">O R G A N I Z A T I O N A L&nbsp;&nbsp;I N T E L L I G E N C E</span></a></div>
-        <ul>
-          <li><a href="/#model">Model</a></li>
-          <li><a href="/evidence-reconstruction/" class="is-active">Services</a></li>
-          <li><a href="/#method">Method</a></li>
-          <li><a href="/#founder">Founder</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<div class="topbar">PRIVATE RETAINER: 2 OF 5 SEATS AVAILABLE FOR Q3 <b>INTAKE CLOSES 31 JULY</b></div>
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand"><a href="/"><span class="small">KINGLIS — ORGANIZATIONAL INTELLIGENCE</span></a></div>
+      <ul>
+        <li><a href="/evidence/" class="is-active">Evidence</a></li>
+        <li><a href="/intelligence/">Intelligence</a></li>
+        <li><a href="/advisory/">Advisory</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-  <main>
-    <section class="hero" id="top">
-      <div class="container">
-        <span class="micro">01 — EVIDENCE</span>
-        <h1 class="serif-display">Establish What<br><em>Actually Happened</em></h1>
-        <p class="lead">When the record is fragmented, disputed, or incomplete, you can't afford to guess — and you can't afford to be wrong.</p>
-        <p class="sub">We reconstruct all available evidence into a single, structured and source-traceable record. Methodical in its construction. Rigorous in its sourcing. Built to withstand the scrutiny of investigation, governance, litigation and executive decision-making — wherever the record is ultimately tested.</p>
-      </div>
-    </section>
-
-    <section id="capabilities">
-      <div class="container">
-        <span class="micro">CAPABILITIES</span>
-        <h2 class="serif-display" style="font-size:clamp(1.8rem,3.2vw,2.6rem); margin:0.8rem 0 1rem;">What we do when the record does not hold.</h2>
-        <div class="cap-grid">
-  <div class="cap-item">
-    <div class="cap-index">01</div>
-    <div class="cap-content">
-      <h3>Evidence Reconstruction™</h3>
-      <p>When the factual record is unclear, contested or incomplete, we locate, organise and verify all available documentation to produce a structured, source-traceable account of events. Every finding is attributed. Every conclusion is grounded. The result is an authoritative record built to hold up under legal, regulatory and governance scrutiny — including active litigation and enforcement proceedings.</p>
-      <div style="margin-top:20px;display:flex;gap:12px;">
-        <a href="/evidence/evidence-reconstruction/" style="border:1px solid #121212;padding:12px 22px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:#FAF8F3;background:#121212;">View Protocol →</a>
-      </div>
-    </div>
-  </div>
-  <div class="cap-item">
-    <div class="cap-index">02</div>
-    <div class="cap-content">
-      <h3>Founder Intellectual Identity™</h3>
-      <p>Your thinking lives across conversations, decisions, client work, proposals, presentations, notebooks, emails and experience. It has shaped businesses, teams and industries—but it exists as fragmented knowledge that depends entirely on you.</p>
-    </div>
-  </div>
-  <div class="cap-item">
-    <div class="cap-index">03</div>
-    <div class="cap-content">
-      <h3>Workplace & Conduct Investigations</h3>
-      <p>When allegations arise — misconduct, governance breaches, executive disputes — the quality of the investigation determines the quality of the outcome. We conduct independent, impartial investigations that are structured for defensibility from the outset. Every finding is documented. Every conclusion is supported. The result is a record that can be relied upon by boards, legal counsel and regulators alike.</p>
-    </div>
-  </div>
-  <div class="cap-item" style="border-bottom:0;">
-    <div class="cap-index">04</div>
-    <div class="cap-content">
-      <h3>Litigation & Regulatory Support</h3>
-      <p>In adversarial proceedings, the organisation of your evidence is as important as the evidence itself. We prepare, structure and present your documentary record for legal proceedings, regulatory responses and external review — ensuring that what you have is accessible, coherent and credible under pressure. The goal is to reduce exposure, strengthen your position and accelerate resolution.</p>
-    </div>
-  </div>
+<main>
+<section class="hero">
+<div class="container">
+<span class="micro">01 — EVIDENCE INTELLIGENCE</span>
+<h1 class="serif">When the factual<br><em>record is contested</em></h1>
+<p class="lead">We locate, organise and verify all available documentation to produce a structured, source-traceable account of events. Every finding is attributed.</p>
+<ul class="bullets">
+<li>Pre-litigation and litigation support where facts are disputed</li>
+<li>Board investigations, regulatory enquiries and audit trails</li>
+<li>Founder / partnership disputes where memory and documents conflict</li>
+</ul>
+<div class="meta">
+<a href="#secure" class="btn btn-primary">SECURE DROP™ →</a>
+<a href="#sample" class="link-rust">View redacted sample ↓</a>
 </div>
-    </section>
+<div class="microcopy">🔒 Encrypted. No discovery call required. 48h response.</div>
+<div class="trustbar">
+<span>12,000+ docs reconstructed</span>
+<span>48h conflict review</span>
+<span>Privilege-aware workflow</span>
+<span>Encrypted intake</span>
+</div>
+</div>
+</section>
 
-    <section id="deliverables" style="background:#fff;">
-      <div class="container">
-        <span class="micro">YOU'LL RECEIVE</span>
-        <h2 class="serif-display" style="font-size:clamp(1.8rem,3.2vw,2.6rem); margin:0.8rem 0 1rem;">A record you can act on.</h2>
-        <div class="receive-grid">
-          <div class="receive-card"><strong>Evidence Register</strong>Structured index of every source, verified and traceable.</div>
-          <div class="receive-card"><strong>Verified Chronology</strong>Timeline of events grounded in the evidence, not assumption.</div>
-          <div class="receive-card"><strong>Executive Investigation Report</strong>Decision-ready findings built for board and legal review.</div>
-          <div class="receive-card"><strong>Document Gap Analysis</strong>What is missing, what is weak, and where you are exposed.</div>
-        </div>
-        <div style="margin-top:3rem;">
-          <a href="/#contact" class="cta-premium">Get The Record Straight <span>→</span></a>
-        </div>
-      </div>
-    </section>
+<section class="cap-section">
+<div class="container">
+<div class="cap-item">
+<div class="cap-index">01</div>
+<div class="cap-content">
+<h3>Evidence Reconstruction™</h3>
+<p>When the factual record is unclear, contested or incomplete, we produce a structured, source-traceable account. Every finding is attributed. Every conclusion is grounded.</p>
+<div class="action"><a href="/evidence/evidence-reconstruction/">View Protocol →</a></div>
+</div>
+</div>
+<div class="cap-item">
+<div class="cap-index">02</div>
+<div class="cap-content">
+<h3>Digital Chain of Custody</h3>
+<p>Identification and preservation of all source material across email, chat, docs, notebooks, contracts and third-party systems. Chain-of-custody preserved from intake to delivery.</p>
+<div class="action"><a href="/evidence/chain-of-custody/">View Protocol →</a></div>
+</div>
+</div>
+<div class="cap-item">
+<div class="cap-index">03</div>
+<div class="cap-content">
+<h3>Source Authentication</h3>
+<p>Attribution and contradiction mapping. What is confirmed, what is contested, what is missing. Built to hold up under legal and governance scrutiny.</p>
+<div class="action"><a href="/evidence/source-authentication/">View Protocol →</a></div>
+</div>
+</div>
+<div class="cap-item" style="border-bottom:0">
+<div class="cap-index">04</div>
+<div class="cap-content">
+<h3>Litigation Archive</h3>
+<p>Court-ready packet: indexed bundle, timeline, source map and executive record. Designed to be handed to counsel without redrafting.</p>
+<div class="action"><a href="/evidence/litigation-archive/">View Protocol →</a></div>
+</div>
+</div>
+</div>
+</section>
 
-    <section id="contact" class="section-dark">
-      <div class="container contact-grid">
-        <div class="contact-intro">
-          <span class="micro">Start a Conversation</span>
-          <h2>Perhaps the problem isn't the problem.</h2>
-          <p class="muted">The architecture producing it may be.</p>
-          <div style="margin-top:2rem; padding-top:1.6rem; border-top:1px solid var(--line-light); max-width:24rem;">
-            <p class="muted">Tell us what you're seeing. A recurring decision. Work that keeps returning. An outcome nobody can explain.</p>
-          </div>
-        </div>
-        <div>
-          <p class="muted" style="margin-bottom:2rem;">This is for boards, executives and legal teams when accuracy matters.</p>
-          <a href="/#contact" class="cta-premium" style="background:var(--paper); color:var(--ink);">Request A Private Review →</a>
-        </div>
-      </div>
-    </section>
-  </main>
+<section class="section-dark" id="secure">
+<div class="container" style="display:grid;grid-template-columns:1fr 1.05fr;gap:5rem">
+<div>
+<span class="micro">Start a Conversation</span>
+<h2 class="serif" style="font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:.96;margin:.7rem 0 .9rem;color:var(--paper)">Authoritative record, not narrative.</h2>
+<p style="color:rgba(251,246,240,.72);line-height:1.6;max-width:24rem;font-weight:300">Tell us what happened, what evidence exists, and what outcome you need. We review scope, complexity and conflict in 48 hours.</p>
+</div>
+<div>
+<input type="text" placeholder="Search within evidence notes" style="margin-bottom:14px" />
+<p style="color:rgba(251,246,240,.6);font-size:12px;margin-bottom:20px;font-weight:300">Focus ring is now rust #8c3a2e for conversion clarity.</p>
+<a href="/#contact" class="cta-white ring">SECURE DROP™ — EVIDENCE RECONSTRUCTION →</a>
+<div style="margin-top:18px"><a href="#" class="link-dark">Speak to an expert →</a> <span style="font-size:10px;color:#8A8683;margin-left:8px">Rust link on dark with white underline</span></div>
+</div>
+</div>
+</section>
 
-  <footer>
-    <div class="container">
-      <div>© 2026 KINGLIS</div>
-      <div class="small">Organizational Intelligence — Confidential · Global · Secure</div>
-      <div class="small">www.thisiskinglis.com · <a href="/evidence-reconstruction/">Evidence Reconstruction™</a> · <a href="/intelligence/">Intelligence</a> · <a href="/advisory/">Advisory</a></div>
-    </div>
-  </footer>
+</main>
+<footer>
+<div class="container">
+<div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase">© 2026 KINGLIS</div>
+<div class="small">Organizational Intelligence — Confidential · Global · Secure · NDA by default · thisiskinglis.com/secure-drop</div>
+<div class="small">Evidence · Intelligence · Advisory — All links now use rust #8c3a2e</div>
+</div>
+</footer>
 </body>
 </html>
