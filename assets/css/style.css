@@ -176,3 +176,72 @@ footer .small a:hover{border-bottom-color:var(--accent)}
   #kinglis-model-charcoal h2{font-size:34px}
   #kinglis-model-charcoal .km-links{grid-template-columns:1fr}
 }
+/* === KINGLIS 3-CARD LIGHT MODEL - BIGGER, EQUAL HEIGHT === */
+.kinglis-model-light {
+  background:#F9F8F7;
+  padding:96px 0;
+}
+.kinglis-model-light .kinglis-3grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  max-width:1120px;
+  margin:48px auto 0;
+}
+.kinglis-model-light .kinglis-card {
+  background:#FFFFFF;
+  border:1px solid #E8E1D6;
+  border-radius:6px;
+  padding:44px 36px 32px;
+  min-height:520px; /* <- BIGGER */
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition:transform .18s, border-color .18s;
+}
+.kinglis-model-light .kinglis-card:hover {
+  transform:translateY(-4px);
+  border-color:#D8D1C7;
+}
+.kinglis-model-light .kinglis-card .kicker {
+  font-size:10px;
+  letter-spacing:.16em;
+  color:#8A7A5A;
+  margin-bottom:20px;
+}
+.kinglis-model-light .kinglis-card h3 {
+  font-family:Georgia, serif;
+  font-size:26px; /* was ~20px */
+  line-height:1.2;
+  font-weight:400;
+  color:#1E1D1E;
+  margin:0 0 24px;
+}
+.kinglis-model-light .kinglis-card p {
+  font-size:15.5px;
+  line-height:1.75;
+  color:#5C5A57;
+  margin:0;
+}
+.kinglis-model-light .kinglis-card .cta {
+  margin-top:32px;
+  background:#111;
+  color:#F9F8F7;
+  border:1px solid #111;
+  box-shadow:0 0 0 1px #fff, 0 0 0 3px #111; /* white ring button */
+  padding:14px 18px;
+  font-size:11px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  width:100%;
+  justify-content:center;
+}
+
+@media(max-width:900px){
+  .kinglis-model-light .kinglis-3grid {
+    grid-template-columns:1fr;
+  }
+  .kinglis-model-light .kinglis-card {
+    min-height:auto;
+  }
+}
