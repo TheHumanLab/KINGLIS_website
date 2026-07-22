@@ -271,3 +271,14 @@ footer .small a:hover{border-bottom-color:var(--accent)}
   padding: 32px 28px;
   min-height: 180px;
 }
+<button>REQUEST A PRIVATE REVIEW →</button>
+<p class="intake-trust">No tracking. No newsletter. One human reply within 48h. Data deleted on request.</p>
+}
+.intake-trust {
+  margin-top: 14px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+}
